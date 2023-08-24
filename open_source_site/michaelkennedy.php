@@ -73,6 +73,100 @@ require_once "includes/header.php";
         from {opacity: 0; transform: translateY(40px);}
         to {opacity: 1; transform: translateY(0);}
     }
+    /* Crazy Spinning Logo */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.home img {
+    animation: spin 10s infinite linear, pulse 1.5s infinite ease-in-out;
+}
+
+.team-section h1 {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    transition: transform 0.3s;
+}
+
+.home:hover {
+    transform: scale(1.1);
+}
+
+.home img {
+    border: 5px solid #3498db;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(52, 152, 219, 0.5);
+    animation: spin 10s infinite linear, pulse 1.5s infinite ease-in-out;
+}
+
+.team-section {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #14b2b8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team-section h1 {
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.team-section a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.team-section a:hover {
+    color: #f1c40f;
+}
+
+.team-section .section {
+    margin-top: 20px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    color: #2c3e50;
+}
+
 </style>
 
 <body>
