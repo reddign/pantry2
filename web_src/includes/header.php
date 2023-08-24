@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Blue Jay Pantry</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/fontawesome/css/brands.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/fontawesome/css/solid.css" rel="stylesheet">
+<link rel="icon" href="images/BlueJayPantry-Logo-v4.png" type="image/png" />
 
 <!-- support v4 icon references/syntax -->
   <link 
