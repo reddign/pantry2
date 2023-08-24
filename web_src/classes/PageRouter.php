@@ -44,7 +44,7 @@ class PageRouter{
                 $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&catID={$catID}&id={$id}");
                 //$web_string = file_get_contents($url."/data_src/data.php?table=products&catID={$catID}");
                 $products = json_decode($web_string);
-                $content .= GeneralContent::getAllProductsDisplay($products,"INVENTORY"); 
+                $content .= GeneralContent::getAllProductsDisplay($products,"Pizza INVENTORY"); 
                 $useFoodTabs = true;
             break;
             case "reports":
