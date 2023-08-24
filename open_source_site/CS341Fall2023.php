@@ -28,7 +28,7 @@ require_once "includes/header.php";
             Clayton Greer<br>  
             Sam Huhn<br>
             Michael Kennedy<br>
-            Ethan Lajeunesse<br>
+            <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
             Stephanie Motz<br>
             Isabel Pacheco Mattivi<br>
