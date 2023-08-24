@@ -1,0 +1,28 @@
+body{
+    margin:0%;
+    margin-left: 15%;
+    padding:0%;
+    overflow-x: hidden;
+}
+
+.inventoryTabs {
+    height: 30px;
+    width:-webkit-fill-available;
+    background-color: #004B98;
+  }
+  
+  a.tab {
+    display:inline-block;
+    text-decoration: none;
+    width: 19.4%;
+    height: 26px;
+    background-color: #004B98;
+    color: #c8c8c8;
+    font-weight: bold;
+    padding: 0px;
+    text-align: center;
+    border-style: solid; 
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: #0A2240;
+  }

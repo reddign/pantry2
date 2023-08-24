@@ -1,0 +1,136 @@
+/* Background Attributes */
+#LoginBody {
+    /* background-image: linear-gradient(to right, aqua , #BF40BF); CYAN TO MAGENTA GRADIENT */
+    background-image: linear-gradient(to left, #000080, lightsteelblue);  
+}
+
+.home{
+    display: absolute;
+    padding-left: 25px;
+    padding-top: 25px;
+    color: #c8c8c8;
+}
+
+/* Main Div Attributes */ 
+#main {
+    background-color: white;  
+    filter: drop-shadow(0 0 0.75rem black);   
+    width: 250px;
+    
+    border-radius: 7px;             /* add border curvature */
+    margin: auto;                   /* center div */
+    margin-top: 50px;              /* add extra space from top of page (center to screen) */
+
+    padding-bottom: 40px;           /* add extra white space between button and div border */
+    padding-left: 50px;             /* white space between div contents and div border */
+    padding-right: 50px;            /* white space between div contents and div border */
+}
+
+/* Login Header Attributes */
+#Loginh1 {
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;             /* center h1 text */
+    padding-top: 40px;              /* add extra space between top of the oage and LOGIN */
+    margin-bottom: 15px;            /* add extra space between header and username box */
+}
+
+/* Form Attributes */
+form {
+    margin-top: 25px;
+}
+
+/* Input Boxes Attributes */
+#username, #password {
+    font-family: Tahoma, Verdana, sans-serif;
+    width: 225px;                   /* width of the input boxes */
+    padding: 10px;                  /* white space between input text and border of text field */ 
+}
+
+/* Username and Password label Attributes */
+#usernameLabel, #passwordLabel {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 13px;                
+}
+
+/* Hyperlink Attributes */
+/* #forgotPassword {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+#forgotPasswordDiv {
+    text-align: right;
+} */
+
+/* HyperLink Modifiers */
+a:hover {
+    color: #5CB8E4;
+}
+
+/* Button Attributes */
+#loginBtn {
+    color: white;
+    font-size: 12px;
+    font-weight: bold; 
+    text-align: center;
+
+    border: 2px solid black;
+    border-radius: 18px; 
+    
+    outline: 2px solid black ;
+    transition: outline-offset 200ms ease;
+    outline-offset: -2px; 
+
+    margin-top: 5%;       /* extra space between password and button */
+    width: 250px;
+    padding: 10px;
+    /* background-image: linear-gradient(to right, cyan, #BF40BF);   */
+    background-image: linear-gradient(to left, #000080, lightsteelblue);  
+} 
+
+/* Button Modifyers */
+#loginBtn:hover {
+    /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF); CYAN TO MAGENTA GRADIEN */
+    background-image: linear-gradient(to left, #1034A6, white); 
+    border-color: #36454F; 
+} 
+
+/* More Button Modifyers */
+#loginBtn:focus {
+    outline-offset: 2px;
+}
+
+/* Error Div Attributes */
+#error {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Error Div Horizontal Line Attributes */
+#errorHr {
+    margin-top: 0px;
+    border: solid 1px;
+    color: red;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    /* For mobile phones: */
+    #main { 
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    #loginBtn {
+        width: 100%;
+    }
+    #username, #password {
+        width: 91%
+    }
+}

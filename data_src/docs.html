@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Pantry REST API - Documentation</title>
+    <meta name="description" content="Jay Pantry is a project of Etown's Fall 2023 Software Engineering Class">
+    <meta name="author" content="Etown CS">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./docs_files/hightlightjs-dark.css">
+    <script src="./docs_files/highlight.min.js.download"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./docs_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./docs_files/style.css" media="all">
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+
+  <body>
+    <div class="left-menu">
+      <div class="content-logo">
+        <div class="logo" title="Jays Nest Pantry">
+          <span>Blue Jay Pantry - Data API</span>
+        </div>
+        <button class="burger-menu-icon" id="button-menu-mobile">
+          <svg width="34" height="34" viewBox="0 0 100 100">
+            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+            <path class="line line2" d="M 20,50 H 80"></path>
+            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-closer"></div>
+      <div class="content-menu">
+        <div class="content-infos">
+          <div class="info">
+            <b>Author:</b>
+            <a href="https://github.com/reddign">Professor Reddig</a>
+          </div>
+          <div class="info">
+            <b>Class:</b>
+            <a href="#">Etown CS 341</a>
+          </div>
+          <div class="info">
+            <b>Semester:</b>
+            <a href="#">Fall 2023</a>
+          </div>
+          <div class="info"><b>Version:</b> 1.0</div>
+          <div class="info">
+            <b>Last Updated:</b> 2:45 PM (UTC 6+), 30 Jun, 2023
+          </div>
+        </div>
+        <ul>
+          <li class="scroll-to-link active" data-target="content-get-started">
+            <a>Get Started</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-product">
+            <a>PRODUCTS</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-products">
+            <a><code class="highlighted">GET</code> Get Products</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-single-product">
+            <a><code class="highlighted">GET</code> Get Single Product</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-products-by-catID">
+            <a><code class="highlighted">GET</code> Get Products for a Single Category ID</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-create-product">
+            <a><code class="highlighted">POST</code> Create Product</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-update-product">
+            <a><code class="highlighted">PUT</code> Update Products</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-delete-product">
+            <a><code class="highlighted">DELETE</code> Delete a Product</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-cat">
+            <a>CATEGORIES</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-cart">
+            <a>CARTS</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-user">
+            <a>USERS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-page">
+      <div class="content-code"></div>
+      <div class="content">
+        <div class="overflow-hidden content-section" id="content-get-started">
+          <h1>Get started</h1>
+          <pre>API Endpoints
+-------------
+
+Products
+==========
+<code class="hljs cpp">
+http:<span class="hljs-comment">//localhost/data_src/api/products</span>
+http:<span class="hljs-comment">//localhost/data_src/api/products/read.php?APIKEY=secretKEYhere</span>
+http:<span class="hljs-comment">//localhost/data_src/api/products/read.php?APIKEY=secretKEYhere&id=product_id</span>
+http:<span class="hljs-comment">//localhost/data_src/api/products/update.php</span>
+http:<span class="hljs-comment">//localhost/data_src/api/products/delete.php</span>
+</code>
+<br>
+Carts
+==========
+<code class="hljs cpp">
+http:<span class="hljs-comment">//localhost/data_src/api/cart/read.php?APIKEY=secretKEYhere</span>
+http:<span class="hljs-comment">//localhost/data_src/api/cart/read.php?APIKEY=secretKEYhere&id=cart_id</span>
+http:<span class="hljs-comment">//localhost/data_src/api/cart/create.php</span>
+http:<span class="hljs-comment">//localhost/data_src/api/cart/update.php</span>
+http:<span class="hljs-comment">//localhost/data_src/api/cart/delete.php</span></code>
+</pre>
+          <p>
+            Under the data_src folder we are using a REST API created using Core PHP.
+            All CRUD operations on the database will be done using this code.
+          </p>
+          <p>
+            This is API will use an 
+            <strong>API key</strong> for validation that will change in production. 
+            If you confront any error, please contact
+            me at
+            <a href="https://github.com/reddign">GitHub</a>
+          </p>
+
+    
+
+          <p>
+            While you're trying to
+            <code class="higlighted break-word">Create</code>,
+            <code class="higlighted break-word">Update</code>, or
+            <code class="higlighted break-word">Delete</code> through API, make
+            sure your provided data are in JSON format because
+            <code class="higlighted break-word">header</code> only accepts
+            <code class="higlighted break-word">Content-Type: application/json</code>
+            in these requests.
+          </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-get-product">
+          <h2>Products</h2>
+          <p>These are items available at the food pantry. The quantiy available and 
+            the category are fields as well as an image path.
+            </p>
+            </div>
+
+        <div class="overflow-hidden content-section" id="content-get-products">
+          <h2>Get Products</h2>
+          <p>
+            To get products you need to make a
+            <code class="higlighted break-word">GET</code> call to the following
+            url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/read.php?APIKEY=secretKEYhere</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">Get Product Result Format Example :
+
+[
+    {
+        <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
+        <span class="hljs-attr">"productName"</span>: <span class="hljs-string">"Sliced Carrots"</span>,
+        <span class="hljs-attr">"catID"</span>: <span class="hljs-string">"2"</span>,
+        <span class="hljs-attr">"categoryName"</span>: <span class="hljs-string">"Canned Goods"</span>,
+        <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
+        <span class="hljs-attr">"img"</span>: <span class="hljs-string">"/path/to/image/imgFileName.jpg"</span>,
+    } ...
+]</code></pre>
+          <h3>
+            This will provide all the products. So, you don't have to pass any
+            QUERY PARAMETERS
+          </h3>
+          <h2>Make Sure you add the API key</h2>
+          <p>
+            You need to add the 
+            <code class="higlighted break-word">API KEY</code> to the 
+            all the web requests and urls as follows:<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/read.php?APIKEY=secretKEYhere</code>
+          </p>
+          <br>
+
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-get-single-product">
+          <h2>Get a Single Product</h2>
+          <p>
+            To get a specific product you need to make a
+            <code class="higlighted break-word">GET</code> call to the following
+            url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/read.php?APIKEY=secretKEYhere&id=product_id</code>
+          </p>
+          <br>
+          <pre>The URL should look like:
+
+<code class="hljs cpp">
+http:<span class="hljs-comment">//localhost/data_src/api/product/read.php?APIKEY=secretKEYhere&id=201</span>
+</code>
+            <code class="json highlighted hljs">
+Result if any product exists:
+
+[
+  {
+    <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
+    <span class="hljs-attr">"productName"</span>: <span class="hljs-string">"Sliced Carrots"</span>,
+    <span class="hljs-attr">"catID"</span>: <span class="hljs-string">"2"</span>,
+    <span class="hljs-attr">"categoryName"</span>: <span class="hljs-string">"Canned Goods"</span>,
+    <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
+    <span class="hljs-attr">"img"</span>: <span class="hljs-string">"/path/to/image/imgFileName.jpg"</span>,
+  }
+]</code></pre>
+          <h4>Just pass the product id to get the specific product from API</h4>
+        </div>
+
+
+        <div class="overflow-hidden content-section" id="content-get-products-by-catID">
+          <h2>Get Products for a specific category id</h2>
+          <p>
+            To get products you need for a specific category make a
+            <code class="higlighted break-word">GET</code> call to the following
+            url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/read.php?APIKEY=secretKEYhere&catID=category_id</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">Get Product Result Format Example :
+
+[
+    {
+        <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
+        <span class="hljs-attr">"productName"</span>: <span class="hljs-string">"Sliced Carrots"</span>,
+        <span class="hljs-attr">"catID"</span>: <span class="hljs-string">"2"</span>,
+        <span class="hljs-attr">"categoryName"</span>: <span class="hljs-string">"Canned Goods"</span>,
+        <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
+        <span class="hljs-attr">"img"</span>: <span class="hljs-string">"/path/to/image/imgFileName.jpg"</span>,
+    } ...
+]</code></pre>
+
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-create-product">
+          <h2>Create a Product</h2>
+          <p>
+            To create a new product you need to make a
+            <code class="higlighted break-word">POST</code> request to the
+            following url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/create.php</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">
+Create Product JSON format Example :
+
+{
+
+    <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"catID"</span>: int,
+    <span class="hljs-attr">"productName"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"quantity"</span>: int,
+    <span class="hljs-attr">"img"</span>: <span class="hljs-string">"string"</span>,
+}
+
+On Success, Response Message Will Be:
+
+{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Product Created Successfully"</span>
+}
+                  </code></pre>
+          <h4>QUERY PARAMETERS</h4>
+          <table class="central-overflow-x">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>APIKEY</td>
+                <td>String</td>
+                <td>Secret API Key provided</td>
+              </tr>
+              <tr>
+                <td>catID</td>
+                <td>Integer</td>
+                <td>Product Category</td>
+              </tr>
+              <tr>
+                <td>productName</td>
+                <td>String</td>
+                <td>Your product title</td>
+              </tr>
+              <tr>
+                <td>quantity</td>
+                <td>Integer</td>
+                <td>number of products in pantry</td>
+              </tr>
+              <tr>
+                <td>img</td>
+                <td>String</td>
+                <td>img file path and name</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-update-product">
+          <h2>Update a Product</h2>
+          <p>
+            To update a new product you need to make a
+            <code class="higlighted break-word">PUT</code> request to the
+            following url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/update.php</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">
+Update Product JSON format Example :
+
+{
+    <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-number">secret API Key</span>,
+    <span class="hljs-attr">"productID"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"catID"</span>: int,
+    <span class="hljs-attr">productName"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"quantity"</span>: int,
+    <span class="hljs-attr">"img"</span>: <span class="hljs-string">"string"</span>,
+}
+
+On Success, The Response Will Be:
+
+{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Product Updated Successfully"</span>
+}
+</code></pre>
+          <h4>QUERY PARAMETERS</h4>
+          <table class="central-overflow-x">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>APIKEY</td>
+                <td>String</td>
+                <td>Secret API Key</td>
+              </tr>
+              <tr>
+                <td>productID</td>
+                <td>Integer</td>
+                <td>Existing Product Id</td>
+              </tr>
+              <tr>
+                <td>catID</td>
+                <td>Integer</td>
+                <td>Product Category ID</td>
+              </tr>
+              <tr>
+                <td>productName</td>
+                <td>String</td>
+                <td>Your product title</td>
+              </tr>
+              <tr>
+                <td>quantity</td>
+                <td>Integer</td>
+                <td>number of products in pantry</td>
+              </tr>
+              <tr>
+                <td>img</td>
+                <td>String</td>
+                <td>img file path and name</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-delete-product">
+          <h2>Delete a Product</h2>
+          <p>
+            To delte a product you need to make a DELETE request to the
+            following url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/product/delete.php</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">
+Delete Product JSON format Example :
+{
+  <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-number">nsW3a567</span>
+  <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>
+}
+
+Success Response Will Be
+{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"✅ Category Deleted!"</span>
+}</code></pre>
+          <h4>QUERY PARAMETERS</h4>
+          <table class="central-overflow-x">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>APIKEY</td>
+                <td>String</td>
+                <td>Secret API Key</td>
+              </tr>
+              <tr>
+                <td>productID</td>
+                <td>Integer</td>
+                <td>Just provide the Product Id to be deleted</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-get-cat">
+          <h2>Categories</h2>
+          <h2>
+            <code class="higlighted break-word">All the processes for Categories are same as Products!</code>
+          </h2>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-get-cart">
+          <h2>Carts</h2>
+          <h2>
+            <code class="higlighted break-word">All the processes for Carts are same as Products!</code>
+          </h2>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-get-user">
+          <h2>Users</h2>
+          <h2>
+            <code class="higlighted break-word">All the processes for Users are same as Products!</code>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
+    <a href="https://github.com/mattSutton462/Blue_Jay_Pantry/" class="github-corner" aria-label="View source on Github" title="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="
+          z-index: 99999;
+          fill: #70b7fd;
+          color: #fff;
+          position: fixed;
+          top: 0;
+          border: 0;
+          right: 0;
+        " aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>
+      .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+      }
+      @keyframes octocat-wave {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        20%,
+        60% {
+          transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+          transform: rotate(10deg);
+        }
+      }
+      @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+          animation: none;
+        }
+        .github-corner .octo-arm {
+          animation: octocat-wave 560ms ease-in-out;
+        }
+      }
+      @media only screen and (max-width: 680px) {
+        .github-corner > svg {
+          right: auto !important;
+          left: 0 !important;
+          transform: rotate(270deg) !important;
+        }
+      }
+    </style>
+    <!-- END Github Corner Ribbon - to remove -->
+    <script src="./docs_files/script.js.download"></script>
+  
+
+</body></html>

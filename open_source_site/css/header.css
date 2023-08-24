@@ -1,0 +1,29 @@
+#HeaderBody{
+    margin:0%;
+    margin-left: 15%;
+    padding:0%;
+    overflow-x: hidden;
+    background-color: #0A2240;
+}
+.header {
+    padding: 0%;
+    background-color: #c8c8c8;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 21.5%;
+  }
+
+#PantryLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom:auto;
+}
+#cart{
+    margin-top: auto;
+    margin-bottom:auto;
+    position:fixed;
+    top: 5%;
+    right: 4%;
+}
