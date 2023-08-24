@@ -15,7 +15,6 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Michael Kennedy</h1>
-        //add linkedIn
         <a href="https://www.linkedin.com/in/michaelpkennedy1/"><p>LinkedIn</p></a>
 
         <div class="section">Michael Kennedy is a senior CS major who loves to golf. .
