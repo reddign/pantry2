@@ -37,7 +37,7 @@ require_once "includes/header.php";
             Giovanni Raso<br>
             Wesley Ryan<br>
             Danielle Strausburger<br>
-            <a href='tanner_wetzel.php'>Tanner Wetzel<br>
+            <a href='tanner_wetzel.php'>Tanner Wetzel</a><BR>
             Toma Yasuda<br>
         </div>
     
