@@ -33,7 +33,7 @@ require_once "includes/header.php";
             Stephanie Motz<br>
             Isabel Pacheco Mattivi<br>
             Melissa Patton<br>
-            Nolan Pettit<br>
+            <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
             Giovanni Raso<br>
             Wesley Ryan<br>
             Danielle Strausburger<br>
