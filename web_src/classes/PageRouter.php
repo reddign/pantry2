@@ -44,10 +44,11 @@ class PageRouter{
                 $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&catID={$catID}&id={$id}");
                 //$web_string = file_get_contents($url."/data_src/data.php?table=products&catID={$catID}");
                 $products = json_decode($web_string);
-                $content .= GeneralContent::getAllProductsDisplay($products,"INVENTORY"); 
+                $content .= GeneralContent::getAllProductsDisplay($products,"Pizza INVENTORY"); 
                 $useFoodTabs = true;
             break;
             case "reports":
+                //Please use comments.  You are a professor.  They are watching you!
                 $catID = isset($_GET["catID"])?$_GET["catID"]:"";
                 $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
                 $web_string = file_get_contents($url."/data_src/api/reports/read.php?APIKEY=$api_key&graphType={$graphType}&catID={$catID}");
