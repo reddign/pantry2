@@ -19,25 +19,25 @@ require_once "includes/header.php";
         <span class="border"></span>
       
             <a href='janedoe.php'>Jane Doe</a><BR>
-            Anfal Al-Hussaini<br>
+            <a href= 'anfal_alhussaini.php'>Anfal Al-Hussaini</a><br>
             AJ Botticelli<br>
             Nathan Brightup<br>
-            James Buck<br>
+            <a href='JamesBuck.php'>James Buck</a><BR>
             Mina Campos<br>
-            Phillip Goldberg<br>
+            <a style="color:white;" href="phillipgoldberg.php">Phillip Goldberg</a><br>
             Clayton Greer<br>  
             Sam Huhn<br>
-            Michael Kennedy<br>
-            Ethan Lajeunesse<br>
+            <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
+            <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
             Stephanie Motz<br>
             Isabel Pacheco Mattivi<br>
             Melissa Patton<br>
-            Nolan Pettit<br>
+            <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
             Giovanni Raso<br>
             Wesley Ryan<br>
             Danielle Strausburger<br>
-            Tanner Wetzel<br>
+            <a href='tanner_wetzel.php'>Tanner Wetzel</a><BR>
             Toma Yasuda<br>
         </div>
     
