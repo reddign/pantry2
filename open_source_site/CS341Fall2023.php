@@ -19,7 +19,7 @@ require_once "includes/header.php";
         <span class="border"></span>
       
             <a href='janedoe.php'>Jane Doe</a><BR>
-            <a href= 'anfal_alhussaini'>Anfal Al-Hussaini</a><br>
+            <a href= 'anfal_alhussaini.php'>Anfal Al-Hussaini</a><br>
             AJ Botticelli<br>
             Nathan Brightup<br>
             James Buck<br>
