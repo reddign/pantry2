@@ -32,7 +32,7 @@ require_once "includes/header.php";
             Emma Maykut<br>
             Stephanie Motz<br>
             Isabel Pacheco Mattivi<br>
-            Melissa Patton<br>
+            <a href='MelissaPatton.php'>Melissa Patton</a><BR>
             <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
             Giovanni Raso<br>
             Wesley Ryan<br>
