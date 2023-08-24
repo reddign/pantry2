@@ -22,7 +22,7 @@ require_once "includes/header.php";
             <a href= 'anfal_alhussaini.php'>Anfal Al-Hussaini</a><br>
             AJ Botticelli<br>
             Nathan Brightup<br>
-            James Buck<br>
+            <a href='JamesBuck.php'>James Buck</a><BR>
             Mina Campos<br>
             Phillip Goldberg<br>
             Clayton Greer<br>  
