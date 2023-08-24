@@ -24,7 +24,7 @@ require_once "includes/header.php";
             Nathan Brightup<br>
             <a href='JamesBuck.php'>James Buck</a><BR>
             Mina Campos<br>
-            Phillip Goldberg<br>
+            <a style="color:white;" href="phillipgoldberg.php">Phillip Goldberg</a><br>
             Clayton Greer<br>  
             Sam Huhn<br>
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
