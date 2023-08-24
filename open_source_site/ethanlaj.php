@@ -30,6 +30,10 @@ require_once "includes/header.php";
         .section {
             font-size: 2em;
         }
+
+        body {
+            cursor: url('https://media.licdn.com/dms/image/D4E35AQFNXp1AQgDlGQ/profile-framedphoto-shrink_800_800/0/1689816998242?e=1693494000&v=beta&t=tBfkRQot_J7KUMLUQZX49T9uphVIXoiVKtUY1rhQQU8'), auto;
+        }
         @keyframes moveAndScale {
             0% {
                 transform: scale(1) translate(0, 0);
