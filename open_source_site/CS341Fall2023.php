@@ -26,7 +26,7 @@ require_once "includes/header.php";
             Mina Campos<br>
             <a href="phillipgoldberg.php">Phillip Goldberg</a><br>
             Clayton Greer<br>  
-            Sam Huhn<br>
+            <a href="SamHuhn.php">Sam Huhn</a><br>
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
