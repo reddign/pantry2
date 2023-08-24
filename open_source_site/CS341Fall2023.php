@@ -27,7 +27,7 @@ require_once "includes/header.php";
             Phillip Goldberg<br>
             Clayton Greer<br>  
             Sam Huhn<br>
-            Michael Kennedy<br>
+            <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
             Stephanie Motz<br>
