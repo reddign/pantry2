@@ -124,6 +124,7 @@ require_once "includes/header.php";
         margin: 0 auto;
         display: block;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        animation: spin 10s infinite linear;
     }
 
         /* Animations */
