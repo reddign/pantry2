@@ -15,8 +15,13 @@ require_once "includes/header.php";
         body {
             background: rgba(0,0,0,0.8);
             color: white;
-            cursor: url('https://avatars.githubusercontent.com/u/24838272?v=4'), auto;
+            cursor: url('../open_source_site/images/ethancur.cur'), auto;
         }
+
+        a {
+            cursor: inherit;
+        }
+
         div {
             animation: moveAndScale 10s infinite alternate;
         }
