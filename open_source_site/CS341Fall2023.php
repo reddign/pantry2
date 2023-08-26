@@ -30,13 +30,18 @@ require_once "includes/header.php";
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
+<<<<<<< HEAD
             Stephanie Motz<br>
             <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
+=======
+            <a href='stephaniemotz.php'>Stephanie Motz</a><br>
+            <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
+>>>>>>> bf1dd2496d5b7cabfa479eba6d5ffb5b12bb9b33
             <a href='MelissaPatton.php'>Melissa Patton</a><BR>
             <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
             Giovanni Raso<br>
             Wesley Ryan<br>
-            Danielle Strausburger<br>
+            <a href='danistrausburger.php'>Danielle Strausburger</a><br>
             <a href='tanner_wetzel.php'>Tanner Wetzel</a><BR>
             Toma Yasuda<br>
         </div>
