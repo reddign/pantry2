@@ -15,7 +15,13 @@ require_once "includes/header.php";
         body {
             background: rgba(0,0,0,0.8);
             color: white;
+            cursor: url('../open_source_site/images/ethancur.cur'), auto;
         }
+
+        a {
+            cursor: inherit;
+        }
+
         div {
             animation: moveAndScale 10s infinite alternate;
         }
@@ -30,6 +36,17 @@ require_once "includes/header.php";
         .section {
             font-size: 2em;
         }
+        .profilePic {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            animation: pulsingGlow 1.5s infinite alternate;
+        }
+
         @keyframes moveAndScale {
             0% {
                 transform: scale(1) translate(0, 0);
@@ -52,6 +69,20 @@ require_once "includes/header.php";
                 opacity: 0.5;
             }
         }
+        @keyframes pulsingGlow {
+            0% {
+                filter: brightness(1);
+                box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                filter: brightness(1.5);
+                box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.75);
+            }
+            100% {
+                filter: brightness(1);
+                box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+            }
+        }
     </style>
 </head>
 <body>
@@ -60,6 +91,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1 id="titleText">Ethan Lajeunesse</h1>
+        <a href="https://www.linkedin.com/in/ethan-lajeunesse-aa0992253/" target="_blank"><img class="profilePic" src="https://avatars.githubusercontent.com/u/24838272?v=4" alt="Ethan Lajeunesse"></a>
         <div class="section" id="randomSection">
             Ethan Lajeunesse is a cool student. He is a senior Comp Sci major at Etown.
             <br><br>
