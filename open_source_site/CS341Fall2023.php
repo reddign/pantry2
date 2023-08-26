@@ -31,7 +31,7 @@ require_once "includes/header.php";
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
             Stephanie Motz<br>
-            Isabel Pacheco Mattivi<br>
+            <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
             <a href='MelissaPatton.php'>Melissa Patton</a><BR>
             <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
             Giovanni Raso<br>
