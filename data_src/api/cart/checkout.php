@@ -49,8 +49,8 @@ $params = [":basketID" => $basketID];
 FoodDatabase::startTransaction();
 try {
   FoodDatabase::executeSQL($update_sql, $params);
-  FoodDatabase::executeSQL($deleteBasket, $params);
   FoodDatabase::executeSQL($deleteBasketItem, $params);
+  FoodDatabase::executeSQL($deleteBasket, $params);
 
   FoodDatabase::commitTransaction();
   http_response_code(200);
