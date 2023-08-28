@@ -39,7 +39,7 @@ require_once "includes/header.php";
             <a href='danistrausburger.php'>Danielle Strausburger</a><br>
             <a href='tanner_wetzel.php'>Tanner Wetzel</a><BR>
             <a href='toma_yasuda.php'>Toma Yasuda</a><br>
-            <a href='toma_yasuda.php'>Toma Yasuda</a><br>
+            <a href='reddig.php'>Prof Reddig</a><br>
         </div>
     
 </div>
