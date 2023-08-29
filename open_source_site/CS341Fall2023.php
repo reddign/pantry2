@@ -25,7 +25,7 @@ require_once "includes/header.php";
             <a href='JamesBuck.php'>James Buck</a><BR>
             Mina Campos<br>
             <a href="phillipgoldberg.php">Phillip Goldberg</a><br>
-            Clayton Greer<br>  
+            <a href="Clayton_Greer.php">Clayton Greer</a><br>  
             <a href="SamHuhn.php">Sam Huhn</a><br>
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
