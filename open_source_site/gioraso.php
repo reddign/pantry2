@@ -18,8 +18,8 @@ require_once "includes/header.php";
         <div class="section">Giovanni Raso is a senior computer science major attending Elizabethtown College.
        <BR><BR>
         
-        <a href=\\"https://www.linkedin.com/in/giovanni-raso1/">Giovanni's LinkedIn</a>";
-        <a href=\\"https://github.com/GiovanniRaso">Giovanni's GitHub</a>";
+        <a href=\\"https://www.linkedin.com/in/giovanni-raso1/">Giovanni's LinkedIn</a><br>
+        <a href=\\"https://github.com/GiovanniRaso">Giovanni's GitHub</a><br>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
         
