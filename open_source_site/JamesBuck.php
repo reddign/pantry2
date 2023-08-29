@@ -15,7 +15,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>James Buck</h1>
-        <div class="section">James Buck is a second year Computer Science Student who hopes to graduate in late 2025.
+        <div class="section">James Buck is a twentieth year Computer Science Student who hopes to graduate in late 2025.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
