@@ -34,7 +34,7 @@ require_once "includes/header.php";
             <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
             <a href='MelissaPatton.php'>Melissa Patton</a><BR>
             <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
-            Giovanni Raso<br>
+            <a href='goiraso.php'>Giovanni Raso</a><br>
             Wesley Ryan<br>
             <a href='danistrausburger.php'>Danielle Strausburger</a><br>
             <a href='tanner_wetzel.php'>Tanner Wetzel</a><BR>
