@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-$title = "Melissa Patton";
+$title = "Isabel Pacheco Mattivi";
 
 require_once "includes/header.php";
 ?>
@@ -14,9 +14,8 @@ require_once "includes/header.php";
         </a> -->
     </div>
     <div class="team-section">
-        <h1>Melissa Patton</h1>
-        <div class="section"> Melissa Patton is a junior at Elizabethtown College. 
-            She is majoring in Computer Science and minoring in graphic design.
+        <h1>Isabel Pacheco Mattivi</h1>
+        <div class="section">Isabel Pacheco Mattivi is a junior majoring in Computer Science with a mathematics minor. She plans to graduate in May 2025.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>

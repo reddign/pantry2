@@ -26,19 +26,20 @@ require_once "includes/header.php";
             Mina Campos<br>
             <a href="phillipgoldberg.php">Phillip Goldberg</a><br>
             Clayton Greer<br>  
-            Sam Huhn<br>
+            <a href="SamHuhn.php">Sam Huhn</a><br>
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
-            Stephanie Motz<br>
-            Isabel Pacheco Mattivi<br>
+            <a href='stephaniemotz.php'>Stephanie Motz</a><br>
+            <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
             <a href='MelissaPatton.php'>Melissa Patton</a><BR>
             <a href='nolan_pettit.php'>Nolan Pettit</a><BR>
             Giovanni Raso<br>
             Wesley Ryan<br>
-            Danielle Strausburger<br>
+            <a href='danistrausburger.php'>Danielle Strausburger</a><br>
             <a href='tanner_wetzel.php'>Tanner Wetzel</a><BR>
-            Toma Yasuda<br>
+            <a href='toma_yasuda.php'>Toma Yasuda</a><br>
+            <a href='reddig.php'>Prof Reddig</a><br>
         </div>
     
 </div>

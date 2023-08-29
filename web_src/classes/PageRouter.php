@@ -1,5 +1,9 @@
 <?php
-
+/*******
+ * 
+ * Page Router Class
+ * 
+ */
 class PageRouter{
     public static function getContent($page,$url){
         global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
@@ -44,7 +48,7 @@ class PageRouter{
                 $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&catID={$catID}&id={$id}");
                 //$web_string = file_get_contents($url."/data_src/data.php?table=products&catID={$catID}");
                 $products = json_decode($web_string);
-                $content .= GeneralContent::getAllProductsDisplay($products,"Pizza INVENTORY"); 
+                $content .= GeneralContent::getAllProductsDisplay($products,"INVENTORY"); 
                 $useFoodTabs = true;
             break;
             case "reports":
