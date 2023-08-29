@@ -16,7 +16,7 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>Melissa Patton</h1>
         <div class="section"> Melissa Patton is a jounior at Elizabethtown College. 
-            She is majoring in Computer Science and minoring in graphic design at Elizabethtown College while hoping to graduate 2025.
+            She is majoring in Computer Science and minoring in graphic design.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>

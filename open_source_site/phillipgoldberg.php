@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-$title = "James Buck";
+$title = "Phillip Goldberg";
 
 require_once "includes/header.php";
 ?>
@@ -14,8 +14,9 @@ require_once "includes/header.php";
         </a> -->
     </div>
     <div class="team-section">
-        <h1>James Buck</h1>
-        <div class="section">James Buck is a twentieth year Computer Science Student who hopes to graduate in late 2025.
+        <h1>Phillip Goldberg</h1>
+        <img style="position:relative;top:-25px;"src="images/PhillipPFP.jpg"/>
+        <div class="section"><br>Phillip Goldberg is an Information Systems Major at Elizabethtown College.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
