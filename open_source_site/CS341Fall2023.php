@@ -30,6 +30,7 @@ require_once "includes/header.php";
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse</a><br>
             Emma Maykut<br>
+            Professor Reddig <BR>
             <a href='stephaniemotz.php'>Stephanie Motz</a><br>
             <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
             <a href='MelissaPatton.php'>Melissa Patton</a><BR>
