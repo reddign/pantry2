@@ -29,6 +29,7 @@ require_once "includes/header.php";
             <a href="SamHuhn.php">Sam Huhn</a><br>
             <a href= 'michaelkennedy.php'>Michael Kennedy</a><br>
             <a href='ethanlaj.php'>Ethan Lajeunesse Is Awesome</a><br>
+            Thanks, Ethan!  Prof Reddig
             <a href = 'emmamaykut.php' > Emma Maykut </a><br>
             <a href='stephaniemotz.php'>Stephanie Motz</a><br>
             <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a><br>
