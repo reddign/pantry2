@@ -97,36 +97,81 @@ class GeneralContent{
           $headersize = "h1";
           $height = "16";
         }
-        return '
-        <div class="w3-container w3-light-grey" style="padding:'.$height.'px 16px">
-            <div id="main">
-                <'.$headersize.'>'.$message.'</'.$headersize.'>
-            </div>
-        </div>';
+    
+        if(isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES"  ){
+          return '
+          <div class="w3-container w3-light-grey" style="padding:'.$height.'px 16px">
+              <div id="main">
+                  <'.$headersize.'>'.$message.'</'.$headersize.'>
+              </div>
+          </div>';
+        }else{
+          return '
+          <div class="w3-container w3-light-grey" style="padding:'.$height.'px 16px">
+              <div id="main">
+                  <'.$headersize.'>'.$message.'</'.$headersize.'>
+              </div>
+              <form action="index.php" method="POST">
+                  <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to Login">
+              </form>
+          </div>';
+        }
     }
     public static function getLoginForm(){
-        $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
+      $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
+      $adminLogin = (isset($_SESSION["adminLogin"]))?$_SESSION["adminLogin"]:"";
+      if($adminLogin){
+      return '
+      <div class="w3-container w3-light-grey" style="padding:128px 16px">
+          <div id="main">
+              <h1>Admin Login</h1>
+              <div id="error">'.$error.'</div>
+              <form action="index.php" method="POST" class="w3-form">
+                  <label id="usernameLabel">Username:</label><br>
+                  <input class="w3-input w3-border" id="username" name="user" placeholder="Type your username" required>
+                  <br>
+                  <br>
+                  <label id="passwordLabel">Password:</label><br>
+                  <input class="w3-input w3-border" id="password" name="pass" type="password" placeholder="Type your password" required>
+                  <br>
+                  <br>
+                  <input type="submit" class="w3-button w3-red w3-padding-large" id="loginBtn" name="loginBtn" value="LOGIN">
+              </form>
+              <br>
+              <form action="index.php" method="POST">
+                  <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to User Login">
+              </form>
+          </div>
+      </div>
+      ';
+      }else{
         return '
         <div class="w3-container w3-light-grey" style="padding:128px 16px">
             <div id="main">
-                <h1>Admin Login</h1>
+                <h1>Login</h1>
                 <div id="error">'.$error.'</div>
                 <form action="index.php" method="POST" class="w3-form">
                     <label id="usernameLabel">Username:</label><br>
-                    <input class="w3-input w3-border" id="username" name="user" placeholder="Type your username" required>
-                    <br>
-                    <br>
-                    <label id="passwordLabel">Password:</label><br>
-                    <input class="w3-input w3-border" id="password" name="pass" type="password" placeholder="Type your password" required>
+                    <input class="w3-input w3-border" id="username" name="user" placeholder="Type your username" required>       
                     <br>
                     <br>
                     <input type="submit" class="w3-button w3-red w3-padding-large" id="loginBtn" name="loginBtn" value="LOGIN">
-                    <!-- <button>LOGIN</button> -->
+                </form>
+                <br>
+                <form action="index.php" method="POST">
+                    <input type="submit" class="w3-button w3-blue w3-padding-large" id="adminLoginBtn" name="adminLoginBtn" value="Admin Login">
+                </form>
+                <br>
+                <br>
+                <form action="index.php" method="POST">
+                    <input type="submit" class="w3-padding-large" id="registerBtn" name="registerBtn" value="Register">
                 </form>
             </div>
         </div>
         ';
+      }
     }
+  
     public static function getAbout(){
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
