@@ -15,7 +15,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Aj Botticelli</h1>
-        <div class="section">Aj Botticelli is a Junior Honors Student. He is a Junior Computer Science and Data Science Major.
+        <div class="section">Aj Botticelli is a Junior Honors Student. He is a Junior Computer Science and Data Science Major. Hello!
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
