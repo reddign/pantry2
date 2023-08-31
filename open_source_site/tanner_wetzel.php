@@ -15,7 +15,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Tanner Wetzel</h1>
-        <div class="section">Tanner Wetzel is a junior Computer Science major at Elizabethtown College.
+        <div class="section">Tanner Wetzel is a junior Computer Science major at Elizabethtown College. Tanner is working on localization for the project.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
