@@ -20,10 +20,10 @@ require_once "includes/header.php";
       
             <a href='janedoe.php'>Jane Doe</a><BR>
             <a href= 'anfal_alhussaini.php'>Anfal Al-Hussaini</a><br>
-            AJ Botticelli<br>
-            Nathan Brightup<br>
+            <a href = 'ajbotticelli.php'>AJ Botticelli</a><br>
+            <a href = 'nathanbrightup.php'>Nathan Brightup</a><br>
             <a href='JamesBuck.php'>James Buck</a><BR>
-            Mina Campos<br>
+            <a href = 'minacampos.php'>Mina Campos</a><br>
             <a href="phillipgoldberg.php">Phillip Goldberg</a><br>
             <a href="Clayton_Greer.php">Clayton Greer</a><br>  
             <a href="SamHuhn.php">Sam Huhn</a><br>
