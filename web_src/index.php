@@ -2,15 +2,28 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
+
 require_once "includes/config.php";
 require_once "classes/LoginProcess.php";
 require_once "classes/PageRouter.php";
 require_once "classes/GeneralContent.php";
 require_once "classes/EditItemForm.php";
+
+if(isset($_POST['adminLoginBtn'])){
+    $_SESSION["adminLogin"] = true;
+    $_SESSION["error"] = "";
+    header("Location: index.php"); 
+}else if(isset($_POST['backToUserLoginBtn'])){
+    unset($_SESSION["adminLogin"]);
+    $_SESSION["error"] = "";
+    header("Location: index.php"); 
+}
+
 $title = "Blue Jay Pantry";
 $useFoodTabs = false;
 $useChartTabs = false;
 $useCategoryTabs = false;
+$content = '';
 $loginAttempted = isset($_POST["loginBtn"]) && $_POST["loginBtn"]=="LOGIN" ? true:false;
 if($loginAttempted){
     $username = isset($_POST["user"]) ? $_POST["user"]:"";
@@ -22,10 +35,11 @@ if($loginAttempted){
         $page = "login";
     }
     
+}else if (!isset($_SESSION["LoginStatus"]) || $_SESSION["LoginStatus"] != "YES") {
+    $page = "login";
 }else{
     $page = isset($_GET["page"])?$_GET["page"]:"about";
 }
-$content = '';
 $savingItem = isset($_POST["saveBtn"]) && $_POST["saveBtn"]=="Save Product Info" ? true:false;
 if($savingItem){
     $dataReturned = EditItemForm::validateAndProcessData($_POST,$_FILES,$url);
