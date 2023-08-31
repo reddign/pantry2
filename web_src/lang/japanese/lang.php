@@ -17,7 +17,7 @@ $time_sign_up = ""; //Time
 //contact section
 $contact = "";
     //send message form
-    $name = "";
+    $name = "名前";
     $email = "";
     $subject = "";
     $message = "";
