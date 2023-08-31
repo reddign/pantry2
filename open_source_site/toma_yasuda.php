@@ -19,7 +19,6 @@ require_once "includes/header.php";
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
         <BR><BR>
-        if you see this line of text, you are now cursed for the next 48 hours
     </div>
         
     
