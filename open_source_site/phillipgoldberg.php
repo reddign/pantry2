@@ -16,7 +16,7 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>Phillip Goldberg</h1>
         <img style="position:relative;top:-25px;"src="images/PhillipPFP.jpg"/>
-        <div class="section"><br>Phillip Goldberg is an Information Systems Major at Elizabeth College.
+        <div class="section"><br>Phillip Goldberg is an Information Systems Major at Elizabethtown College.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
