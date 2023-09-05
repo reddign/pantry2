@@ -63,6 +63,11 @@ class PageRouter{
                     $useCategoryTabs = true;
                 }
             break;
+
+            case "settings":
+                $content .= "<br> <br> <br> <br> <h1> Nolan was here. </h1>";
+            break;
+
             case "about":
                 $content = GeneralContent::getAbout();
             break;
