@@ -11,12 +11,17 @@ if($key!=$GLOBAL_API_KEY){
   echo json_encode(["message"=>"Invalid API KEY"]);
   exit;
 }
-
-$basketID = 16;
+if ($id == "" || $id == 0) {
+  $sql = "select * from basketitem";
+  $params = null;
+  $data = FoodDatabase::getDataFromSQL($sql, $params);
+  echo json_encode($data);
+} else {
 $where = " WHERE B.basketID = :basketID ";
-$params = [":basketID"=>$basketID];
+$params = [":basketID"=>$id];
 $sql = "select * from BasketItem B inner join product p on p.productID=B.productID ".$where;
 $data = FoodDatabase::getDataFromSQL($sql, $params);
 echo json_encode($data);
+}
 
 ?>
