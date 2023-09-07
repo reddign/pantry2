@@ -15,7 +15,7 @@ $donate_here = "Donar aqui"; //Money
 $food_find_more = "Saber más"; //Food
 $time_sign_up = "Inscribirse"; //Time
 //contact section
-$contact = "Contactar";
+$contact = "CONTACTAR";
     //send message form
     $name = "Nombre";
     $email = "Correo electrónico";
