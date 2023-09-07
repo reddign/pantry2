@@ -14,6 +14,7 @@
         ?>
           <a href="index.php?page=edit" class="w3-bar-item w3-button">Edit Inventory</a>
           <a href="index.php?page=reports" class="w3-bar-item w3-button">Reports</a>
+          <a href="index.php?page=settings" onclick="w3_close()" class="w3-bar-item w3-button">Settings</a>
           <a href="index.php?page=logout" class="w3-bar-item w3-button" id="logout">Logout</a>
         <?php
         }else{

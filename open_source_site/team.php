@@ -40,7 +40,7 @@ require_once "includes/header.php";
         <h1>FALL 2023<BR>Software Engineering<BR>Class Project</h1>
         <span class="border"></span>
         <div class="section">The project then became the work for the entire Fall 2023 class. Students were presented with documentation and checked out the repository in Git.  They took on tasks and moved things forward for the first 3 weeks of class.  Then another team took on the project for the rest of the semester.
-        <a href="CS341Fall2023.php"><img src="images/CS341Fall2023.jpg" style="width:400px;"><BR><BR> Meet CS 341 Fall 2023</a>
+        <a href="CS341Fall2023.php"><img src="images/CS341Fall2023B.jpg" style="width:400px;"><BR><BR> Meet CS 341 Fall 2023</a>
        
         </div>
         
