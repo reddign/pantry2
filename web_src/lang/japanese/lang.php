@@ -1,34 +1,34 @@
 <?php
 //MAIN PAGE
 //inventory
-$add_button = "";
-$delete_button = "";
+$add_button = "カートに追加す";
+$delete_button = "削除";
 //header buttons
-$cart_button = "";
-$about_button = "";
-$contact_button = "";
-$logon_button = "";
-$inventory_button = "";
-$donate_button = "";
+$cart_button = "カート";
+$about_button = "就いて";
+$contact_button = "連絡";
+$logon_button = "ログオン";
+$inventory_button = "在庫";
+$donate_button = "寄付する";
 //donations
-$donate_here = ""; //Money
-$food_find_more = ""; //Food
-$time_sign_up = ""; //Time
+$donate_here = "寄付する"; //Money
+$food_find_more = "調べる"; //Food
+$time_sign_up = "サインアップ"; //Time
 //contact section
-$contact = "";
+$contact = "連絡";
     //send message form
     $name = "名前";
-    $email = "";
-    $subject = "";
-    $message = "";
-    $send_message_button = "";
+    $email = "メール";
+    $subject = "内容";
+    $message = "メッセージ";
+    $send_message_button = "メッセージを送る";
 //front page
-$learn_more_button = "";
-$view_inventory_button = "";
+$learn_more_button = "知る";
+$view_inventory_button = "在庫を見る";
 //bottom of page
-$to_top_button = "";
-$etown_students_link = "";
+$to_top_button = "トップへ戻る";
+$etown_students_link = "イータウンCS大学生";
 //Admin Login
-$username_entry = "";
-$password_entry = "";
+$username_entry = "ユーザー名を入力";
+$password_entry = "パスワードを入力";
 ?>
