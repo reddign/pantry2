@@ -35,12 +35,12 @@ class Validator {
             }
         }
 
-		if (!empty($this->errors)) {
-			$this->exitWithError();
-		}
-		else {
-			return true;
-		}
+        if (!empty($this->errors)) {
+            $this->exitWithError();
+        }
+        else {
+            return true;
+        }
     }
 
     public function getErrors() {
