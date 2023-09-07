@@ -46,7 +46,7 @@ require_once "includes/header.php";
             <a href='isabelpmattivi.php'>Isabel Pacheco Mattivi</a>,
             <a href='gioraso.php'>Giovanni Raso</a>,
             <a href='toma_yasuda.php'>Toma Yasuda</a><BR>
-            
+
              Not pictured: <a href='reddig.php'>Prof Reddig</a><br>
         </div>
     
