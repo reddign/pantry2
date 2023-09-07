@@ -19,7 +19,7 @@ require_once "includes/header.php";
         <img src="images/CS341Fall2023.jpg" style="width:800px;" usemap="#students"><BR><BR>
         <map name="students">
             <area shape="rect" coords="85,5,121,43" alt="Clock" href="clock.php">
-            <area shape="rect" coords="260,73,296,35" title="Ractangle" href="nathanbrightup.php">
+            <area shape="rect" coords="260,73,296,35" title="Nathan" href="nathanbrightup.php">
             <area shape="rect" coords="434,51,460,94" title="Ethan" href="ethanlaj.php">
         </map>
         <div class="section" style="text-align:center">Our class included:<BR>
