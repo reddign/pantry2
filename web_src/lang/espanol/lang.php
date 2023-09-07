@@ -1,34 +1,36 @@
 <?php  
 //MAIN PAGE
 //inventory
-$add_button = "";
-$delete_button = "";
+$add_button = "Añadir";
+$delete_button = "Eliminar";
 //header buttons
-$cart_button = "";
-$about_button = "";
-$contact_button = "";
-$logon_button = "";
-$inventory_button = "";
-$donate_button = "";
+$cart_button = "MI CARRITO";
+$about_button = "ACERCA DE";
+$contact_button = "CONTACTO";
+$logon_button = "PLOGÓN";
+$inventory_button = "INVENTARIO";
+$donate_button = "DONAR";
 //donations
-$donate_here = ""; //Money
-$food_find_more = ""; //Food
-$time_sign_up = ""; //Time
+$donate_here = "Donar aqui"; //Money
+$food_find_more = "Saber más"; //Food
+$time_sign_up = "Inscribirse"; //Time
 //contact section
-$contact = "";
+$contact = "Contactar";
     //send message form
-    $name = "";
-    $email = "";
-    $subject = "";
-    $message = "";
-    $send_message_button = "";
+    $name = "Nombre";
+    $email = "Correo electrónico";
+    $subject = "Sujeto";
+    $message = "Mensaje";
+    $send_message_button = "ENVIAR MENSAJE";
 //front page
-$learn_more_button = "";
-$view_inventory_button = "";
+$welcome_message = "Comida gratuita para estudiantes necesitados";
+$learn_more_button = "Saber más";
+$view_inventory_button = "Ver nuestro inventario";
 //bottom of page
-$to_top_button = "";
-$etown_students_link = "";
+$to_top_button = "A la cima";
+$etown_students_link = "Estudiantes de Etown CS";
 //Admin Login
-$username_entry = "";
-$password_entry = "";
+$username_entry = "Escribe tu nombre de usuario";
+$password_entry = "Escribe tu contraseña";
+$login_button = "ACCESO";
 ?>

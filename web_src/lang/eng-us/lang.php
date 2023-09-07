@@ -23,6 +23,7 @@ $contact = "CONTACT";
     $message = "message";
     $send_message_button = "SEND MESSAGE";
 //front page
+$welcome_message = "Free Food for Students In Need";
 $learn_more_button = "Learn more";
 $view_inventory_button = "View Our Inventory";
 //bottom of page
@@ -31,4 +32,5 @@ $etown_students_link = "Etown CS Students";
 //Admin Login
 $username_entry = "Type your username";
 $password_entry = "Type your password";
+$login_button = "LOGIN";
 ?>
