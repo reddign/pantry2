@@ -16,7 +16,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Sam Huhn</h1>
-        <div class="section">Sam Huhn is a junior who is pursuing a major in Computer Science. He hopes to get a career in Software Engineering after graduating in 2025.
+        <div class="section">Sam Huhn is a student who is pursuing a major in Computer Science. He hopes to get a career in Software Engineering after graduating in 2025.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>

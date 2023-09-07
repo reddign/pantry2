@@ -7,7 +7,13 @@
     <i class="fa-brands fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+<html>
+  <a href="https://www.linkedin.com/in/nolan-pettit/" target="_blank" >
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+</a>
+</html>
+    
+
   </div>
   
   <p>Powered by <a href="../open_source_site/team.php" target="_blank" class="w3-hover-text-red">Etown CS Students</a></p>
