@@ -23,6 +23,7 @@ $contact = "";
     $message = "";
     $send_message_button = "";
 //front page
+$welcome_message = "";
 $learn_more_button = "";
 $view_inventory_button = "";
 //bottom of page
@@ -31,4 +32,5 @@ $etown_students_link = "";
 //Admin Login
 $username_entry = "";
 $password_entry = "";
+$login_button = "";
 ?>
