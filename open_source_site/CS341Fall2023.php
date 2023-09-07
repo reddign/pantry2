@@ -16,7 +16,7 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>CS 341 - Software Engineering - Fall 2023</h1>
         <span class="border"></span>
-        <img src="images/CS341Fall2023.jpg" style="width:800px;" usemap="#students"><BR><BR>
+        <img src="images/CS341Fall2023B.jpg" style="width:800px;" usemap="#students"><BR><BR>
         <map name="students">
             <area shape="rect" coords="85,5,121,43" alt="Clock" href="clock.php">
             <area shape="rect" coords="646,103,682,144" title="Isabel Pacheco Mattivi" href="isabelpmattivi.php">
