@@ -33,7 +33,7 @@ require_once "includes/header.php";
             <a href = 'nathanbrightup.php'>Nathan Brightup</a>,
             <a href="Clayton_Greer.php">Clayton Greer</a>,
             <a href="nolan_pettit.php">Nolan Pettit</a>,
-            Wesley Ryan,
+            <a href="wesley_ryan.php">Wesley Ryan</a>,
             <a href = 'emmamaykut.php' > Emma Maykut </a>,
             <a href='ethanlaj.php'>Ethan Lajeunesse</a>,
             <a href='danistrausburger.php'>Danielle Strausburger</a>,
