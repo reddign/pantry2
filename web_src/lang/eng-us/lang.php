@@ -1,4 +1,5 @@
 <?php
+global $about_button,$cart_button,$contact_button,$logon_button,$inventory_button,$donate_button;
 //MAIN PAGE
 //inventory
 $add_button = "Add";

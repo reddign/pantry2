@@ -6,8 +6,10 @@
  */
 class PageRouter{
     public static function getContent($page,$url){
-        global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
+        global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key,$lang;
         $content = '';
+        //determine page spoken language
+        checkLang::switchLang($lang);
         //determine page content
         switch($page){
             case "data":
