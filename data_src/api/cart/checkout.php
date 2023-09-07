@@ -5,7 +5,7 @@ require_once "../../classes/FoodDatabase.php";
 
 $basketID = isset($_POST["id"]) ? $_POST["id"] : "";
 if ($basketID == "") {
-  echo json_encode(["message" => "Missing basketID parameter"]);
+  echo json_encode(["message" => "Missing id parameter for cart"]);
   http_response_code(400);
   exit;
 }
