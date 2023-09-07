@@ -1,5 +1,6 @@
 <?PHP
 // This endpoint is used to create non-admin users ONLY.
+header('Content-Type: application/json');
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
 require_once "../../classes/Validator.php";
@@ -28,10 +29,8 @@ if (isUsernameTaken($uname)){
 $params = [":username"=>$uname,":isAdmin"=>0];
 $sql = "INSERT INTO user (username,isAdmin) VALUES (:username,:isAdmin);";
 
-FoodDatabase::executeSQL($sql, $params);
-// TODO: return id of user created
-$message = ["message"=>"User Created Successfully"];
-echo json_encode($message);
+$userId = (int) FoodDatabase::executeSQL($sql, $params, true);
+echo json_encode(["userID" => $userId]);
 
 function isUsernameTaken($username){
 	$sql = "SELECT username FROM user WHERE username=:username;";
