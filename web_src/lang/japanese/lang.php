@@ -1,13 +1,13 @@
 <?php
 //MAIN PAGE
 //inventory
-$add_button = "カートに追加す";
+$add_button = "カートに入れる";
 $delete_button = "削除";
 //header buttons
 $cart_button = "カート";
-$about_button = "就いて";
+$about_button = "アバウト";
 $contact_button = "連絡";
-$logon_button = "ログオン";
+$logon_button = "ログイン";
 $inventory_button = "在庫";
 $donate_button = "寄付する";
 //donations
@@ -27,7 +27,7 @@ $learn_more_button = "知る";
 $view_inventory_button = "在庫を見る";
 //bottom of page
 $to_top_button = "トップへ戻る";
-$etown_students_link = "イータウンCS大学生";
+$etown_students_link = "イータウンCSの大学生";
 //Admin Login
 $username_entry = "ユーザー名を入力";
 $password_entry = "パスワードを入力";
