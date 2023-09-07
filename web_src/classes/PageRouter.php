@@ -65,7 +65,12 @@ class PageRouter{
             break;
 
             case "settings":
-                $content .= "<br> <br> <br> <br> <h1> Nolan was here. </h1>";
+           
+                    // Check if the user is logged in as an admin
+                    $content = GeneralContent::getSocialMediaUpdateForm();
+                
+                
+            
             break;
 
             case "about":

@@ -327,6 +327,37 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
         
     }
 
+    public static function getSocialMediaUpdateForm() {
+      $content = '
+          <div class="w3-container" style="padding: 128px 10px">
+              <h1>Update Social Media Links</h1>
+              <form method="POST" action="update_social_media.php">
+                  <label for="facebook">Facebook:</label>
+                  <input type="text" name="facebook" id="facebook"><br>
+
+                  <label for="twitter">Instagram:</label>
+                  <input type="text" name="instagram" id="twitter"><br>
+
+                  <label for="twitter">Twitter:</label>
+                  <input type="text" name="twitter" id="twitter"><br>
+
+                  <label for="twitter">Snapchat:</label>
+                  <input type="text" name="snapchat" id="twitter"><br>
+
+                  <label for="twitter">Pinterest:</label>
+                  <input type="text" name="pinterest" id="twitter"><br>
+
+                  <label for="twitter">LinkedIn:</label>
+                  <input type="text" name="linkedin" id="twitter"><br>
+
+                  <input type="submit" value="Save">
+              </form>
+          </div>';
+  
+      return $content;
+  }
+  
+
 
 
 
