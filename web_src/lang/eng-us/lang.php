@@ -25,6 +25,7 @@ $contact = "CONTACT";
 //front page
 $learn_more_button = "Learn more";
 $view_inventory_button = "View Our Inventory";
+$language_dropdown = "Choose a language";
 //bottom of page
 $to_top_button = "To the top";
 $etown_students_link = "Etown CS Students";
