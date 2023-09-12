@@ -4,11 +4,11 @@
     <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/ETOWN_Footer_Logo.png" width='100px.'></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="index.php?page=about#about" class="w3-bar-item w3-button"><?php echo $about_button ?></php></a>
-      <a href="index.php?page=cart" class="w3-bar-item w3-button"><i class="fa fa-cart-shopping"></i> <?php echo $cart_button ?></a>
-      <a href="index.php?page=products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> <?php echo $inventory_button?></a>
-      <a href="index.php?page=about#donate" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> <?php echo $donate_button?></a>
-      <a href="index.php?page=about#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> <?php echo $contact_button?></a>
+      <a href="index.php?page=about#about" class="w3-bar-item w3-button"><?php echo $translations["about_button"] ?></php></a>
+      <a href="index.php?page=cart" class="w3-bar-item w3-button"><i class="fa fa-cart-shopping"></i> <?php echo $translations["cart_button"] ?></a>
+      <a href="index.php?page=products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> <?php echo $translations["inventory_button"]?></a>
+      <a href="index.php?page=about#donate" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> <?php echo $translations["donate_button"]?></a>
+      <a href="index.php?page=about#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> <?php echo $translations["contact_button"]?></a>
       <?php //Hidden Admin Tabs
         if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         ?>
