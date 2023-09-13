@@ -15,7 +15,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Isabel Pacheco Mattivi</h1>
-        <div class="section">Isabel Pacheco Mattivi is a junior majoring in Computer Science with a mathematics minor. She plans to graduate in May 2025.
+        <div class="section">Isabel Pacheco Mattivi is a junior at Elizabethtown College. She is majoring in Computer Science with a mathematics minor. She plans to graduate in May 2025.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
