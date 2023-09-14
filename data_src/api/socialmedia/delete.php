@@ -1,6 +1,8 @@
 <?PHP
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
+require_once "../../../../web_src/classes/GeneralContent.php"
+
 $admin_id = isset($_DELETE["admin_id"])?intval($_DELETE["admin_id"]):"";
 $key = isset($_DELETE["APIKEY"])?$_DELETE["APIKEY"]:"";
 if($key!=$GLOBAL_API_KEY){

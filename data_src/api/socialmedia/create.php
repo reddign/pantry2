@@ -2,6 +2,7 @@
 
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
+require_once "../../../../web_src/classes/GeneralContent.php"
 
 $admin_id = isset($_POST["admin_id"])?$_POST["admin_id"]:"";
 $facebook = isset($_POST["facebook"])?$_POST["facebook"]:"";

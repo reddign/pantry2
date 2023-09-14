@@ -2,6 +2,7 @@
 
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
+require_once "../../../../web_src/classes/GeneralContent.php"
 
 $admin_id = isset($_GET["admin_id"])?$_GET["admin_id"]:"";
 $key = isset($_GET["APIKEY"])?$_GET["APIKEY"]:"";
