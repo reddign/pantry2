@@ -96,7 +96,16 @@ $translations = array(
     "Time_desc1" => "Stock Shelves",
     "Time_desc2" => "Help Guests",
     "Time_desc3" => "Process Donations",
-    "Time_desc4" => "Manage Inventory"
+    "Time_desc4" => "Manage Inventory",
+
+    // Inventory section new
+    "Inventory_center" => "INVENTORY",
+    //buttons
+    "Breakfast_Foods_button" => "Breakfast Foods",
+    "Canned_button" => "Canned Goods",
+    "Fresh_button" => "Fresh Foods",
+    "Snacks_button" => "Snacks",
+    "Wellness_products_button" => "Wellness Products"
 
 );
 
