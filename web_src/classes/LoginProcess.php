@@ -12,19 +12,19 @@ class LoginProcess {
                 if($pass == "" || $pass == null){
                     $_SESSION["LoginStatus"] = "NO";
                     $_SESSION["isAdmin"] = false;
-                    $_SESSION["userid"] = "";
+                    $_SESSION["userId"] = "";
                     $_SESSION["error"] = "Admin users must login with their password.";
                     return false;
                 }else if (password_verify($pass, $user->password)) {
                     $_SESSION["LoginStatus"] = "YES";
                     $_SESSION["isAdmin"] = true;
                     $_SESSION["error"] = "";
-                    $_SESSION["userid"] = $user->userid;
+                    $_SESSION["userId"] = $user->userId;
                     return true;
                 } else {
                     $_SESSION["LoginStatus"] = "NO";
                     $_SESSION["isAdmin"] = false;
-                    $_SESSION["userid"] = "";
+                    $_SESSION["userId"] = "";
                     $_SESSION["error"] = "Incorrect Password!";
                     return false;
                 }
@@ -32,13 +32,13 @@ class LoginProcess {
                 $_SESSION["LoginStatus"] = "YES";
                 $_SESSION["isAdmin"] = false;
                 $_SESSION["error"] = "";
-                $_SESSION["userid"] = $user->userid;
+                $_SESSION["userId"] = $user->userId;
                 return true;
             }
         } else {
             $_SESSION["LoginStatus"] = "NO";
             $_SESSION["isAdmin"] = false;
-            $_SESSION["userid"] = "";
+            $_SESSION["userId"] = "";
             $_SESSION["error"] = "User not found.";
             return false;
         }
@@ -47,7 +47,7 @@ class LoginProcess {
     public static function processLogout() { 
         $_SESSION["LoginStatus"] = "NO";
         $_SESSION["isAdmin"] = false;
-        $_SESSION["userid"] = "";
+        $_SESSION["userId"] = "";
         $_SESSION["error"] = "";
     }
 }
