@@ -39,7 +39,7 @@ $params = [":id" => $id, ":quantity" => $quantity, ":basket_id" => $basket_id];
 try {
     // Check if the product already exists in the cart
     $sqlCheck = "SELECT * FROM basketitem WHERE productID = :id AND BasketID = :basket_id";
-    $result = FoodDatabase::executeSQL($sqlCheck, [":id" => $id, ":basket_id" => $basket_id]);
+    $result = FoodDatabase::getDataFromSQL($sqlCheck, [":id" => $id, ":basket_id" => $basket_id]);
 
     if ($result !== false && $result->rowCount() > 0) {
         // If the product exists in the cart, update the quantity
