@@ -1,7 +1,7 @@
 <?PHP
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
-$key = isset($_GET["APIKEY"])?$_GET["APIKEY"]:""; //change paramter to get requests?
+$key = isset($_GET["APIKEY"])?$_GET["APIKEY"]:""; //change paramter to get requests??
 $id = isset($_GET["productID"])?intval($_GET["productID"]):"";
 $basket_item_id = isset($_GET["BasketItemID"])?intval($_GET["BasketItemID"]):"";
 $basket_id = isset($_GET["basketID"])?intval($_GET["basketID"]):"";
