@@ -1,5 +1,9 @@
 <?PHP
 require_once "GoogleChartDisplay.php";
+require_once "../../../data_src/api/socialmedia/create.php"
+require_once "../../../data_src/api/socialmedia/read.php"
+require_once "../../../data_src/api/socialmedia/update.php"
+require_once "../../../data_src/api/socialmedia/delete.php"
 class GeneralContent{
 
     public static function getAllProductsDisplay($products,$title="INVENTORY",$button="addtocart"){
