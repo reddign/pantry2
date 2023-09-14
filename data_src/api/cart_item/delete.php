@@ -24,7 +24,7 @@ if($basket_id==""||$basket_id==0){
 $params = [":id"=>$id, ":basket_item_id"=>$basket_item_id, ":basket_id"=>$basket_id];
 $sql = "DELETE FROM basketitem WHERE productID = :id AND BasketItemID = :basket_item_id AND BasketID = :basket_id";
 try {
-  // Execute the SQL query and handle errors
+  // Execute the SQL query and handle error
   FoodDatabase::executeSQL($sql, $params);
   http_response_code(200); // OK
   $message = ["message" => "Product Removed From Cart"];
