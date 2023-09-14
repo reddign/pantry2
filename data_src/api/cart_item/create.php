@@ -4,10 +4,10 @@ require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
 
 // Retrieve query parameters from the URL
-$key = isset($_GET["APIKEY"]) ? $_GET["APIKEY"] : "";
-$id = isset($_GET["productID"]) ? intval($_GET["productID"]) : "";
-$quantity = isset($_GET["quantity"]) ? intval($_GET["quantity"]) : "";
-$basket_id = isset($_GET["basketID"]) ? intval($_GET["basketID"]) : "";
+$key = isset($_POST["APIKEY"]) ? $_POST["APIKEY"] : "";
+$id = isset($_POST["productID"]) ? intval($_POST["productID"]) : "";
+$quantity = isset($_POST["quantity"]) ? intval($_POST["quantity"]) : "";
+$basket_id = isset($_POST["basketID"]) ? intval($_POST["basketID"]) : "";
 
 // Check if the provided API key matches the global API key
 if ($key != $GLOBAL_API_KEY) {
