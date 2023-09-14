@@ -31,12 +31,17 @@ class FoodDatabase{
         return $valuesArray;
     }
 
-    public static function executeSQL($sql,$params=null){
+    public static function executeSQL($sql,$params=null,$returnID=false){
         self::connect();
         
         $stmt = self::$conn->prepare($sql);
         $stmt->execute($params);
-        return true;
+
+        if ($returnID) {
+            return self::$conn->lastInsertId();
+        } else {
+            return true;
+        }
     }
 
     public static function startTransaction() {
