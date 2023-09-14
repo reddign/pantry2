@@ -8,9 +8,11 @@ $api_key = "848429r2g";
 
 class checkLang{
     public static function switchLang($lang){
-        $lang = "english";
+        $lang = "eng-us";
 
-        switch ($lang){
+        require_once (__DIR__ . '/../lang/' . $lang .'/lang.php');
+
+        /*switch ($lang){
 
             case 'english':
                 require_once (__DIR__ . '/../lang/eng-us/lang.php');
@@ -23,7 +25,7 @@ class checkLang{
             case 'french':
                 require_once (__DIR__ . '/../lang/french/lang.php');
             break;
-        }
+        }*/
     }
 }
 ?>
