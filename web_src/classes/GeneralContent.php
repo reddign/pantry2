@@ -328,6 +328,7 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
     }
 
     public static function getSocialMediaUpdateForm() {
+      // this function creates the social media tags and save button
       $content = '
           <div class="w3-container" style="padding: 128px 10px">
               <h1>Update Social Media Links</h1>

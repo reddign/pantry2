@@ -44,7 +44,7 @@ function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snap
     }
 
     // Prepare the SQL statement
-    $stmt = $conn->prepare("UPDATE admin_social_media SET 
+    $stmt = $conn->prepare("UPDATE adminsocialmedia SET 
                             facebook = ?, 
                             instagram = ?, 
                             twitter = ?, 
