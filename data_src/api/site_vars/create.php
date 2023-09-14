@@ -1,5 +1,7 @@
 <?PHP
 
+// Should only be used once to add initial values.
+
 //This code has not be really worked out or tested yet.
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
@@ -19,8 +21,8 @@ if($key!=$GLOBAL_API_KEY){
   echo json_encode(["message"=>"Invalid API KEY"]);
   exit;
 }
-$params = [":logo"=>$logo,":userpg"=>$user_paragraph,":dark_bg"=>$dark_bg_color,":med_bg"=>$med_bg_color,":light_bg"=>$light_bg_color,":med_border"=>$med_border_color,":dark_border"=>$dark_border_color,":error"=>$error_color];
-$sql = "insert into product (logo,user_paragraph,dark_bg_color,med_bg_color, light_bg_color, med_border_color, dark_bg_color, error_color) VALUES (:logo,:userpg,:dark_bg,:med_bg,:light_bg,:med_border,:dark_border,:error);";
+$params = [":id"=>$userid,":logo"=>$logo,":userpg"=>$user_paragraph,":dark_bg"=>$dark_bg_color,":med_bg"=>$med_bg_color,":light_bg"=>$light_bg_color,":med_border"=>$med_border_color,":dark_border"=>$dark_border_color,":error"=>$error_color];
+$sql = "insert into style (userid,logo,user_paragraph,dark_bg_color,med_bg_color,light_bg_color,med_border_color,dark_bg_color,error_color) VALUES (:id,:logo,:userpg,:dark_bg,:med_bg,:light_bg,:med_border,:dark_border,:error);";
 FoodDatabase::executeSQL($sql, $params);
 $message = ["message"=>"Style Created Successfully"];
 echo json_encode($message);
