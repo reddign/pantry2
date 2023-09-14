@@ -19,7 +19,7 @@
         <?php
         }else{
           ?>
-           <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i>LOGON</a>
+           <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i><?php echo $translations["logon_button"] ?></a>
   
           <?PHP
         }
@@ -36,11 +36,11 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="index.php?page=about#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="index.php?page=cart" onclick="w3_close()" class="w3-bar-item w3-button">MY CART</a>
-  <a href="index.php?page=products" onclick="w3_close()" class="w3-bar-item w3-button">INVENTORY</a>
-  <a href="index.php?page=about#donate" onclick="w3_close()" class="w3-bar-item w3-button">DONATE</a>
-  <a href="index.php?page=about#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="index.php?page=about#about" onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $translations["about_button"] ?></a>
+  <a href="index.php?page=cart" onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $translations["cart_button"] ?></a>
+  <a href="index.php?page=products" onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $translations["inventory_button"]?></a>
+  <a href="index.php?page=about#donate" onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $translations["donate_button"]?></a>
+  <a href="index.php?page=about#contact" onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $translations["contact_button"]?></a>
   <?php //Hidden Admin Tabs
         if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         ?>
