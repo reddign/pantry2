@@ -20,7 +20,7 @@ $translations = array(
     
     // Contact Section
     "contact" => "CONTACT",
-    "contact_desc" => "",
+    "contact_desc" => "Entrons en contact. Envoie-nous un message:",
     "name" => "Nom",
     "email" => "E-mail",
     "subject" => "Sujet",
@@ -43,58 +43,58 @@ $translations = array(
     "login_button" => "SE CONNECTER",
     
     // Additional Text Translations
-    "Front_page_title" => "",
+    "Front_page_title" => "Blue Jay Pantry",
     
     // About Section
-    "About_header" => "",
+    "About_header" => "À PROPOS",
     "About_sub_header" => "Nourriture gratuite pour les étudiants dans le besoin",
-    "About_sub_paragraph" => "",
-    "About_sub_paragraph_2" => "",
+    "About_sub_paragraph" => "Elizabethtown College s’engage à garantir que tous les étudiants aient régulièrement accès à des options alimentaires saines. Le Blue Jay Pantry a été créé par notre Centre d'engagement communautaire et civique pour fournir à nos étudiants des produits alimentaires gratuits et non périssables provenant de dons de bienfaisance provenant de notre communauté.",
+    "About_sub_paragraph_2" => "Notre Collège rejoint plus de 600 écoles à travers le pays qui exploitent un garde-manger sur le campus et est membre de la College and University Food Bank Alliance (CUFBA). CUFBA offre du soutien, de la formation et des ressources aux niveaux collégial et universitaire pour permettre à un plus grand nombre d’étudiants d’accéder à la nourriture et aux ressources dont ils ont besoin pour réussir leurs études.",
     
     // Our Goals Section
-    "Our_goals_header" => "",
-    "Responsive" => "",
-    "Responsive_desc" => "",
-    "Accessible" => "",
-    "Accessible_desc" => "",
-    "Healthy_meals" => "",
-    "Healthy_meals_desc" => "",
+    "Our_goals_header" => "NOS BUTS",
+    "Responsive" => "Sensible",
+    "Responsive_desc" => "Le garde-manger existe pour aider à éliminer l'insécurité alimentaire à Elizabethtown Collège.",
+    "Accessible" => "Accessible",
+    "Accessible_desc" => "Le garde-manger est destiné à être accessible à tous les étudiants afin d'éliminer les obstacles à l'accès pour les étudiants souffrant de faim et de difficultés à acheter de la nourriture et fonctionnera de manière à maximiser l'hospitalisation et l'intimité.",
+    "Healthy_meals" => "Repas sains",
+    "Healthy_meals_desc" => "Le garde-manger, en partenariat avec les bureaux et les programmes du campus, fournira des ressources qui aideront les étudiants à préparer des repas sains.",
     
     // Statistics
-    "about_statistics_students" => "",
-    "about_statistics_items_distributed" => "",
-    "about_statistics_meals_delivered" => "",
-    "about_statistics_families_fed" => "",
+    "about_statistics_students" => "Étudiantes aidés",
+    "about_statistics_items_distributed" => "Articles distribués",
+    "about_statistics_meals_delivered" => "Repas livrés",
+    "about_statistics_families_fed" => "Familles nourries",
     
     // Accessibility
-    "we_are_accessible" => "",
-    "pantry_hours" => "",
-    "pantry_open" => "",
-    "location" => "",
+    "we_are_accessible" => "Nous sommes accessibles",
+    "pantry_hours" => "Horaires du garde-manger:",
+    "pantry_open" => "Le garde-manger est ouvert 24h/24 et 7j/7",
+    "location" => "Emplacement:",
     "BSC251" => "Brossman Commons (BSC) 251",
-    "contact_info" => "",
+    "contact_info" => "Coordonnées",
     "Center_for_civic" => "Center for Community and Civic Engagement |",
 
     // Donation section
-    "Donation_Header" => "",
-    "Donation_desc" => "",
+    "Donation_Header" => "DES DONS",
+    "Donation_desc" => "Nous acceptons de nombreux types de dons.",
     
-    "Food_head" => "",
-    "Food_desc1" => "",
-    "Food_desc2" => "",
-    "Food_desc3" => "",
-    "Food_desc4" => "",
-    "Food_desc5" => "",
+    "Food_head" => "Nourriture",
+    "Food_desc1" => "Céréales/Pains",
+    "Food_desc2" => "Produits pour journaux",
+    "Food_desc3" => "Produits frais",
+    "Food_desc4" => "Collations",
+    "Food_desc5" => "Articles de soins de santé",
 
-    "Money_Head" => "",
-    "Money_desc1" => "",
+    "Money_Head" => "Argent",
+    "Money_desc1" => "Espèces/Chèques",
     "Money_desc2" => "PayPal/Venmo",
-    "Money_desc3" => "",
+    "Money_desc3" => "Don automatique",
 
-    "Time_head" => "",
-    "Time_desc1" => "",
-    "Time_desc2" => "",
-    "Time_desc3" => "",
-    "Time_desc4" => ""
+    "Time_head" => "Temps",
+    "Time_desc1" => "Étagères de stock",
+    "Time_desc2" => "Aider les invités",
+    "Time_desc3" => "Traiter les dons",
+    "Time_desc4" => "Gérer l'inventaire"
 );
 ?>
