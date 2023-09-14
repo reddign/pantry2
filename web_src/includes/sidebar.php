@@ -1,4 +1,6 @@
 <!-- Navbar (sit on top) -->
+<link rel = "stylesheet" type = "text/css" href = "css/languages.css">
+<link rel = "stylesheet" href = "https://mdbootstrap.com/docs/standard/content-styles/flags/#introduction/bootstrap.min.css" integrity = "" crossorigin = "anonymous">
 <div class="w3-top">
   <div class="w3-bar w3-dark-blue w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/ETOWN_Footer_Logo.png" width='100px.'></a>
@@ -20,6 +22,28 @@
         }else{
           ?>
            <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i>LOGON</a>
+            <!--Languages-->
+           <div class = "lang-menu">
+           <div class = "selected-lang">LANGUAGES
+        </div>
+           
+                <ul>
+                    <li>
+                        <a href="#"><i class = "flag flag-us"></i>ENGLISH</a>
+                    </li>
+                    <li>
+                        <a href=""><i class = "flag flag-spain"></i>ESPAÑOL</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="flag flag-france"></i>FRANÇAIS</a>
+                    </li>
+                    <li>
+                        <a href=""><i class = "flag flag-japan"></i>日本語</a>
+                    </li>
+                </ul>
+                
+            </div>
+        
   
           <?PHP
         }
@@ -55,4 +79,4 @@
           <?PHP
         }
         ?>
-</nav>
+        </nav>
