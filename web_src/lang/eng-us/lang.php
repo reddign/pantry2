@@ -73,7 +73,7 @@ $translations = array(
     "location" => "Location",
     "BSC251" => "Brossman Commons (BSC) 251",
     "contact_info" => "Contact Information:",
-    "Center_for_civic" => "Center for Community and Civic Engagement |"
+    "Center_for_civic" => "Center for Community and Civic Engagement |",
     // Donation section new
     "Donation_Header" => "DONATIONS",
     "Donation_desc" => "We accept many types of donations.",
@@ -94,7 +94,7 @@ $translations = array(
     "Time_desc1" => "Stock Shelves",
     "Time_desc2" => "Help Guests",
     "Time_desc3" => "Process Donations",
-    "Time_desc4" => "Manage Inventory",
+    "Time_desc4" => "Manage Inventory"
 
 );
 
