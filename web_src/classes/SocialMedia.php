@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Function to update social media links in the database
 function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin) {
     // Perform database update here
-    // You should establish a database connection and execute an UPDATE query
 
     $servername = "localhost";
     $username = "root";
@@ -36,11 +35,6 @@ function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snap
 
     // Create a connection
     $conn = new mysqli($servername, $username, $password, $database);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
 
     // Prepare the SQL statement
     $sql = "INSERT INTO adminsocialmedia (facebook, instagram, 
