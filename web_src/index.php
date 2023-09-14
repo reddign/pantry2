@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 
 require_once "includes/config.php";
@@ -11,12 +9,15 @@ require_once "classes/EditItemForm.php";
 
 if(isset($_POST['adminLoginBtn'])){
     $_SESSION["adminLogin"] = true;
-    $_SESSION["error"] = "";
+    unset($_SESSION["error"]);
     header("Location: index.php"); 
 }else if(isset($_POST['backToUserLoginBtn'])){
     unset($_SESSION["adminLogin"]);
-    $_SESSION["error"] = "";
+    unset($_SESSION["error"]);
     header("Location: index.php"); 
+}else if (isset($_POST['registerBtn'])){
+    unset($_SESSION["error"]);
+    header("Location: index.php?page=register");
 }
 
 $title = "Blue Jay Pantry";

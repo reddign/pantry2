@@ -1,5 +1,6 @@
 <?PHP
 require_once "GoogleChartDisplay.php";
+session_start();
 class GeneralContent{
 
     public static function getAllProductsDisplay($products,$title="INVENTORY",$button="addtocart"){
@@ -111,7 +112,7 @@ class GeneralContent{
               <div id="main">
                   <'.$headersize.'>'.$message.'</'.$headersize.'>
               </div>
-              <form action="index.php" method="POST">
+              <form action="index.php?page=login" method="POST">
                   <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to Login">
               </form>
           </div>';
@@ -163,7 +164,7 @@ class GeneralContent{
                 </form>
                 <br>
                 <br>
-                <form action="index.php?page=register" method="POST">
+                <form action="index.php" method="POST">
                     <input type="submit" class="w3-padding-large" id="registerBtn" name="registerBtn" value="Register">
                 </form>
             </div>
@@ -389,8 +390,8 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
                       <input type="submit" class="w3-button w3-red w3-padding-large" value="Register">
                   </form>
                   <br>
-                  <form action="" method="POST">
-                      <input type="submit" class="w3-button w3-blue w3-padding-large" value="Back to Login">
+                  <form action="index.php" method="POST">
+                      <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to Login">
                   </form>
               </div>
           </div>
