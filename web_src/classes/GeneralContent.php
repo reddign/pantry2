@@ -373,7 +373,29 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
     }
 
 
-
-
+    public static function getRegisterForm() {
+      $error = (isset($_SESSION["error"])) ? $_SESSION["error"] : "";
+      
+      return '
+          <div class="w3-container w3-light-grey" style="padding:128px 16px">
+              <div id="main">
+                  <h1>Register</h1>
+                  <div id="error">' . $error . '</div>
+                  <form action="./utils/register.php" method="post" class="w3-form">
+                      <label id="usernameLabel">Username:</label><br>
+                      <input class="w3-input w3-border" id="username" name="username" placeholder="Type your username" required>
+                      <br>
+                      <br>
+                      <input type="submit" class="w3-button w3-red w3-padding-large" value="Register">
+                  </form>
+                  <br>
+                  <form action="./utils/register.php" method="POST">
+                      <input type="submit" class="w3-button w3-blue w3-padding-large" value="Back to Login">
+                  </form>
+              </div>
+          </div>
+      ';
+  }
+  
 }
 ?>
