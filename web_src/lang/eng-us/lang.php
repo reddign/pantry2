@@ -50,6 +50,8 @@ $translations = array(
     "About_header" => "ABOUT",
     "About_sub_header" => "Free Food for Students In Need",
     "About_sub_paragraph" => "Elizabethtown College is committed to ensuring that all students have regular access to healthy food options. The Blue Jay Pantry has been established by our Center for Community and Civic Engagement to provide our students with free, non-perishable food items sourced by charitable donations from within our community...",
+    //new variable
+    "About_sub_paragraph_2" => "Our College joins over 600 schools nationwide who operate an on-campus food pantry and is a member of the College and University Food Bank Alliance (CUFBA). CUFBA provides colleges and universities with support, training and resources to connect more students with the food and resources they need for educational success.",
     
     // Our Goals Section
     "Our_goals_header" => "OUR GOALS",
@@ -94,7 +96,16 @@ $translations = array(
     "Time_desc1" => "Stock Shelves",
     "Time_desc2" => "Help Guests",
     "Time_desc3" => "Process Donations",
-    "Time_desc4" => "Manage Inventory"
+    "Time_desc4" => "Manage Inventory",
+
+    // Inventory section new
+    "Inventory_center" => "INVENTORY",
+    //buttons
+    "Breakfast_Foods_button" => "Breakfast Foods",
+    "Canned_button" => "Canned Goods",
+    "Fresh_button" => "Fresh Foods",
+    "Snacks_button" => "Snacks",
+    "Wellness_products_button" => "Wellness Products"
 
 );
 

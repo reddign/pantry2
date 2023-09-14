@@ -64,7 +64,16 @@ $translations = array(
 "Time_desc1" => "品出しを仕込む",
 "Time_desc2" => "ゲストを助ける",
 "Time_desc3" => "寄付を処理する",
-"Time_desc4" => "在庫を管理する"
+"Time_desc4" => "在庫を管理する",
+
+// Inventory section new
+"Inventory_center" => "在庫",
+//buttons
+"Breakfast_Foods_button" => "朝食用食品",
+"Canned_button" => "缶詰",
+"Fresh_button" => "新鮮な食品",
+"Snacks_button" => "軽食",
+"Wellness_products_button" => "健康製品"
 
 );
 ?>
