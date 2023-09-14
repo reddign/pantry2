@@ -43,6 +43,15 @@ CREATE TABLE IF NOT EXISTS `class` (
   `students` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 );
+ 
+
+CREATE TABLE `registration` (
+`userID` INT(11), 
+`firstUse` TINYINT, 
+`children` VARCHAR(50), 
+`adult` VARCHAR(50), 
+`senior` VARCHAR(50), 
+FOREIGN KEY (userID) REFERENCES user(userID) );
 
 
 
