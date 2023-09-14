@@ -1,6 +1,6 @@
 <!-- Navbar (sit on top) -->
 <link rel = "stylesheet" type = "text/css" href = "css/languages.css">
-<link rel = "stylesheet" href = "https://mdbootstrap.com/docs/standard/content-styles/flags/#introduction/bootstrap.min.css" integrity = "" crossorigin = "anonymous">
+
 <div class="w3-top">
   <div class="w3-bar w3-dark-blue w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/ETOWN_Footer_Logo.png" width='100px.'></a>
