@@ -17,7 +17,7 @@ class checkLang{
             break;
 
             case 'espanol':
-                require_once (__DIR__ . '\..\lang\french\lang.php');
+                require_once (__DIR__ . '\..\lang\espanol\lang.php');
             break;
 
             case 'french':
