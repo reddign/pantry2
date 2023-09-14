@@ -1,4 +1,7 @@
-
+/*  *** TO DO ***
+* Create color variables that link to data stored in style table.
+* Change colors to variables instead of hardcoded colors.
+*/
 #AboutBody {
     background-color: #0A2240;
 }

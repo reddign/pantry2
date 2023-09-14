@@ -1,3 +1,7 @@
+/* *** TO DO ***
+* Create color variables that link to data stored in style table.
+* Change colors to variables instead of hardcoded colors.
+*/
 /* Background Attributes */
 #LoginBody {
     /* background-image: linear-gradient(to right, aqua , #BF40BF); CYAN TO MAGENTA GRADIENT */

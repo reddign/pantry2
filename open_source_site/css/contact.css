@@ -1,4 +1,7 @@
-
+/* *** TO DO ***
+* Create color variables that link to data stored in style table.
+* Change colors to variables instead of hardcoded colors.
+*/
 .dark-background {
     background: #0A2240;
     color: #c8c8c8;
