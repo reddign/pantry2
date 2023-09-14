@@ -44,20 +44,21 @@ try {
     if ($result !== false && $result->rowCount() > 0) {
         // If the product exists in the cart, update the quantity
         $sqlUpdate = "UPDATE basketitem SET Quantity = Quantity + :quantity WHERE productID = :id AND BasketID = :basket_id";
-        FoodDatabase::executeSQL($sqlUpdate, $params);
-    } else {
+        FoodDatabase::executeSQL($sqlUpdate, $params);} 
+    elseif ($result !== false) {
         // If the product doesn't exist in the cart, insert it as a new item
         $sqlInsert = "INSERT INTO basketitem (productID, Quantity, BasketID) VALUES (:id, :quantity, :basket_id)";
-        FoodDatabase::executeSQL($sqlInsert, $params);
-    }
+        FoodDatabase::executeSQL($sqlInsert, $params);}
+    else {$message = ["message" => "Invalid value"];
+        echo json_encode($message);}
 
     // Respond with a success message and HTTP status code 200 (OK)
     http_response_code(200);
     $message = ["message" => "Product Added to Cart"];
-    echo json_encode($message);
-} catch (PDOException $e) {
+    echo json_encode($message);} 
+    catch (PDOException $e) {
+    
     // If there's a database error, respond with an error message and HTTP status code 500 (Internal Server Error)
     http_response_code(500);
-    echo json_encode(["message" => "Database Error: " . $e->getMessage()]);
-}
+    echo json_encode(["message" => "Database Error: " . $e->getMessage()]);}
 ?>
