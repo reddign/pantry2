@@ -3,24 +3,29 @@
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
 
-$basketID = isset($_POST["id"]) ? $_POST["id"] : "";
-if ($basketID == "") {
-  echo json_encode(["message" => "Missing id parameter for cart"]);
-  http_response_code(400);
-  exit;
+$schema = [
+	'id' => ['required' => true],
+];
+
+$validator = new Validator($schema, $_POST);
+$validator->validate();
+
+$key = isset($_GET["APIKEY"]) ? $_GET["APIKEY"] : "";
+if ($key != $GLOBAL_API_KEY) {
+    echo json_encode(["message"=>"Invalid API KEY"]);
+    exit;
 }
 
-// $key = isset($_GET["APIKEY"])?$_GET["APIKEY"]:"";
-// if($key!=$GLOBAL_API_KEY){
-  //   echo json_encode(["message"=>"Invalid API KEY"]);
-  //   exit;
-  // }
+$basketID = $_POST["id"];
 
 /**
  * The following SQL statments do the following:
  * 
+ * Select basket and basketItems
+ * Create a transaction with the same userID as the basket
+ * Create a transactionDetails for each basketItem
  * Decreases the quantity of each product in the basket by 1
- * Deletes all basket items
+ * Deletes all basket items in the basket
  * Deletes the basket
  */
 $item_qty_sql = 
@@ -37,20 +42,52 @@ $update_stmt_where =
   WHERE b.basketID = :basketID
 )";
 
-$update_sql = "UPDATE product p
+$update_product_qty_sql = "UPDATE product p
              SET quantity = quantity - ($item_qty_sql)
              $update_stmt_where;
 ";
-$deleteBasketItem = "DELETE FROM BasketItem WHERE basketID = :basketID";
-$deleteBasket = "DELETE FROM Basket WHERE basketID = :basketID";
 
-$params = [":basketID" => $basketID];
+$get_basket_sql = "SELECT userID FROM basket WHERE basketID = :basketID";
+$get_basketItems_sql = "SELECT productID, quantity FROM basketItem WHERE basketID = :basketID";
+
+$create_transaction_sql = 'INSERT INTO transactions (date, userID)
+                           SET date = NOW(), userID = :userID';
+$create_transactionsDetails_sql = 'INSERT INTO transactionsDetails (transactionID, productID, quantity)
+                                   VALUES (:transactionID, :productID, :quantity)';
+
+$delete_basketItem = "DELETE FROM BasketItem WHERE basketID = :basketID";
+$delete_basket = "DELETE FROM Basket WHERE basketID = :basketID";
+
+$basketParams = [":basketID" => $basketID];
+
+$basket = FoodDatabase::getDataFromSQL($get_basket_sql, $basketParams);
+if (count($basket) == 0) {
+  echo json_encode(["message"=>"Basket not found"]);
+  http_response_code(404);
+  exit;
+}
+
+$basket = $basket[0];
+$basketItems = FoodDatabase::getDataFromSQL($get_basketItems_sql, $basketParams);
 
 FoodDatabase::startTransaction();
 try {
-  FoodDatabase::executeSQL($update_sql, $params);
-  FoodDatabase::executeSQL($deleteBasketItem, $params);
-  FoodDatabase::executeSQL($deleteBasket, $params);
+  $transactionParams = [":userID" => $basket["userID"]];
+  $transactionID = FoodDatabase::executeSQL($create_transaction_sql, $transactionParams, true);
+
+  foreach ($basketItems as $basketItem) {
+    $transactionDetailsParams = [
+      ":productID" => $basketItem["productID"],
+      ":quantity" => $basketItem["quantity"],
+      ":transactionID" => $transactionID,
+    ];
+    
+    FoodDatabase::executeSQL($create_transactionsDetails_sql, $transactionDetailsParams);
+  }
+
+  FoodDatabase::executeSQL($update_product_qty_sql, $basketParams);
+  FoodDatabase::executeSQL($delete_basketItem, $basketParams);
+  FoodDatabase::executeSQL($delete_basket, $basketParams);
 
   FoodDatabase::commitTransaction();
   http_response_code(200);
