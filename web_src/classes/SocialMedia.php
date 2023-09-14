@@ -28,15 +28,14 @@ function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snap
     // Perform database update here
     // You should establish a database connection and execute an UPDATE query
 
-    // Example code (replace with your database connection and query)
-    
     $servername = "localhost";
-    $username = "your_username";
-    $password = "your_password";
-    $dbname = "your_database_name";
+    $username = "root";
+    $password = "";
+    $database = "foodpantry";
+    $GLOBAL_API_KEY = "848429r2g";
 
     // Create a connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $database);
 
     // Check connection
     if ($conn->connect_error) {
@@ -44,28 +43,10 @@ function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snap
     }
 
     // Prepare the SQL statement
-    $stmt = $conn->prepare("UPDATE adminsocialmedia SET 
-                            facebook = ?, 
-                            instagram = ?, 
-                            twitter = ?, 
-                            snapchat = ?, 
-                            pinterest = ?, 
-                            linkedin = ? 
-                            WHERE admin_id = ?");
-
-    // Bind parameters
-    $stmt->bind_param("ssssssi", $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin, $adminId);
-
-    // Execute the statement
-    if ($stmt->execute()) {
-        // Update successful
-        $stmt->close();
-        $conn->close();
-    } else {
-        // Handle the error
-        echo "Error: " . $stmt->error;
-        $stmt->close();
-        $conn->close();
-    }
+    $sql = "INSERT INTO adminsocialmedia (facebook, instagram, 
+                                            twitter, snapchat, 
+                                            pinterest, linkedin)
+            VALUES ($facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin)";
+        
 }
 ?>
