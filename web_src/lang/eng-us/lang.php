@@ -13,7 +13,7 @@ $translations = array(
     "logon_button" => "LOGON",
     "inventory_button" => "INVENTORY",
     "donate_button" => "DONATE",
-    "learn_more"=> "learn more",
+    "learn_more"=> "Learn More",
     
     // Donations
     "donate_here" => "Donate Here", //Money
