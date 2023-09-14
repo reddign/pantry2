@@ -128,7 +128,7 @@ class GeneralContent{
               <div id="error">'.$error.'</div>
               <form action="index.php" method="POST" class="w3-form">
                   <label id="usernameLabel">Username:</label><br>
-                  <input class="w3-input w3-border" id="username" name="user" placeholder="Type your username" required>
+                  <input class="w3-input w3-border" id="username" name="user" placeholder="Type your student ID" required>
                   <br>
                   <br>
                   <label id="passwordLabel">Password:</label><br>
@@ -151,8 +151,8 @@ class GeneralContent{
                 <h1>Login</h1>
                 <div id="error">'.$error.'</div>
                 <form action="index.php" method="POST" class="w3-form">
-                    <label id="usernameLabel">Username:</label><br>
-                    <input class="w3-input w3-border" id="username" name="user" placeholder="Type your username" required>       
+                    <label id="usernameLabel">Student Id:</label><br>
+                    <input class="w3-input w3-border" id="username" name="user" placeholder="Type your student ID" required>       
                     <br>
                     <br>
                     <input type="submit" class="w3-button w3-red w3-padding-large" id="loginBtn" name="loginBtn" value="LOGIN">
@@ -163,7 +163,7 @@ class GeneralContent{
                 </form>
                 <br>
                 <br>
-                <form action="index.php" method="POST">
+                <form action="index.php?page=register" method="POST">
                     <input type="submit" class="w3-padding-large" id="registerBtn" name="registerBtn" value="Register">
                 </form>
             </div>
@@ -382,14 +382,14 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
                   <h1>Register</h1>
                   <div id="error">' . $error . '</div>
                   <form action="./utils/register.php" method="post" class="w3-form">
-                      <label id="usernameLabel">Username:</label><br>
-                      <input class="w3-input w3-border" id="username" name="username" placeholder="Type your username" required>
+                      <label id="usernameLabel">Student ID:</label><br>
+                      <input class="w3-input w3-border" id="username" name="username" placeholder="Type your student ID" required>
                       <br>
                       <br>
                       <input type="submit" class="w3-button w3-red w3-padding-large" value="Register">
                   </form>
                   <br>
-                  <form action="./utils/register.php" method="POST">
+                  <form action="" method="POST">
                       <input type="submit" class="w3-button w3-blue w3-padding-large" value="Back to Login">
                   </form>
               </div>

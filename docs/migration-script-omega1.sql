@@ -157,8 +157,7 @@ CREATE TABLE IF NOT EXISTS `foodpantry`.`transactionsDetails` (
     REFERENCES `foodpantry`.`transactions` (`transactionID`)
     );
 
-INSERT INTO `user` VALUES (1,'jays',1,'$2y$10$Ux7yFlVtPZsdxRL3eLDnqev89gsHQJzhXe7Rh1c3/Doe4qWUINZ6i');
-INSERT INTO `user` VALUES (2,'1234567',0,null);
+INSERT INTO `user` VALUES (1,'aba2dc56c0c9a7ce7350ab8adf3cbef69ec9dc2fcdd07a9f856442d9758be1b7',1,'$2y$10$Ux7yFlVtPZsdxRL3eLDnqev89gsHQJzhXe7Rh1c3/Doe4qWUINZ6i');
 INSERT INTO `basket` VALUES (1,'2022-10-25', 1),(2,'2022-10-26', 1),(3,'2022-10-25', 1),(4,'2022-10-26', 1),(5,'2022-10-25', 1),(6,'2022-10-26',1 ),(7,'2022-10-26', 1),(8,'2022-10-27', 1),(9,'2022-10-27',1 ),(10,'2022-10-27', 1),(11,'2022-10-27', 1),(12,'2022-10-28',1),(13,'2022-10-29',1),(14,'2022-10-29',1),(15,'2022-10-23',1),(16,'2022-10-24',1);
 INSERT INTO `category` VALUES (1,'breakfast_foods'),(2,'canned_goods'),(3,'fresh_foods'),(4,'snacks'),(5,'wellness_products');
 INSERT INTO `class` VALUES (1,'7th class',48),(2,'8th class',49),(3,'9th glass',32),(4,'10th class',62);

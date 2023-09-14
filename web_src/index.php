@@ -35,9 +35,14 @@ if($loginAttempted){
         $page = "login";
     }
     
-}else if (!isset($_SESSION["LoginStatus"]) || $_SESSION["LoginStatus"] != "YES") {
-    $page = "login";
-}else{
+} else if (!isset($_SESSION["LoginStatus"]) || $_SESSION["LoginStatus"] != "YES") {
+    if(isset($_GET["page"]) && $_GET["page"] == "register") {
+        $page = "register";
+    } else {
+        $page = "login";
+    }
+}
+else{
     $page = isset($_GET["page"])?$_GET["page"]:"about";
 }
 $savingItem = isset($_POST["saveBtn"]) && $_POST["saveBtn"]=="Save Product Info" ? true:false;
