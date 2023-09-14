@@ -30,7 +30,13 @@ if($graphType=="ByProduct"){
   $params = [":catid"=>$catID];
   // echo $sql;
   // print_r($params);
-}else{
+}
+/*
+else if($graphType=="ByUserInfo"){
+  $sql = TODO add sql statment here
+}
+*/
+else{
 
   if(isset($_GET["date1"])){
     $params = [":date1"=>$_GET["date1"],":date2"=>$_GET["date2"]];
