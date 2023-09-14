@@ -18,7 +18,7 @@ class GoogleChartDisplay{
           return $content;
     }
     //TODO make this function work
-   /* public static function getUserDatat($data){
+   /* public static function getUserData($data){
         $content = GoogleChartDisplay::getGoogleJSForBarGraph($data,"Orders on specific dates","Total Products","Date"); 
        
           return $content;
