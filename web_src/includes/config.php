@@ -13,7 +13,7 @@ class checkLang{
         switch ($lang){
 
             case 'english':
-                require_once (__DIR__ . '\..\lang\eng-us\lang.php');
+                require_once (__DIR__ . '/../lang/eng-us/lang.php');
             break;
 
             case 'espanol':
