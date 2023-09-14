@@ -128,13 +128,14 @@ class GeneralContent{
         ';
     }
     public static function getAbout(){
+      global $translations;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small">Blue Jay Pantry</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Blue Jay Pantry</span><br>
-            <span class="w3-large">Free Food for Students In Need.</span>
-            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
+            <span class="w3-large">'. $translations["About_sub_header"].'</span>
+            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">'.$translations["learn_more"].'</a></p>
           </div> 
           <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -147,32 +148,32 @@ class GeneralContent{
         </header>
         <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT</h3>
+  <h3 class="w3-center">'. $translations["About_header"].'</h3>
   <div class="w3-center w3-col m6">
   <img  src="images/BlueJayPantry-Logo-v4.png" style="width:75%">
   </div>
   <div class="w3-col m6">
-  <p class="w3-center w3-large">Free Food for Students In Need</p>
-<p>Elizabethtown College is committed to ensuring that all students have regular access to healthy food options. The Blue Jay Pantry has been established by our Center for Community and Civic Engagement to provide our students with free, non-perishable food items sourced by charitable donations from within our community.</p>
+  <p class="w3-center w3-large">'. $translations["About_sub_header"].'</p>
+<p>'. $translations["About_sub_paragraph"].'</p>
 
-<p>Our College joins over 600 schools nationwide who operate an on-campus food pantry and is a member of the College and University Food Bank Alliance (CUFBA). CUFBA provides colleges and universities with support, training and resources to connect more students with the food and resources they need for educational success.</p>
+<p>'. $translations["About_sub_paragraph_2"].'</p>
  </div>  
-  <h3 class="w3-center">OUR GOALS</h3>
+  <h3 class="w3-center">'. $translations["Our_goals_header"].'</h3>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-third">
       <i class="fa-solid fa-utensils w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>The pantry exists to help eliminate food insecurity at Elizabethtown College.</p>
+      <p class="w3-large">'. $translations["Responsive"].'</p>
+      <p>'. $translations["Responsive_desc"].'</p>
     </div>
     <div class="w3-third">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Accessible</p>
-      <p>The pantry is intended to be accessible to all students in order to eliminate barriers to access for students experiencing hunger and having difficulty buying food and will operate in ways that maximize hospitality and privacy.</p>
+      <p class="w3-large">'. $translations["Accessible"].'</p>
+      <p>'. $translations["Accessible_desc"].'</p>
     </div>
     <div class="w3-third">
       <i class="fa-solid fa-seedling w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Healthy Meals</p>
-      <p>The pantry, in partnership with offices and programs on campus, will provide resources that will help students create healthy meals.</p>
+      <p class="w3-large">'. $translations["Healthy_meals"].'</p>
+      <p>'. $translations["Healthy_meals_desc"].'</p>
     </div>
     
   </div>
@@ -181,19 +182,19 @@ class GeneralContent{
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
   <div class="w3-quarter">
     <span class="w3-xxlarge">140+</span>
-    <br>Students Helped
+    <br>'. $translations["about_statistics_students"].'
   </div>
   <div class="w3-quarter">
     <span class="w3-xxlarge">55,432+</span>
-    <br>Items Distributed
+    <br>'. $translations["about_statistics_items_distributed"].'
   </div>
   <div class="w3-quarter">
     <span class="w3-xxlarge">89+</span>
-    <br>Meals Delivered
+    <br>'. $translations["about_statistics_meals_delivered"].'
   </div>
   <div class="w3-quarter">
     <span class="w3-xxlarge">51+</span>
-    <br>Families Fed
+    <br>'. $translations["about_statistics_families_fed"].'
   </div>
 </div>
 
@@ -201,16 +202,16 @@ class GeneralContent{
 <div class="w3-container w3-light-white" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>We are accessible</h3>
-      <p>Pantry Hours:<BR>
-	  Pantry is open 24/7<BR>
+      <h3>'.$translations["we_are_accessible"].'</h3>
+      <p>'.$translations["pantry_hours"].'<BR>
+      '.$translations["pantry_open"].'<BR>
 	  <BR>
-      Location:<BR>
-      Brossman Commons (BSC) 251<BR>
+    '.$translations["location"].'<BR>
+    '.$translations["BSC251"].'<BR>
 	  <BR>
-Contact Information:<BR>
-Center for Community and Civic Engagement | civicengagement@etown.edu</p>
-      <p><a href="index.php?page=products" class="w3-button w3-red"><i class="fa fa-th"> </i> View Our Inventory</a></p>
+'.$translations["contact_info"].'<BR>
+'.$translations["Center_for_civic"].' | civicengagement@etown.edu</p>
+      <p><a href="index.php?page=products" class="w3-button w3-red"><i class="fa fa-th"> </i> View Our Inventory</a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="images/food-pantry.jpg" alt="Pantry Shelves Image" width="700" height="394">

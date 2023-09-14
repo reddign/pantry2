@@ -4,6 +4,8 @@ global $translations;
 $translations = array(
 //MAIN PAGE
 
+"learn_more"=> "learn more",//change to japanese
+
 //inventory
 "add_button" => "カートに入れる",
 "delete_button" => "削除",
