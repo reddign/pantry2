@@ -30,27 +30,24 @@ if($graphType=="ByProduct"){
   $params = [":catid"=>$catID];
   // echo $sql;
   // print_r($params);
-}
-/*
-else if($graphType=="ByUserInfo"){
-  $sql = TODO add sql statment here
-}
-*/
-else{
+}else{
 
   if(isset($_GET["date1"])){
     $params = [":date1"=>$_GET["date1"],":date2"=>$_GET["date2"]];
-    $where = "where basketDate BETWEEN :date1 and :date2";
+    $where = "where date BETWEEN :date1 and :date2";
   }else{
     $params = null;
     $where = '';
   }
   
 
-  $sql = "select basketDate as productName, COUNT(basketDate) total
-      from Basket
+  // Pulls and Formats transaction Date
+  $sql = "select DATE_FORMAT( date, 'YYYY-MM-DD' ) as transactionDate, COUNT(date) total
+      from transactions
       ".$where."
-      GROUP BY basketDate;";
+      GROUP BY date;";
+
+      
   
   
   }
