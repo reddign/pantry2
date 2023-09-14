@@ -31,12 +31,11 @@ if($graphType=="ByProduct"){
   // echo $sql;
   // print_r($params);
 }
-else if($graphType=="ByUserInfo"){
+/*else if($graphType=="ByUserInfo"){
   $sql = "select COUNT(children), COUNT(adult), COUNT(senior), COUNT(firstuse)
   from registration;
-  echo $sql;
   $params = null;
-}
+}*/
 
 else{
 
