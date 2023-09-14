@@ -21,6 +21,7 @@ $translations = array(
     
     // Contact Section
     "contact" => "CONTACT",
+    "contact_desc" => "Lets get in touch. Send us a message:", //new
     "name" => "Name",
     "email" => "Email",
     "subject" => "Subject",
@@ -34,6 +35,7 @@ $translations = array(
     
     // Bottom of Page
     "to_top_button" => "To the top",
+    "powered_by" => "Powered by ", // new
     "etown_students_link" => "Etown CS Students",
     
     // Admin Login
@@ -72,6 +74,28 @@ $translations = array(
     "BSC251" => "Brossman Commons (BSC) 251",
     "contact_info" => "Contact Information:",
     "Center_for_civic" => "Center for Community and Civic Engagement |"
+    // Donation section new
+    "Donation_Header" => "DONATIONS",
+    "Donation_desc" => "We accept many types of donations.",
+    
+    "Food_head" => "Food",
+    "Food_desc1" => "Cereals/Breads",
+    "Food_desc2" => "Dairy Products",
+    "Food_desc3" => "Fresh Produce",
+    "Food_desc4" => "Snacks",
+    "Food_desc5" => "Health Care Items",
+
+    "Money_Head" => "Money",
+    "Money_desc1" => "Cash/Checks",
+    "Money_desc2" => "PayPal/Venmo",
+    "Money_desc3" => "Automatic Donation",
+
+    "Time_head" => "Time",
+    "Time_desc1" => "Stock Shelves",
+    "Time_desc2" => "Help Guests",
+    "Time_desc3" => "Process Donations",
+    "Time_desc4" => "Manage Inventory",
+
 );
 
 ?>
