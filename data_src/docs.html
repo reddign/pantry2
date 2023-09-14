@@ -91,6 +91,9 @@
           <li class="scroll-to-link" data-target="content-get-user">
             <a>USERS</a>
           </li>
+          <li class="scroll-to-link" data-target="content-create-user">
+            <a><code class="highlighted">POST</code> Create a User</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -485,6 +488,55 @@ Success Response: 200 Status Code
             <code class="higlighted break-word">All the processes for Users are same as Products!</code>
           </h2>
         </div>
+
+        <div class="overflow-hidden content-section" id="content-create-user">
+          <h2>Create a User</h2>
+          <p>
+            To create a new user you need to make a
+            <code class="higlighted break-word">POST</code> request to the
+            following url :<br>
+            <code class="higlighted break-word">http://localhost/data_src/api/user/create.php</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">
+Create User JSON format Example :
+
+{
+
+    <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"username"</span>: <span class="hljs-string">"string"</span>,
+}
+
+On Success, Response Message Will Be:
+
+{
+    <span class="hljs-attr">"userID"</span>: <span class="hljs-string">1</span>
+}
+                  </code></pre>
+          <h4>QUERY PARAMETERS</h4>
+          <table class="central-overflow-x">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>APIKEY</td>
+                <td>String</td>
+                <td>Secret API Key provided</td>
+              </tr>
+              <tr>
+                <td>username</td>
+                <td>String</td>
+                <td>The username of the user</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </div>
     <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
