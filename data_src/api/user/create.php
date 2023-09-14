@@ -19,26 +19,32 @@ if ($key != $GLOBAL_API_KEY){
 }
 
 $uname = $_POST["username"];
+$hashed_username = hashUsernameWithoutSalt($uname);
 
-if (isUsernameTaken($uname)){
+if (isUsernameTaken($hashed_username)){
 	http_response_code(400);
 	echo json_encode(["message"=>"Username is already taken"]);
 	exit;
 }
 
-$params = [":username"=>$uname,":isAdmin"=>0];
+$params = [":username"=>$hashed_username,":isAdmin"=>0];
 $sql = "INSERT INTO user (username,isAdmin) VALUES (:username,:isAdmin);";
 
 $userId = (int) FoodDatabase::executeSQL($sql, $params, true);
 echo json_encode(["userID" => $userId]);
 
-function isUsernameTaken($username){
+function isUsernameTaken($hashed_uname) {
 	$sql = "SELECT username FROM user WHERE username=:username;";
-	$params = [":username"=>$username];
+	$params = [":username"=>$hashed_uname];
 	$result = FoodDatabase::getDataFromSQL($sql,$params);
 
 	if (count($result) > 0){
 		return true;
 	}
 	return false;
+}
+
+function hashUsernameWithoutSalt($username) {
+	$hash = hash("sha256", $username);
+	return $hash;
 }
