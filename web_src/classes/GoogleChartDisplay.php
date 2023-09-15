@@ -17,12 +17,12 @@ class GoogleChartDisplay{
        
           return $content;
     }
-    //TODO make this function work
-   /* public static function getUserData($data){
-        $content = GoogleChartDisplay::getGoogleJSForBarGraph($data,"Orders on specific dates","Total Products","Date"); 
+
+   public static function getUserData($data){
+        $content = GoogleChartDisplay::getGoogleJSForBarGraph($data,"User Info","Total Users","Date"); 
        
           return $content;
-    }*/
+    }
     private static function getGoogleJSForBarGraph($data,$title,$xscale,$yscale){
         $content ='
         <script type="text/javascript">

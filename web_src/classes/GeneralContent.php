@@ -364,6 +364,9 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
             case 'ByProduct':
                 $content .= GoogleChartDisplay::getTotalReport($data);
                 break;
+            case 'ByUserInfo':
+                $content .= GoogleChartDisplay::getTotalReport($data);
+                break;
             default:
                 $content .= GoogleChartDisplay::getTotalReport($data);
 
