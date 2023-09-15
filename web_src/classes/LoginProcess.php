@@ -1,9 +1,16 @@
 <?php
 class LoginProcess {
 
+    private static function hashUsername($username) {
+        $hash = hash("sha256", $username);
+        return $hash;
+    }
+    
+
     public static function processLogin($user, $pass, $url) { 
         global $api_key;
-        $web_string = file_get_contents($url."/data_src/api/user/read.php?APIKEY=$api_key&user=".$user);
+        $hashedUsername = self::hashUsername($user);
+        $web_string = file_get_contents($url."/data_src/api/user/read.php?APIKEY=$api_key&user=".$hashedUsername);
         $users = json_decode($web_string);
         if (is_array($users) && count($users) > 0) {
             $user = array_pop($users);

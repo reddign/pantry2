@@ -1,16 +1,21 @@
 <?php
-include  '../includes/database_config.php';
-include  '../includes/config.php';
+session_start(); 
+
+include '../includes/database_config.php';
+include '../includes/config.php';
 include '../data_src/includes/database_config.php';
+require_once "../classes/LoginProcess.php";
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 global $api_key;
 global $url;
-// reg.php
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
     $username = $_POST['username'];
-    $apiUrl = $url."../../data_src/api/user/create.php"; 
-    echo $username;
-    echo 'api key' .$api_key;
-    echo $apiUrl;
+    $apiUrl = "http://127.0.0.1/pantry2/data_src/api/user/create.php";
+    ; 
     $data = [
         "APIKEY" => $api_key,
         "username" => $username
@@ -26,18 +31,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
     $context = stream_context_create($options);
     $result = file_get_contents($apiUrl, false, $context);
 
-    var_dump($result);
+    if ($result === FALSE) {
+        $error = error_get_last();
+        echo "HTTP request failed. Error was: " . $error['message'];
+    }
     
     $response = json_decode($result, true);
-    var_dump($response);
-
-    if (isset($response['userID'])) {
-        echo "Successfully registered!";
-        echo $response['userID'];
-        // Successfully registered, you can redirect or show a success message
-        header('Location: success_page.php'); // Redirect to a success page or whatever you like
+    
+    if ($response['status'] === 'success') {
+        $success = LoginProcess::processLogin($username,$password,$url);
+        if($success){
+            header('Location: ../successPage.php'); 
+        }else{
+            header('Location: ../index.php'); 
+        }
         exit;
-    } else {
-        $errorMsg = $response['message'];
+    } elseif ($response['status'] === 'error') {
+        $_SESSION['error'] = $response['message'];
+        header('Location: ../index.php?page=register'); 
     }
+
+    exit;
 }
+
+?>
