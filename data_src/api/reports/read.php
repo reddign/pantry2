@@ -32,11 +32,11 @@ if($graphType=="ByProduct"){
   // print_r($params);
 }
 //TODO make this sql work
-/*else if($graphType=="ByUserInfo"){
-  $sql = "select COUNT(children), COUNT(adult), COUNT(senior), COUNT(firstuse)
-  from registration;
+else if($graphType=="ByUserInfo"){
+  $sql = "select userID, SUM(children), SUM(adult), SUM(senior), SUM(firstuse)
+  from registration";
   $params = null;
-}*/
+}
 
 else{
 
