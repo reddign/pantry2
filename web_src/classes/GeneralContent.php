@@ -221,18 +221,17 @@ class GeneralContent{
 
 <!-- Donate Section -->
 <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="donate">
-  <h3>DONATIONS</h3>
-  <p class="w3-large">We accept many types of donations.</p>
+  <h3>'.$translations["Donation_Header"].'</h3>
+  <p class="w3-large">'.$translations["Donation_desc"].'</p>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Food</li>
-        <li class="w3-padding-16">Cereals/Breads</li>
-        <li class="w3-padding-16">Diary Products</li>
-        <li class="w3-padding-16">Fresh Produce</li>
-        <li class="w3-padding-16">Snacks</li>
-        <li class="w3-padding-16">Health Care Items
-        </li>
+        <li class="w3-black w3-xlarge w3-padding-32">'.$translations["Food_head"].'</li>
+        <li class="w3-padding-16">'.$translations["Food_desc1"].'</li>
+        <li class="w3-padding-16">'.$translations["Food_desc2"].'</li>
+        <li class="w3-padding-16">'.$translations["Food_desc3"].'</li>
+        <li class="w3-padding-16">'.$translations["Food_desc4"].'</li>
+        <li class="w3-padding-16">'.$translations["Food_desc5"].'</li>
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-red w3-padding-large">Find Out More</button>
         </li>
@@ -240,10 +239,10 @@ class GeneralContent{
     </div>
     <div class="w3-third">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-blue w3-xlarge w3-padding-48">Money</li>
-        <li class="w3-padding-16">Cash/Checks</li>
-         <li class="w3-padding-16">PayPal/Venmo</li>
-        <li class="w3-padding-16">Automatic Donation</li>
+        <li class="w3-blue w3-xlarge w3-padding-48">'.$translations["Money_Head"].'</li>
+        <li class="w3-padding-16">'.$translations["Money_desc1"].'</li>
+         <li class="w3-padding-16">'.$translations["Money_desc2"].'</li>
+        <li class="w3-padding-16">'.$translations["Money_desc3"].'</li>
       
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-red w3-padding-large">Donate Here</button>
@@ -252,11 +251,11 @@ class GeneralContent{
     </div>
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Time</li>
-        <li class="w3-padding-16">Stock Shelves</li>
-        <li class="w3-padding-16">Help Guests</li>
-        <li class="w3-padding-16">Process Donations</li>
-        <li class="w3-padding-16">Manage Inventory</li>
+        <li class="w3-black w3-xlarge w3-padding-32">'.$translations["Time_head"].'</li>
+        <li class="w3-padding-16">'.$translations["Time_desc1"].'</li>
+        <li class="w3-padding-16">'.$translations["Time_desc2"].'</li>
+        <li class="w3-padding-16">'.$translations["Time_desc3"].'</li>
+        <li class="w3-padding-16">'.$translations["Time_desc4"].'</li>
     
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-red w3-padding-large">Sign Up</button>
@@ -268,8 +267,8 @@ class GeneralContent{
 
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <h3 class="w3-center">'.$translations["contact"].'</h3>
+  <p class="w3-center w3-large">'.$translations["contact_desc"].'</p>
   <div style="margin-top:48px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Elizabethtown College, Brossman Center</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
