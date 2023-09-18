@@ -16,10 +16,14 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>Clayton Greer</h1>
         <div class="section">Clayton Greer is a senior graduating Fall 2023. He is majoring in Computer Engineering. Clayton will also complete a minor in Asian Studies. 
-                             Clayton is working with team Delta to complete localization for development of the food pantry project.  He is focused on the Japanese translation.
+                             Clayton is working with team Delta to complete localization for development of the food pantry project.  He is focused on the translation in Japanese.
        <BR><BR>
        %%no more testing here
        
+       TESTING<BR>
+       Flying<BR>
+       TESTING<BR>
+       Soaring<BR>
        
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
