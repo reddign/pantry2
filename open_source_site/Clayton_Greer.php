@@ -16,12 +16,12 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>Clayton Greer</h1>
         <div class="section">Clayton Greer is a senior graduating Fall 2023. He is majoring in Computer Engineering. Clayton will also complete a minor in Asian Studies. 
-                             Clayton is working with team Delta to complete localization for development of the food pantry project.  He is focused on the Japanese translation.
+                             Clayton is working with team Delta to complete localization for development of the food pantry project.  He is focused on the translation in Japanese.
        <BR><BR>
        TESTING<BR>
+       Flying<BR>
        TESTING<BR>
-       TESTING<BR>
-       TESTING<BR>
+       Soaring<BR>
        TESTING<BR>
        TESTING<BR>
        
