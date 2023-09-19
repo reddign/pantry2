@@ -9,7 +9,7 @@ $api_key = "848429r2g";
 class checkLang{
     public static function switchLang($lang){
         if($lang==NULL){
-        $lang = "french";
+        $lang = "eng-us";
         }
         
         require_once (__DIR__ . '/../lang/' . $lang .'/lang.php');
