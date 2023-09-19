@@ -16,7 +16,7 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>Danielle Strausburger</h1>
         <div class="section"> Danielle Strausburger is a junior at Elizabethtown College. 
-            She is majoring in Computer Science, with a concentration in Web and Application Design, plus a minor in Graphic Design, and intends to graduate in 2025.
+            She is majoring in Computer Science, with a concentration in Web and Application Design. She also is pursuing a minor in Graphic Design, and intends to graduate in 2025.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
