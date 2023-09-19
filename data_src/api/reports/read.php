@@ -34,7 +34,7 @@ if($graphType=="ByProduct"){
 //TODO make this sql work
 else if($graphType=="ByUserInfo"){
   $sql = "select userID, SUM(children), SUM(adult), SUM(senior), SUM(firstuse)
-  from registration";
+  from registration GROUP BY userID";
   $params = null;
 }
 
