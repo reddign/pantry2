@@ -71,7 +71,7 @@ require_once "includes/header.php";
             <br>
             Please contact <a href="mailto:thompsonjavita@etown.edu">Javita Thompson</a> or the <a href="mailto:civicengagement@etown.edu">Center for Community and Civic Engagement</a> with any questions.</p>
         <br>
-        <span class="border"></span>
+        <span class="border"> </span>
         <h2>Volunteer:</h2>
         <p>Contact the <a href="mailto:civicengagement@etown.edu">Center for Community and Civic Engagement</a> if you would like to volunteer with the Blue Jay Pantry or establish a food drive event.</p>
     </div>
