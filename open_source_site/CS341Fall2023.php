@@ -26,7 +26,7 @@ require_once "includes/header.php";
         <a href = 'minacampos.php'>Mina Campos</a>,  
         <a href= 'michaelkennedy.php'>Michael Kennedy</a>,
         <a href='MelissaPatton.php'>Melissa GRACEEEEEE Patttttttttttton</a>,
-        <a href="phillipgoldberg.php">Philllllllllllllllllllllllllll</a>,
+        <a href="phillipgoldberg.php">Phillllllllllffjrfjjf,gellllllllllllllllll</a>,
             <a href= 'anfal_alhussaini.php'>Anfal Al-Hussaini</a>,
             <a href = 'ajbotticelli.php'>AJ Botticelli</a>,
             <a href='tanner_wetzel.php'>Tanner Wetzel</a>,
