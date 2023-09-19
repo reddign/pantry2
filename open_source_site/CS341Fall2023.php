@@ -25,7 +25,7 @@ require_once "includes/header.php";
         From Left to Right:
         <a href = 'minacampos.php'>Mina Campos</a>,  
         <a href= 'michaelkennedy.php'>Michael Kennedy</a>,
-        <a href='MelissaPatton.php'>Melissa G Pattttttttttton</a>,
+        <a href='MelissaPatton.php'>Melissa G Pattttttttttton - Wrong!</a>,
         <a href="phillipgoldberg.php">Philllllllll</a>,
             <a href= 'anfal_alhussaini.php'>Anfal Al-Hussaini</a>,
             <a href = 'ajbotticelli.php'>AJ Botticelli</a>,
