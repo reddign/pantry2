@@ -16,7 +16,7 @@ require_once "includes/header.php";
     <div class="team-section">
         <h1>Nolan Pettit</h1>
         <div class="section">Nolan Pettit is a Junior Computer Science and Data Science double major at Elizabethtown College.
-            hi! 
+            
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
