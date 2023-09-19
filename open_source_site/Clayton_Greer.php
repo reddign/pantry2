@@ -19,7 +19,7 @@ require_once "includes/header.php";
                              Clayton is working with team Delta to complete localization for development of the food pantry project. He has Created the Japanese Translations for the site.
        <BR><BR>
        %%no more testing here
-       
+       TESTING NEW Feature Fixed!!!!<BR>
        TESTING<BR>
        Flying<BR>
        TESTING<BR>
