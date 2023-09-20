@@ -2,8 +2,16 @@
 * Create color variables that link to data stored in style table.
 * Change colors to variables instead of hardcoded colors.
 */
+
+:root {
+  --dark_bg: $data->dark_bg_color;
+  --med_bg: #3DB5E6;
+  --light_bg: #c8c8c8
+}
+
+
 #AboutBody {
-    background-color: #0A2240;
+    background-color: var(--dark_bg);
 }
 
 #headerImg {
