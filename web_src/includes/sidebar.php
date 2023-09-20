@@ -1,4 +1,7 @@
 <!-- Navbar (sit on top) -->
+<?php
+require_once (__DIR__ . '/config.php');
+?>
 <link rel = "stylesheet" type = "text/css" href = "css/languages.css">
 
 <div class="w3-top">
@@ -21,7 +24,7 @@
         <?php
         }else{
           ?>
-           <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i>LOGON</a>
+           
             <!--Languages-->
            <div class = "lang-menu">
            <div class = "selected-lang">LANGUAGES
@@ -29,20 +32,55 @@
            
                 <ul>
                     <li>
-                        <a href="#"><i class = "flag flag-us"></i>ENGLISH</a>
+                        <a href="#" onclick="switchLanguage('eng-us')"><i class = "flag flag-us"></i>ENGLISH</a>
                     </li>
                     <li>
-                        <a href=""><i class = "flag flag-spain"></i>ESPAÑOL</a>
+                        <a href="#" onclick="switchLanguage('espanol')"><i class = "flag flag-spain"></i>ESPAÑOL</a>
                     </li>
                     <li>
-                        <a href=""><i class="flag flag-france"></i>FRANÇAIS</a>
+                        <a href="#" onclick="switchLanguage('french')"><i class="flag flag-france"></i>FRANÇAIS</a>
                     </li>
                     <li>
-                        <a href=""><i class = "flag flag-japan"></i>日本語</a>
+                        <a href="#" onclick="switchLanguage('japanese')"><i class = "flag flag-japan"></i>日本語</a>
                     </li>
                 </ul>
                 
             </div>
+            <script>
+
+function switchLanguage(lang) {
+     const xhr = new XMLHttpRequest();
+     xhr.open("GET","lang/changeLang.php?lang="+lang);
+     xhr.send();
+     xhr.responseType = "json";
+     console.log("Done");
+
+}
+
+              function switchLanguage3(lang) {
+                if(lang == 'eng-us'){
+                  <?php
+                    setcookie("langCook","eng-us",time() + 900000);
+                  ?>
+                  return;
+                } else if(lang == 'espanol'){
+                  <?php
+                    setcookie("langCook","espanol",time() + 900000);
+                  ?>
+                  return;
+                } else if(lang == 'french'){
+                  <?php
+                    setcookie("langCook","french",time() + 900000);
+                  ?>
+                  return;
+                } else if(lang == 'japanese'){
+                  <?php
+                    setcookie("langCook","japanese",time() + 900000);
+                  ?>
+                  return;
+                }            
+              }
+          </script>
         
            <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i><?php echo $translations["logon_button"] ?></a>
   

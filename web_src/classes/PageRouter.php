@@ -6,10 +6,16 @@
  */
 class PageRouter{
     public static function getContent($page,$url){
-        global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key,$lang;
+        global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
+        
         $content = '';
         //determine page spoken language
-        checkLang::switchLang($lang);
+        //make a cookie if there is none
+        if(!isset($_COOKIE["langCook"])){
+            setcookie("langCook","eng-us");
+        }
+        //switch lang to match cookie
+        checkLang::switchLang($_COOKIE["langCook"]);
         //determine page content
         switch($page){
             case "data":
