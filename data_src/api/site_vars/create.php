@@ -22,7 +22,7 @@ if($key!=$GLOBAL_API_KEY){
   exit;
 }
 $params = [":id"=>$userid,":logo"=>$logo,":userpg"=>$user_paragraph,":dark_bg"=>$dark_bg_color,":med_bg"=>$med_bg_color,":light_bg"=>$light_bg_color,":med_border"=>$med_border_color,":dark_border"=>$dark_border_color,":error"=>$error_color];
-$sql = "insert into style (userid,logo,user_paragraph,dark_bg_color,med_bg_color,light_bg_color,med_border_color,dark_bg_color,error_color) VALUES (:id,:logo,:userpg,:dark_bg,:med_bg,:light_bg,:med_border,:dark_border,:error);";
+$sql = "insert into style (userid,logo,user_paragraph,dark_bg_color,med_bg_color,light_bg_color,med_border_color,dark_border_color,error_color) VALUES (:id,:logo,:userpg,:dark_bg,:med_bg,:light_bg,:med_border,:dark_border,:error);";
 FoodDatabase::executeSQL($sql, $params);
 $message = ["message"=>"Style Created Successfully"];
 echo json_encode($message);
