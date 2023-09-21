@@ -3,10 +3,10 @@
 */
 
 :root {
-    --light_bg: #c8c8c8;
-    --med_border: #3DB5E6;
-    --dark_border: black;
-    --error: red;
+    --light_bg: $light_bg_color;
+    --med_border: $data->med_border_color;
+    --dark_border: $data->dark_border_color;
+    --error: $data->error_color;
 }
 
 /* Background Attributes */
