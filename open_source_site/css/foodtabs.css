@@ -1,7 +1,7 @@
 /* *** TO DO ***
-* Create color variables that link to data stored in style table.
-* Change colors to variables instead of hardcoded colors.
+* Change color variables to link to data stored in style table.
 */
+
 body{
     margin:0%;
     margin-left: 15%;
@@ -12,7 +12,7 @@ body{
 .inventoryTabs {
     height: 30px;
     width:-webkit-fill-available;
-    background-color: #004B98;
+    background-color: var(--med_bg);
   }
   
   a.tab {
@@ -20,13 +20,13 @@ body{
     text-decoration: none;
     width: 19.4%;
     height: 26px;
-    background-color: #004B98;
-    color: #c8c8c8;
+    background-color: var(--med_bg);
+    color: var(--light_bg);
     font-weight: bold;
     padding: 0px;
     text-align: center;
     border-style: solid; 
     border-width: 2px;
     border-radius: 3px;
-    border-color: #0A2240;
+    border-color: var(--dark_bg);
   }

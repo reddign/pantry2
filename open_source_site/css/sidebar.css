@@ -1,6 +1,5 @@
 /* *** TO DO ***
-* Create color variables that link to data stored in style table.
-* Change colors to variables instead of hardcoded colors.
+* Change color variables to link to data stored in style table.
 */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -9,11 +8,11 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #0A2240; /* Black */
+    background-color: var(--dark_bg); 
     overflow-y: hidden;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;/*20px*/
-    border-right: solid #c8c8c8;
+    border-right: solid var(--light_bg);
     border-width: 3px;
   }
   
@@ -32,7 +31,7 @@
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #3DB5E6;
+    color: var(--med_border);
   }
 
   .border {
@@ -43,7 +42,7 @@
     margin-top: 30px;
     height: 3px;
     width: 175px;
-    background-color: #3DB5E6;
+    background-color: var(--med_border);
     border-radius: 2px
   }
 
@@ -52,8 +51,8 @@
   } 
 
   #logout {
-    color: red;
+    color: var(--error);
   }
   #logout:hover{
-    color: #3DB5E6;
+    color: var(--med_border);
   }

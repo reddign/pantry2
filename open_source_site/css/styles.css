@@ -1,6 +1,5 @@
 /* *** TO DO ***
-* Create color variables that link to data stored in style table.
-* Change colors to variables instead of hardcoded colors.
+* Change color variables to link to data stored in style table.
 */
 /* .content{
     /* margin-left: 15%;
@@ -21,22 +20,22 @@
   .table tr td {
     border: solid black;
     border-width: 5px;
-    background-color: #c8c8c8;
+    background-color: var(--light_bg);
   }
 
   .productImg {
     height: 300px;
     width:225px;
     padding: 7px;
-    background-color: #c8c8c8;
+    background-color: var(--light_bg);
 
   }
 
   .addCart{
-    background-color: #004B98;
-    color: #c8c8c8;
+    background-color: var(--med_bg);
+    color: var(--light_bg);
     padding: 5px;
     font-weight: bold;
     border-radius: 4px;
-    border-color: #004B98;
+    border-color: var(--med_bg);
   }

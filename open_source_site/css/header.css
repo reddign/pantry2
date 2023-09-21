@@ -1,17 +1,17 @@
 /* *** TO DO ***
-* Create color variables that link to data stored in style table.
-* Change colors to variables instead of hardcoded colors.
+* Change color variables to link to data stored in style table.
 */
+
 #HeaderBody{
     margin:0%;
     margin-left: 15%;
     padding:0%;
     overflow-x: hidden;
-    background-color: #0A2240;
+    background-color: var(--dark_bg);
 }
 .header {
     padding: 0%;
-    background-color: #c8c8c8;
+    background-color: var(--light_bg);
     overflow-x: hidden;
     overflow-y: hidden;
     height: 21.5%;

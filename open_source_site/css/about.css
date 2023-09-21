@@ -1,13 +1,14 @@
 /*  *** TO DO ***
-* Create color variables that link to data stored in style table.
-* Change colors to variables instead of hardcoded colors.
+* Change color variables to link to data stored in style table.
 */
 
 :root {
-  --dark_bg: $data->dark_bg_color;
-  --med_bg: $data->med_bg_color;
-  --light_bg: $data->light_bg_color;
-  --med_border: $data->med_border_color;
+  --dark_bg: #0A2240;
+  --med_border: #3DB5E6;
+  --med_bg: #004B98;
+  --light_bg: #c8c8c8;
+  --dark_border: black;
+  --error: red;
 }
 
 
@@ -45,35 +46,35 @@
 
   .paragraph1 h1 {
     font-size: 50px;
-    color: var(--med_bg);
+    color: var(--med_border);
   }
 
   .paragraph2 {
     padding-left: 250px;
     padding-right: 400px;
     padding-bottom: 100px;
-    color: #c8c8c8;
+    color: var(--light_bg);
     font-size: 23px;
     text-align: justify;
   }
 
   .paragraph2 h1 {
     font-size: 50px;
-    color: #3DB5E6;
+    color: var(--med_border);
   }
 
   .paragraph2 h2 {
     font-size: 40px;
-    color: #004B98;
+    color: var(--med_bg);
     font-weight: bolder;
   }
 
   .paragraph2 a {
     text-decoration: none;
-    color:#004B98;
+    color: var(--med_bg);
   }
 
   .paragraph2 a:hover {
-    color:#3DB5E6;
+    color: var(--med_border);
     font-size: 25px;
   }
