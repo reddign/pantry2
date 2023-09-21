@@ -9,13 +9,7 @@ class PageRouter{
         global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
         
         $content = '';
-        //determine page spoken language
-        //make a cookie if there is none
-        if(!isset($_COOKIE["langCook"])){
-            setcookie("langCook","eng-us");
-        }
-        //switch lang to match cookie
-        checkLang::switchLang($_COOKIE["langCook"]);
+        
         //determine page content
         switch($page){
             case "data":
