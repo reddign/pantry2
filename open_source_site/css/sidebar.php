@@ -1,7 +1,4 @@
-<?php
-<!-- TO DO
-  Change color variables to link to data stored in style table.
--->
+<!--  
 echo "<style type='text/css'>
 :root {
   --dark_bg: <?php echo $dark_bg; ?>;
@@ -68,3 +65,5 @@ echo "<style type='text/css'>
   </style>
 
   ?>
+
+  -->
