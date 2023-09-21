@@ -14,18 +14,18 @@ if($key!=$GLOBAL_API_KEY){
 $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
 
 if($graphType=="ByProduct"){
-  $sql = "select P.productName, COUNT(BI.basketID) total
+  $sql = "select P.productName, Sum(TD.quantity)
   from product P,
-  basketItem BI
-  where P.productID = BI.productID 
+  transactionsDetails TD
+  where P.productID = TD.productID 
   GROUP BY P.productName;";
   $params = null;
 }else if($graphType=="ByCategory"){
   $catID = isset($catID)&&$catID!=""?$catID:2;
-  $sql = "select P.productName, COUNT(BI.basketID) total
+  $sql = "select P.productName, COUNT(TD.transactionID) total
   from product P,
-  basketItem BI
-  where P.productID = BI.productID and catID = :catid
+  transactionsDetails TD
+  where P.productID = TD.productID and p.catID = :catid
   GROUP BY P.productName";
   $params = [":catid"=>$catID];
   // echo $sql;
