@@ -109,7 +109,7 @@ $translations = array(
 "Canned_button" => "缶詰",
 "Fresh_button" => "新鮮な食品",
 "Snacks_button" => "軽食",
-"Wellness_products_button" => "健康製品"
+"Wellness_products_button" => "健康製品",
 
 "Languages_button" => "言語"
 );
