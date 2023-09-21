@@ -110,7 +110,6 @@ CREATE TABLE IF NOT EXISTS `foodpantry`.`basketItem` (
   `basketItemID` INT(11) NOT NULL AUTO_INCREMENT,
   `productID` INT(11) NOT NULL,
   `basketID` INT(11) NOT NULL,
-  `quantity` INT NOT NULL,
   PRIMARY KEY (`basketItemID`),
   CONSTRAINT `BasketItem_ibfk_1`
     FOREIGN KEY (`productID`)
