@@ -53,12 +53,10 @@ class GoogleChartDisplay{
                 $children = isset($info->{'SUM(children)'}) ? $info->{'SUM(children)'} : 0;
                 $adult = isset($info->{'SUM(adult)'}) ? $info->{'SUM(adult)'} : 0;
                 $senior = isset($info->{'SUM(senior)'}) ? $info->{'SUM(senior)'} : 0;
-                $firstuse = isset($info->{'SUM(firstuse)'}) ? $info->{'SUM(firstuse)'} : 0;
         
                 $array_string .= "['Children',".$children."],";
                 $array_string .= "['Adult',".$adult."],";
                 $array_string .= "['Senior',".$senior."],";
-                $array_string .= "['First Use',".$firstuse."],";
             }
         }else{
             foreach($data as $info){
