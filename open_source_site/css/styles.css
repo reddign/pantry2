@@ -1,6 +1,12 @@
 /* *** TO DO ***
 * Change color variables to link to data stored in style table.
 */
+
+:root {
+  --med_bg: #004B98;
+  --light_bg: #c8c8c8;
+}
+
 /* .content{
     /* margin-left: 15%;
     margin-top: 22%; */

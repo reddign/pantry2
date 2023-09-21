@@ -2,6 +2,11 @@
 * Change color variables to link to data stored in style table.
 */
 
+:root {
+    --dark_bg: #0A2240;
+    --light_bg: #c8c8c8;
+}
+
 #HeaderBody{
     margin:0%;
     margin-left: 15%;

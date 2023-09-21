@@ -2,6 +2,13 @@
 * Change color variables to link to data stored in style table.
 */
 
+:root {
+    --dark_bg: #0A2240;
+    --med_bg: #004B98;
+    --light_bg: #c8c8c8;
+    --med_border: #3DB5E6;
+}
+
 .dark-background {
     background: var(--dark_bg);
     color: var(--light_bg);

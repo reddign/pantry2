@@ -1,6 +1,14 @@
 /* *** TO DO ***
 * Change color variables to link to data stored in style table.
 */
+
+:root {
+    --light_bg: #c8c8c8;
+    --med_border: #3DB5E6;
+    --dark_border: black;
+    --error: red;
+}
+
 /* Background Attributes */
 #LoginBody {
     /* background-image: linear-gradient(to right, aqua , #BF40BF); CYAN TO MAGENTA GRADIENT */

@@ -1,6 +1,13 @@
 /* *** TO DO ***
 * Change color variables to link to data stored in style table.
 */
+
+:root {
+  --dark_bg: #0A2240;
+  --light_bg: #c8c8c8;
+  --med_border: #3DB5E6;
+}
+
   .home{
     padding-left: 25px;
     padding-top: 25px;

@@ -1,6 +1,14 @@
 /* *** TO DO ***
 * Change color variables to link to data stored in style table.
 */
+
+:root {
+  --dark_bg: #0A2240;
+  --light_bg: #c8c8c8;
+  --med_border: #3DB5E6;
+  --error: red;
+}
+
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 15%; /* Set the width of the sidebar 250px*/

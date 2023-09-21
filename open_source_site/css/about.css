@@ -4,11 +4,9 @@
 
 :root {
   --dark_bg: #0A2240;
-  --med_border: #3DB5E6;
   --med_bg: #004B98;
   --light_bg: #c8c8c8;
-  --dark_border: black;
-  --error: red;
+  --med_border: #3DB5E6;
 }
 
 
