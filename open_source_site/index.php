@@ -5,7 +5,7 @@ session_start();
 $title = "Blue Jay Pantry";
 
 require_once "includes/header.php";
-require_once "css/stylecolors.php";
+//require_once "css/stylecolors.php";
 
 ?>
 
