@@ -48,7 +48,14 @@ require_once (__DIR__ . '/config.php');
             </div>
             <script>
 
+
+
 function switchLanguage(lang) {
+  document.location ="lang/changeLang.php?lang="+lang;
+}
+
+function switchLanguage2(lang) {
+  alert("Setting Lang " + lang)
      const xhr = new XMLHttpRequest();
      xhr.open("GET","lang/changeLang.php?lang="+lang);
      xhr.send();
@@ -56,31 +63,7 @@ function switchLanguage(lang) {
      console.log("Done");
 
 }
-
-              function switchLanguage3(lang) {
-                if(lang == 'eng-us'){
-                  <?php
-                    setcookie("langCook","eng-us",time() + 900000);
-                  ?>
-                  return;
-                } else if(lang == 'espanol'){
-                  <?php
-                    setcookie("langCook","espanol",time() + 900000);
-                  ?>
-                  return;
-                } else if(lang == 'french'){
-                  <?php
-                    setcookie("langCook","french",time() + 900000);
-                  ?>
-                  return;
-                } else if(lang == 'japanese'){
-                  <?php
-                    setcookie("langCook","japanese",time() + 900000);
-                  ?>
-                  return;
-                }            
-              }
-          </script>
+</script>
         
            <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i><?php echo $translations["logon_button"] ?></a>
   
