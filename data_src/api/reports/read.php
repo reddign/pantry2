@@ -16,7 +16,7 @@ $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
 if($graphType=="ByProduct"){
   $sql = "select P.productName, COUNT(BI.basketID) total
   from product P,
-  BasketItem BI
+  basketItem BI
   where P.productID = BI.productID 
   GROUP BY P.productName;";
   $params = null;
@@ -24,7 +24,7 @@ if($graphType=="ByProduct"){
   $catID = isset($catID)&&$catID!=""?$catID:2;
   $sql = "select P.productName, COUNT(BI.basketID) total
   from product P,
-  BasketItem BI
+  basketItem BI
   where P.productID = BI.productID and catID = :catid
   GROUP BY P.productName";
   $params = [":catid"=>$catID];

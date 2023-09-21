@@ -18,11 +18,11 @@ class GoogleChartDisplay{
           return $content;
     }
 
-   public static function getUserData($data){
-        $content = GoogleChartDisplay::getGoogleJSForBarGraph($data,"User Info","Total Users","Date"); 
-       
-          return $content;
+    public static function getUserData($data) {
+        $content = GoogleChartDisplay::getGoogleJSForBarGraph($data, "User Info", "User Types", "Total Users");
+        return $content;
     }
+
     private static function getGoogleJSForBarGraph($data,$title,$xscale,$yscale){
         $content ='
         <script type="text/javascript">
@@ -42,10 +42,19 @@ class GoogleChartDisplay{
           $content .= GoogleChartDisplay::getDiv();
           return $content;
     }
-    private static function getJSArrayData($data,$titlex,$titley){
+    private static function getJSArrayData($data, $titlex, $titley) {
         $array_string = '["'.$titlex.'","'.$titley.'"],';
-        foreach($data as $info){
-            $array_string .= "['".$info->productName."',".$info->total."],";
+        foreach($data as $info) {
+            $userID = isset($info->userID) ? $info->userID : '';
+            $children = isset($info->{'SUM(children)'}) ? $info->{'SUM(children)'} : 0;
+            $adult = isset($info->{'SUM(adult)'}) ? $info->{'SUM(adult)'} : 0;
+            $senior = isset($info->{'SUM(senior)'}) ? $info->{'SUM(senior)'} : 0;
+            $firstuse = isset($info->{'SUM(firstuse)'}) ? $info->{'SUM(firstuse)'} : 0;
+    
+            $array_string .= "['Children',".$children."],";
+            $array_string .= "['Adult',".$adult."],";
+            $array_string .= "['Senior',".$senior."],";
+            $array_string .= "['First Use',".$firstuse."],";
         }
         return $array_string;
     }

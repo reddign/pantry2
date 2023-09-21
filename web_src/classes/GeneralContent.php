@@ -354,8 +354,6 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
         </div>';
     }
     public static function getReportDisplay($data,$type){
-
-
         $content = '';
         switch($type){
             case 'ByCategory':
@@ -365,7 +363,7 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
                 $content .= GoogleChartDisplay::getTotalReport($data);
                 break;
             case 'ByUserInfo':
-                $content .= GoogleChartDisplay::getTotalReport($data);
+                $content .= GoogleChartDisplay::getUserData($data);
                 break;
             default:
                 $content .= GoogleChartDisplay::getTotalReport($data);
