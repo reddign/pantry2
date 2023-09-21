@@ -1,17 +1,7 @@
-/* *** TO DO ***
-* Change color variables to link to data stored in style table.
-*/
-
-:root {
-    --dark_bg: $data->dark_bg_color;
-    --med_bg: $data->med_bg_color;
-    --light_bg: $data->light_bg_color;
-    --med_border: $data->med_border_color;
-}
 
 .dark-background {
-    background: var(--dark_bg);
-    color: var(--light_bg);
+    background: #0A2240;
+    color: #c8c8c8;
     width: 50%;
     height: auto;
     padding: 30px;
@@ -23,15 +13,15 @@
 }
 .dark-background a{
     text-decoration: none;
-    color: var(--med_border);
+    color: #3DB5E6;
 }
 h4 {
     font-size: 27px;
     text-decoration: overline;
 }
 .gradient-background {
-    background: var(--med_bg);
-    background: radial-gradient(circle, var(--med_bg) 0%, var(--dark_bg) 100%);
+    background: #004B98;
+    background: radial-gradient(circle, #004B98 0%, #0A2240 100%);
     color: var(--white);
     width: 100%;
     height: 1000px;

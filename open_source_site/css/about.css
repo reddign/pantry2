@@ -1,15 +1,3 @@
-/*  *** TO DO ***
-* Change color variables to link to data stored in style table.
-*/
-
-:root {
-  --dark_bg: $data->dark_bg_color;
-  --med_bg: $data->med_bg_color;
-  --light_bg: $data->light_bg_color;
-  --med_border: $data->med_border_color;
-}
-
-
 #AboutBody {
     background-color: #0A2240;
 }
