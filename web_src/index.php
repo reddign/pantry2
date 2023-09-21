@@ -1,4 +1,5 @@
 <?php
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
@@ -7,6 +8,9 @@ require_once "classes/LoginProcess.php";
 require_once "classes/PageRouter.php";
 require_once "classes/GeneralContent.php";
 require_once "classes/EditItemForm.php";
+require_once "classes/CheckLang.php";
+require_once "lang/loadLang.php";
+
 $title = "Blue Jay Pantry";
 $useFoodTabs = false;
 $useChartTabs = false;
