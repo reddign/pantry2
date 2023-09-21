@@ -97,8 +97,9 @@ $translations = array(
     "Time_desc1" => "Stock Shelves",
     "Time_desc2" => "Help Guests",
     "Time_desc3" => "Process Donations",
-    "Time_desc4" => "Manage Inventory"
+    "Time_desc4" => "Manage Inventory",
 
+    "Languages_button" => "LANGUAGES"
 );
 
 ?>
