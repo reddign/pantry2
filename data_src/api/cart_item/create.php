@@ -6,7 +6,7 @@ require_once "../../classes/FoodDatabase.php";
 // Retrieve query parameters from the URL
 $key = isset($_POST["APIKEY"]) ? $_POST["APIKEY"] : "";
 $id = isset($_POST["productID"]) ? intval($_POST["productID"]) : "";
-$quantity = isset($_POST["quantity"]) ? intval($_POST["quantity"]) : "";
+$quantity = isset($_POST["quantity"]) ? intval($_POST["quantity"]) : 1;
 $basket_id = isset($_POST["basketID"]) ? intval($_POST["basketID"]) : "";
 
 // Check if the provided API key matches the global API key
@@ -22,7 +22,7 @@ if ($id == "" || $id == 0) {
 }
 
 // Check if the quantity is valid
-if ($quantity == "" || $quantity == 0) {
+if ($quantity == "" || $quantity <= 0) {
     echo json_encode(["message" => "Invalid Quantity"]);
     exit;
 }
@@ -34,23 +34,20 @@ if ($basket_id == "" || $basket_id == 0) {
 }
 
 // Prepare an array of parameters for SQL queries
-$params = [":id" => $id, ":quantity" => $quantity, ":basket_id" => $basket_id];
+$params = [":id" => $id, ":basket_id" => $basket_id];
 
 try {
     // Check if the product already exists in the cart
     $sqlCheck = "SELECT * FROM basketitem WHERE productID = :id AND BasketID = :basket_id";
     $data = FoodDatabase::getDataFromSQL($sqlCheck, [":id" => $id, ":basket_id" => $basket_id]);
 
-    if ($data !== false && count($data) > 0) {
-        // If the product exists in the cart, update the quantity
-        $sqlUpdate = "UPDATE basketitem SET Quantity = Quantity + :quantity WHERE productID = :id AND BasketID = :basket_id";
-        FoodDatabase::executeSQL($sqlUpdate, $params);} 
-    elseif ($data !== false) {
-        // If the product doesn't exist in the cart, insert it as a new item
-        $sqlInsert = "INSERT INTO basketitem (productID, Quantity, BasketID) VALUES (:id, :quantity, :basket_id)";
-        FoodDatabase::executeSQL($sqlInsert, $params);}
-    else {$message = ["message" => "Invalid value"];
-        echo json_encode($message);}
+    for ($x=0; $x<$quantity; $x++){
+        if ($data !== false) {
+            // If the product doesn't exist in the cart, insert it as a new item
+            $sqlInsert = "INSERT INTO basketitem (productID, BasketID) VALUES (:id, :basket_id)";
+            FoodDatabase::executeSQL($sqlInsert, $params);}
+        else {$message = ["message" => "Invalid value"];
+            echo json_encode($message);}}
 
     // Respond with a success message and HTTP status code 200 (OK)
     http_response_code(200);
