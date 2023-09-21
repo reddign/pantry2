@@ -3,7 +3,7 @@
 */
 
 :root {
-  --dark_bg: $data->dark_bg_color;
+  --dark_bg: <?php echo $dark_bg ?>;
   --light_bg: $data->light_bg_color;
   --med_border: $data->med_border_color;
   --error: $data->error_color;
