@@ -275,10 +275,10 @@ class GeneralContent{
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["name"].' required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["email"].' required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["subject"].' required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["message"].' required name="Message"></p>
       <p>
         <button class="w3-button w3-red" type="submit">
           <i class="fa fa-paper-plane"></i> '.$translations["send_message_button"].'

@@ -26,7 +26,7 @@ $translations = array(
     "name" => "Name",
     "email" => "Email",
     "subject" => "Subject",
-    "message" => "message",
+    "message" => "Message",
     "send_message_button" => "SEND MESSAGE",
     
     // Front Page
