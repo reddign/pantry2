@@ -27,7 +27,7 @@ require_once (__DIR__ . '/config.php');
            
             <!--Languages-->
            <div class = "lang-menu">
-           <div class = "selected-lang">LANGUAGES
+           <div class = "selected-lang"><?php echo $translations["Languages_button"]?>
         </div>
            
                 <ul>
