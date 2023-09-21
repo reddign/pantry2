@@ -6,7 +6,7 @@
  */
 class PageRouter{
     public static function getContent($page,$url){
-        global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
+        global $useFoodTabs,$useChartTabs,$useCategoryTabs, $useSettingTabs, $api_key;
         $content = '';
         //determine page content
         switch($page){
@@ -69,7 +69,7 @@ class PageRouter{
                     // Check if the user is logged in as an admin
                     $content = GeneralContent::getSocialMediaUpdateForm();
                 
-                
+                    $useSettingTabs = true;
             
             break;
 

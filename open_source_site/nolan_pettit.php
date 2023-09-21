@@ -18,7 +18,7 @@ require_once "includes/header.php";
       
        
 
-        <div class="section">Nolan Pettit is a freshman/junior  Computer Science and Data Science double major at Elizabethtown College.
+        <div class="section">Nolan Pettit is a Junior Computer Science and Data Science double major at Elizabethtown College.
        
 
        <BR><BR>

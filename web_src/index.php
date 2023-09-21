@@ -11,6 +11,7 @@ $title = "Blue Jay Pantry";
 $useFoodTabs = false;
 $useChartTabs = false;
 $useCategoryTabs = false;
+$useSettingTabs = false;
 $loginAttempted = isset($_POST["loginBtn"]) && $_POST["loginBtn"]=="LOGIN" ? true:false;
 if($loginAttempted){
     $username = isset($_POST["user"]) ? $_POST["user"]:"";
@@ -51,6 +52,10 @@ if($useFoodTabs){
 }
 if($useChartTabs){
     require_once "includes/charttabs.php";
+}
+
+if($useSettingsTabs){
+    require_once "includes/settingtabs.php";
 }
 
 echo $content;
