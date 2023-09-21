@@ -12,7 +12,6 @@ $translations = array(
     "logon_button" => "PLOGÓN",
     "inventory_button" => "INVENTARIO",
     "donate_button" => "DONAR",
-    "learn_more"=> "learn more", //change to spanish
     
     // Donations
     "donate_here" => "Donar aqui", //Money

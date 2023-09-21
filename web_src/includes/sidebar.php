@@ -43,6 +43,9 @@ require_once (__DIR__ . '/config.php');
                     <li>
                         <a href="#" onclick="switchLanguage('japanese')"><i class = "flag flag-japan"></i>日本語</a>
                     </li>
+                    <li>
+                        <a href="#" onclick="switchLanguage('emoji')"><i class = ":)"></i>EMOJI</a>
+                    </li>
                 </ul>
                 
             </div>
