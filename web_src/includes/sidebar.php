@@ -32,16 +32,16 @@ require_once (__DIR__ . '/config.php');
            
                 <ul>
                     <li>
-                        <a href="#" onclick="switchLanguage('eng-us')"><i class = "flag flag-us"></i>ENGLISH</a>
+                    <a href="#" onclick="switchLanguage('eng-us')"><img src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"></i>ENGLISH</a>
                     </li>
                     <li>
-                        <a href="#" onclick="switchLanguage('espanol')"><i class = "flag flag-spain"></i>ESPAÑOL</a>
+                        <a href="#" onclick="switchLanguage('espanol')"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_España.svg/1200px-Bandera_de_España.svg.png"></i>ESPAÑOL</a>
                     </li>
                     <li>
-                        <a href="#" onclick="switchLanguage('french')"><i class="flag flag-france"></i>FRANÇAIS</a>
+                        <a href="#" onclick="switchLanguage('french')"><img src = "https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg"></i>FRANÇAIS</a>
                     </li>
                     <li>
-                        <a href="#" onclick="switchLanguage('japanese')"><i class = "flag flag-japan"></i>日本語</a>
+                        <a href="#" onclick="switchLanguage('japanese')"><img src = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png"></i>日本語</a>
                     </li>
                     <li>
                         <a href="#" onclick="switchLanguage('emoji')"><i class = ":)"></i>EMOJI</a>
