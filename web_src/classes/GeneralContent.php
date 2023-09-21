@@ -135,7 +135,7 @@ class GeneralContent{
             <span class="w3-jumbo w3-hide-small">Blue Jay Pantry</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Blue Jay Pantry</span><br>
             <span class="w3-large">'. $translations["About_sub_header"].'</span>
-            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">'.$translations["learn_more"].'</a></p>
+            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">'.$translations["learn_more_button"].'</a></p>
           </div> 
           <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -211,7 +211,7 @@ class GeneralContent{
 	  <BR>
 '.$translations["contact_info"].'<BR>
 '.$translations["Center_for_civic"].' | civicengagement@etown.edu</p>
-      <p><a href="index.php?page=products" class="w3-button w3-red"><i class="fa fa-th"> </i> View Our Inventory</a></p>
+      <p><a href="index.php?page=products" class="w3-button w3-red"><i class="fa fa-th"> </i> '.$translations["view_inventory_button"].' </a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="images/food-pantry.jpg" alt="Pantry Shelves Image" width="700" height="394">
@@ -233,7 +233,7 @@ class GeneralContent{
         <li class="w3-padding-16">'.$translations["Food_desc4"].'</li>
         <li class="w3-padding-16">'.$translations["Food_desc5"].'</li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large">Find Out More</button>
+          <button class="w3-button w3-red w3-padding-large">'.$translations["food_find_more"].'</button>
         </li>
       </ul>
     </div>
@@ -245,7 +245,7 @@ class GeneralContent{
         <li class="w3-padding-16">'.$translations["Money_desc3"].'</li>
       
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large">Donate Here</button>
+          <button class="w3-button w3-red w3-padding-large">'.$translations["donate_here"].'</button>
         </li>
       </ul>
     </div>
@@ -258,7 +258,7 @@ class GeneralContent{
         <li class="w3-padding-16">'.$translations["Time_desc4"].'</li>
     
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large">Sign Up</button>
+          <button class="w3-button w3-red w3-padding-large">'.$translations["time_sign_up"].'</button>
         </li>
       </ul>
     </div>
@@ -275,13 +275,13 @@ class GeneralContent{
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["name"].' required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["email"].' required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["subject"].' required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder='.$translations["message"].' required name="Message"></p>
       <p>
         <button class="w3-button w3-red" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          <i class="fa fa-paper-plane"></i> '.$translations["send_message_button"].'
         </button>
       </p>
     </form>
