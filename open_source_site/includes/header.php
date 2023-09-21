@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/sidebar.php">
         <link rel="stylesheet" href="css/foodtabs.css">
         <link rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="css/contact.css">
