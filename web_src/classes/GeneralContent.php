@@ -1,6 +1,6 @@
 <?PHP
 require_once "GoogleChartDisplay.php";
-session_start();
+
 class GeneralContent{
 
     public static function getAllProductsDisplay($products,$title="INVENTORY",$button="addtocart"){
