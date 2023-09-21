@@ -68,3 +68,7 @@
 .lang-menu:hover ul {
     display: block;
 }
+
+img {
+    float:left
+}
