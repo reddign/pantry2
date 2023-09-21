@@ -1,4 +1,5 @@
-
+<?php
+echo "<style type='text/css'>
 :root {
   --med_bg: $data->med_bg_color;
   --light_bg: <?php echo $light_bg; ?>;
@@ -42,3 +43,6 @@
     border-radius: 4px;
     border-color: var(--med_bg);
   }
+</style>
+
+?>

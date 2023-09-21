@@ -1,3 +1,4 @@
+<?php
 <!-- TO DO
   Change color variables to link to data stored in style table.
 -->
@@ -65,3 +66,5 @@ echo "<style type='text/css'>
     color: var(--med_border);
   }
   </style>
+
+  ?>
