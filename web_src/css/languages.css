@@ -1,13 +1,12 @@
 /*LANGUAGES*/
 .lang-menu {
     padding:14px 24px;
-    
     width:auto;
     border:none;
     display:block;
     outline:0;
     cursor:pointer;
-     display:inline-block;
+    display:inline-block;
 }
 .lang-menu:hover {
     background-color: #ccc;
@@ -16,7 +15,7 @@
 .lang-menu .selected-lang {
     display: flex;   
     justify-content: space-between;
-    line-height: 2;
+    line-height: 1.5;
     cursor: pointer;
 }
 .lang-menu .selected-lang:before {
@@ -49,8 +48,8 @@
 .lang-menu ul li a {
     text-decoration: none;
     width: 125px;
-    padding: 5px 10px;
-    display: block;
+    padding: 1px 1px;
+    display: inline-block;
 }
 .lang-menu ul li:hover {
     background-color: #1266AC;
@@ -69,6 +68,9 @@
     display: block;
 }
 
-img {
-    float:left
+
+.lang-menu li img {
+    margin-left: auto;
+    width: 22px;
 }
+
