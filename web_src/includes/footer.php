@@ -12,11 +12,11 @@
       <i class="fa fa-linkedin w3-hover-opacity"></i>
 </a>
 </html>
-    
+
 
   </div>
   
-  <p>Powered by <a href="../open_source_site/team.php" target="_blank" class="w3-hover-text-red">Etown CS Students</a></p>
+  <p> <?php echo $translations["powered_by"]?> <a href="../open_source_site/team.php" target="_blank" class="w3-hover-text-red"><?php echo $translations["etown_students_link"]?></a></p>
 </footer>
  
 <script>
