@@ -11,7 +11,7 @@
 
 
 #AboutBody {
-    background-color: var(--dark_bg);
+    background-color: #0A2240;
 }
 
 #headerImg {
@@ -28,7 +28,7 @@
     margin: auto;
     width: 160px;
     height: 4px;
-    background-color: var(--med_border);
+    background-color: #3DB5E6;
     margin-bottom: 40px;
     border-radius: 2px;
   }
@@ -37,42 +37,42 @@
     padding-left: 250px;
     padding-right: 250px;
     padding-bottom: 50px;
-    color: var(--light_bg);
+    color: #c8c8c8;
     font-size: 23px;
     text-align: justify;
   }
 
   .paragraph1 h1 {
     font-size: 50px;
-    color: var(--med_border);
+    color: #3DB5E6;
   }
 
   .paragraph2 {
     padding-left: 250px;
     padding-right: 400px;
     padding-bottom: 100px;
-    color: var(--light_bg);
+    color: #c8c8c8;
     font-size: 23px;
     text-align: justify;
   }
 
   .paragraph2 h1 {
     font-size: 50px;
-    color: var(--med_border);
+    color: #3DB5E6;
   }
 
   .paragraph2 h2 {
     font-size: 40px;
-    color: var(--med_bg);
+    color: #004B98;
     font-weight: bolder;
   }
 
   .paragraph2 a {
     text-decoration: none;
-    color: var(--med_bg);
+    color: #004B98;
   }
 
   .paragraph2 a:hover {
-    color: var(--med_border);
+    color: #3DB5E6;
     font-size: 25px;
   }
