@@ -111,6 +111,6 @@ $translations = array(
 "Snacks_button" => "軽食",
 "Wellness_products_button" => "健康製品"
 
-
+"Languages_button" => "言語"
 );
 ?>
