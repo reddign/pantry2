@@ -2,6 +2,7 @@
 
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
+require_once "../../classes/Validator.php";
 
 $schema = [
 	'id' => ['required' => true],
@@ -10,7 +11,7 @@ $schema = [
 $validator = new Validator($schema, $_POST);
 $validator->validate();
 
-$key = isset($_GET["APIKEY"]) ? $_GET["APIKEY"] : "";
+$key = isset($_POST["APIKEY"]) ? $_POST["APIKEY"] : "";
 if ($key != $GLOBAL_API_KEY) {
     echo json_encode(["message"=>"Invalid API KEY"]);
     exit;
@@ -48,12 +49,14 @@ $update_product_qty_sql = "UPDATE product p
 ";
 
 $get_basket_sql = "SELECT userID FROM basket WHERE basketID = :basketID";
-$get_basketItems_sql = "SELECT productID, quantity FROM basketItem WHERE basketID = :basketID";
+$get_basketItems_sql = "SELECT productID, COUNT(*) as quantity
+                        FROM basketItem WHERE basketID = :basketID
+                        GROUP BY productID";
 
-$create_transaction_sql = 'INSERT INTO transactions (date, userID)
-                           SET date = NOW(), userID = :userID';
-$create_transactionsDetails_sql = 'INSERT INTO transactionsDetails (transactionID, productID, quantity)
-                                   VALUES (:transactionID, :productID, :quantity)';
+$create_transaction_sql = "INSERT INTO transactions (date, userID)
+                           VALUES(NOW(), :userID)";
+$create_transactionsDetails_sql = "INSERT INTO transactionsDetails (transactionID, productID, quantity)
+                                   VALUES (:transactionID, :productID, :quantity)";
 
 $delete_basketItem = "DELETE FROM BasketItem WHERE basketID = :basketID";
 $delete_basket = "DELETE FROM Basket WHERE basketID = :basketID";
@@ -69,6 +72,10 @@ if (count($basket) == 0) {
 
 $basket = $basket[0];
 $basketItems = FoodDatabase::getDataFromSQL($get_basketItems_sql, $basketParams);
+if (count($basketItems) == 0) {
+  echo json_encode(["message"=>"Basket is empty"]);
+  exit;
+}
 
 FoodDatabase::startTransaction();
 try {
