@@ -85,17 +85,20 @@
           <li class="scroll-to-link" data-target="content-get-cart">
             <a>CARTS</a>
           </li>
+          <li class="scroll-to-link" data-target="content-get-cart_items">
+            <a><code class="highlighted">GET</code> Get Items From Every Cart</a>
+          </li>
+          <li class="scroll-to-link" data-target="content-get-cart_items_with_basketID">
+            <a><code class="highlighted">GET</code> Get Items from a Specific Cart</a>
+          </li>
           <li class="scroll-to-link" data-target="content-checkout-cart">
             <a><code class="highlighted">POST</code> Checkout Cart</a>
           </li>
           <li class="scroll-to-link" data-target="content-get-cart_item">
             <a>CART ITEMS</a>
           </li>
-          <li class="scroll-to-link" data-target="content-get-cart_items">
-            <a><code class="highlighted">GET</code> Get Cart Items From Every Cart</a>
-          </li>
-          <li class="scroll-to-link" data-target="content-get-cart_items_with_basketID">
-            <a><code class="highlighted">GET</code> Get Cart Items from a Specific Cart</a>
+          <li class="scroll-to-link" data-target="content-delete-cart">
+            <a><code class="highlighted">DELETE</code> Delete a Whole Cart</a>
           </li>
           <li class="scroll-to-link" data-target="content-delete-cart_item">
             <a><code class="highlighted">DELETE</code> Remove a Cart Item from a Specific Cart</a>
@@ -453,6 +456,59 @@ Success Response Will Be
           </h2>
         </div>
 
+        <div class="overflow-hidden content-section" id="content-get-cart_items">
+          <h2>Get Items From Every Cart</h2>
+          <p>
+            To get cart items you need to make a GET request to the
+            following url :<br>
+            <code class="higlighted break-word">http://localhost/pantry2/data_src/api/cart/read.php? APIKEY=secretKEYhere</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">
+            
+Get Cart Item Result Format Example for Every Cart:
+[
+    {
+        <span class="hljs-attr">"basketItemID"</span>: <span class="hljs-string">"1"</span>,
+        <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
+        <span class="hljs-attr">"basketID"</span>: <span class="hljs-string">"16"</span>,
+        <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
+    } ...
+]
+</code></pre>
+<h3>
+  This will provide all cart items. So, you don't have to pass any
+  QUERY PARAMETERS
+</h3>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-get-cart_items_with_basketID">
+          <h2>Get Items From A Specific Cart</h2>
+          <p>
+            To get cart items you need to make a GET request to the
+            following url :<br>
+            <code class="higlighted break-word">http://localhost/pantry2/data_src/api/cart/read.php? APIKEY=secretKEYhere&id=basketID</code>
+          </p>
+          <br>
+          <pre>The URL should look like:
+
+            <code class="hljs cpp">
+            http:<span class="hljs-comment">//localhost/pantry2/data_src/api/cart/read.php?APIKEY=secretKEYhere&id=1</span>
+            </code>
+                        <code class="json highlighted hljs">
+            Result for each item from the given cart:
+            
+            [
+              {
+                <span class="hljs-attr">"basketItemID"</span>: <span class="hljs-string">"1"</span>,
+                <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
+                <span class="hljs-attr">"basketID"</span>: <span class="hljs-string">"16"</span>,
+                <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
+              }
+            ]</code></pre>
+<h4>Just pass the basket id to get the specific cart from API</h4>
+        </div>
+
         <div class="overflow-hidden content-section" id="content-checkout-cart">
           <h2>Checkout Cart</h2>
           <p>
@@ -501,57 +557,52 @@ Success Response: 200 Status Code
           </h2>
         </div>
 
-        <div class="overflow-hidden content-section" id="content-get-cart_items">
-          <h2>Get Cart Items From Every Cart</h2>
+        <div class="overflow-hidden content-section" id="content-delete-cart">
+          <h2>Delete a Whole Cart</h2>
           <p>
-            To get cart items you need to make a GET request to the
+            To delete a whole cart you need to make a DELETE request to the
             following url :<br>
-            <code class="higlighted break-word">http://localhost/pantry2/data_src/api/cart_item/read.php? APIKEY=secretKEYhere</code>
+            <code class="higlighted break-word">http://localhost/pantry2/data_src/api/cart_item/delete.php</code>
           </p>
           <br>
           <pre><code class="json highlighted hljs">
-            
-Get Cart Item Result Format Example for Every Cart:
-[
-    {
-        <span class="hljs-attr">"basketItemID"</span>: <span class="hljs-string">"1"</span>,
-        <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
-        <span class="hljs-attr">"basketID"</span>: <span class="hljs-string">"16"</span>,
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
-    } ...
-]
+Remove Cart Item JSON format Example :
+{
+  <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-number">nsW3a567</span>
+  <span class="hljs-attr">"basketID"</span>: <span class="hljs-number">16</span>
+}
+
+Success Response Will Be
+{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cart Successfully Deleted!"</span>
+}
+If the cart doesn't exist in the database, the response message will be
+{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cart Does Not Exist!"</span>
+}
 </code></pre>
-<h3>
-  This will provide all cart items. So, you don't have to pass any
-  QUERY PARAMETERS
-</h3>
-        </div>
-
-        <div class="overflow-hidden content-section" id="content-get-cart_items_with_basketID">
-          <h2>Get Cart Items From A Specific Cart</h2>
-          <p>
-            To get cart items you need to make a GET request to the
-            following url :<br>
-            <code class="higlighted break-word">http://localhost/pantry2/data_src/api/cart_item/read.php? APIKEY=secretKEYhere&id=basketID</code>
-          </p>
-          <br>
-          <pre>The URL should look like:
-
-            <code class="hljs cpp">
-            http:<span class="hljs-comment">//localhost/pantry2/data_src/api/cart_item/read.php?APIKEY=secretKEYhere&id=1</span>
-            </code>
-                        <code class="json highlighted hljs">
-            Result for each item from the given cart:
-            
-            [
-              {
-                <span class="hljs-attr">"basketItemID"</span>: <span class="hljs-string">"1"</span>,
-                <span class="hljs-attr">"productID"</span>: <span class="hljs-string">"201"</span>,
-                <span class="hljs-attr">"basketID"</span>: <span class="hljs-string">"16"</span>,
-                <span class="hljs-attr">"quantity"</span>: <span class="hljs-string">"55"</span>,
-              }
-            ]</code></pre>
-<h4>Just pass the basket id to get the specific cart from API</h4>
+          <h4>QUERY PARAMETERS</h4>
+          <table class="central-overflow-x">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>APIKEY</td>
+                <td>String</td>
+                <td>Secret API Key</td>
+              </tr>
+              <tr>
+                <td>basketID</td>
+                <td>Integer</td>
+                <td>cart that is being deleted</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="overflow-hidden content-section" id="content-delete-cart_item">
@@ -568,13 +619,15 @@ Remove Cart Item JSON format Example :
   <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-number">nsW3a567</span>
   <span class="hljs-attr">"productID"</span>: <span class="hljs-number">0</span>
   <span class="hljs-attr">"basketID"</span>: <span class="hljs-number">16</span>
-  <span class="hljs-attr">"basketItemID"</span>: <span class="hljs-number">9</span>
-  
 }
 
 Success Response Will Be
 {
-    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Product Removed From Cart"</span>
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cart Item Removed Successfully!"</span>
+}
+If the cart item doesn't exist in the database, the response message will be
+{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cart Item Does Not Exist!"</span>
 }</code></pre>
           <h4>QUERY PARAMETERS</h4>
           <table class="central-overflow-x">
@@ -600,11 +653,6 @@ Success Response Will Be
                 <td>basketID</td>
                 <td>Integer</td>
                 <td>cart that the item is being removed from</td>
-              </tr>
-              <tr>
-                <td>basketItemID</td>
-                <td>Integer</td>
-                <td>unique id that specifies which item to remove from the cart</td>
               </tr>
             </tbody>
           </table>
