@@ -14,7 +14,7 @@ if($key!=$GLOBAL_API_KEY){
 $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
 
 if($graphType=="ByProduct"){
-  $sql = "select P.productName, Sum(TD.quantity)
+  $sql = "select P.productName, SUM(TD.quantity) total
   from product P,
   transactionsDetails TD
   where P.productID = TD.productID 
@@ -32,9 +32,15 @@ if($graphType=="ByProduct"){
   // print_r($params);
 }
 //TODO make this sql work
-else if($graphType=="ByUserInfo"){
+else if($graphType=="ByDependentInfo"){
   $sql = "select userID, SUM(children), SUM(adult), SUM(senior)
   from registration GROUP BY userID";
+  $params = null;
+}
+else if($graphType=="ByUserInfo"){
+  $sql = " SELECT count(userID) total 
+  FROM transactions 
+  group by userID;";
   $params = null;
 }
 

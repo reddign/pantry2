@@ -5,6 +5,7 @@
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=reports&graphType=ByProduct">BY PRODUCT</a>
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=reports&graphType=ByCategory">BY CATEGORY</a>
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=reports&graphType=ByDateRange">BY DATE RANGE</a>
+            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=reports&graphType=ByDependentInfo">BY DEPENDENT INFO</a>
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=reports&graphType=ByUserInfo">BY USER INFO</a>
         </div>
 <?php
