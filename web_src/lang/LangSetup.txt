@@ -1,0 +1,15 @@
+In order to create a new language you will need to add a folder with the language's name first
+
+Then copy and translate the lang file from any other language
+
+How to translate files
+    "add_button" => "Add",
+    would become
+    "add_button" => "New Translation Here",
+
+then in the /includes/sidebar.php
+look for the <!--Languages--> Header
+
+    Add a new line like this under the others \/
+
+   < a href="#" onclick="switchLanguage('folderNameHere')"></i>YOUR TEXT LABEL HERE</a>

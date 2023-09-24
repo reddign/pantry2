@@ -51,21 +51,10 @@ require_once (__DIR__ . '/config.php');
             </div>
             <script>
 
-
-
 function switchLanguage(lang) {
   document.location ="lang/changeLang.php?lang="+lang;
 }
 
-function switchLanguage2(lang) {
-  alert("Setting Lang " + lang)
-     const xhr = new XMLHttpRequest();
-     xhr.open("GET","lang/changeLang.php?lang="+lang);
-     xhr.send();
-     xhr.responseType = "json";
-     console.log("Done");
-
-}
 </script>
         
            <a href="index.php?page=login" class="w3-bar-item w3-button"><i class="fa fa-key"></i><?php echo $translations["logon_button"] ?></a>
