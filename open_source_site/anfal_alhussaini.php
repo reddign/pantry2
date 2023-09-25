@@ -15,7 +15,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Anfal Al-Hussaini</h1>
-        <div class="section"> Anfal Al-Hussaini is a senior at Elizabethtown College. She is majoring in Computer Science and minoring in Psychology and Business Administration.
+        <div class="section"> Anfal Al-Hussaini is in the class of 2024 at Elizabethtown College. She is majoring in Computer Science and minoring in Psychology and Business Administration.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
