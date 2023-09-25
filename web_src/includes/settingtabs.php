@@ -2,9 +2,9 @@
 </div>
 <div class="w3-bar w3-dark-blue w3-card">
     
-            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings">Social Media</a>
-            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings">Logo</a>
-            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings">Colors</a>
+            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=social">Social Media</a>
+            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=logo">Logo</a>
+            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=colors">Colors</a>
 </div>
 <?PHP
 if($useCategoryTabs){
@@ -13,7 +13,7 @@ if($useCategoryTabs){
                 
     $categories = json_decode($web_string);
 
-    echo '<div class="settingsTabs">';
+    echo '<div class="settingTabs">';
     foreach($categories as $category){
         echo '<a class="tab" href="index.php?page=<?PHP echo $page ?>&catID='.$category->categoryID.'">'.$category->categoryType.'</a>';
     }

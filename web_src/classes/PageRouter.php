@@ -65,10 +65,15 @@ class PageRouter{
             break;
 
             case "settings":
-           
+                    
+                $subsettings = isset($_GET["subsettings"])?$_GET["subsettings"]:"";
                     // Check if the user is logged in as an admin
+
+                if ($subsettings == "social") {
                     $content = GeneralContent::getSocialMediaUpdateForm();
-                
+                } else if ($subsettings == "colors") {
+                    $content = GeneralContent::getColorForm();
+                }
                     $useSettingTabs = true;
             
             break;

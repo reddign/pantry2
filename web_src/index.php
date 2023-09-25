@@ -54,7 +54,7 @@ if($useChartTabs){
     require_once "includes/charttabs.php";
 }
 
-if($useSettingsTabs){
+if($useSettingTabs){
     require_once "includes/settingtabs.php";
 }
 

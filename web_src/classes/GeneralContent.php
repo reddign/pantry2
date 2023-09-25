@@ -362,7 +362,10 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
       return $content;
   }
   
-
+  public static function getColorForm() {
+    $content = "colorForm";
+    return $content;
+  }
 
 
 
