@@ -3,10 +3,10 @@
 */
 
 :root {
-  --dark_bg: $data->dark_bg_color;
-  --light_bg: $data->light_bg_color;
-  --med_border: $data->med_border_color;
-  --error: $data->error_color;
+  --dark_bg: #0A2240;
+  --light_bg: #c8c8c8;
+  --med_border: #3DB5E6;
+  --error: red;
 }
 
 .sidenav {

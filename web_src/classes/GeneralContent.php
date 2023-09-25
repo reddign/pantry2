@@ -132,10 +132,11 @@ class GeneralContent{
         ';
     }
     public static function getAbout(){
+      global $logo2, $pantryName;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
-            <span class="w3-jumbo w3-hide-small">Blue Jay Pantry</span><br>
+            <span class="w3-jumbo w3-hide-small">'.$pantryName.'</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Blue Jay Pantry</span><br>
             <span class="w3-large">Free Food for Students In Need.</span>
             <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
@@ -153,7 +154,7 @@ class GeneralContent{
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT</h3>
   <div class="w3-center w3-col m6">
-  <img  src="images/BlueJayPantry-Logo-v4.png" style="width:75%">
+  <img  src="'.$logo2.'" style="width:75%">
   </div>
   <div class="w3-col m6">
   <p class="w3-center w3-large">Free Food for Students In Need</p>

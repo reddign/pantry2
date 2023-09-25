@@ -7,7 +7,7 @@ require_once "classes/LoginProcess.php";
 require_once "classes/PageRouter.php";
 require_once "classes/GeneralContent.php";
 require_once "classes/EditItemForm.php";
-$title = "Blue Jay Pantry";
+$title = $pantryName;
 $useFoodTabs = false;
 $useChartTabs = false;
 $useCategoryTabs = false;

@@ -26,7 +26,7 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("images/pantry.jpg");
+  background-image: url(<?PHP echo $backgroundImage; ?>);
   min-height: 100%;
 }
 
