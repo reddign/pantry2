@@ -10,7 +10,7 @@ $api_key = "848429r2g";
 $logo1 = "images/ETOWN_Footer_Logo.png";
 
 //path to the second logo
-$logo2 = "web_src/images/BlueJayPantry-Logo-v4.png";
+$logo2 = "images/BlueJayPantry-Logo-v4.png";
 
 
 //If you wanted to change this image

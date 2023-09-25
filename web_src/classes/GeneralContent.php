@@ -364,7 +364,33 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
   }
   
   public static function getColorForm() {
-    $content = "colorForm";
+    //$content = "colorForm";
+
+    /* ***** To Do ******
+    // Make the entered values link to and change values in the config file.
+    */
+    
+      $content = '
+      <div class="w3-container" style="padding: 128px 10px">
+          <h1>Update Color Scheme</h1>
+            <label for="logo1">Logo 1:</label>
+            <input type="text" name="logo1" id="logo1"><br>
+
+            <label for="logo2">Logo 2:</label>
+            <input type="text" name="logo2" id="logo2"><br>
+
+            <label for="backgroundImage">Background Image:</label>
+            <input type="text" name="backgroundImage" id="backgroundImage"><br>
+
+            <label for="pantryName">Pantry Name:</label>
+            <input type="text" name="pantryName" id="pantryName"><br>
+
+            <label for="navBGColor">Navigation Background Color:</label>
+            <input type="text" name="navBGColor" id="navBGColor"><br>
+
+            <input type="submit" value="Save">
+      </div>';
+    
     return $content;
   }
 
