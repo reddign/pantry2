@@ -23,6 +23,7 @@ require_once "includes/header.php";
             <area shape="rect" coords="260,73,296,35" title="Nathan" href="nathanbrightup.php">
             <area shape="rect" coords="434,51,460,94" title="Ethan Lajeunesse" href="ethanlaj.php">
             <area shape="rect" coords="511,61,532,88" title="Ractangle" href="SamHuhn.php">
+            <area shape="rect" coords="210,73,237,104" alt="Tanner Wetzel" href="tanner_wetzel.php">
         </map>
         <div class="section" style="text-align:center">Our class included:<BR>
         <span class="border"></span>
