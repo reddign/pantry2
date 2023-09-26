@@ -368,6 +368,17 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
     return $content;
   }
 
+  public static function getLogoForm() {
+    $content = '
+    <div class="w3-container" style="padding: 128px 10px">
+      <h2>Upload your logo</h2>
+      <form action="/action_page.php">
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+      </form>
+    </div>';
+    return $content;
+  }
 
 
 }

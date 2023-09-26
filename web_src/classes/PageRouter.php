@@ -73,6 +73,8 @@ class PageRouter{
                     $content = GeneralContent::getSocialMediaUpdateForm();
                 } else if ($subsettings == "colors") {
                     $content = GeneralContent::getColorForm();
+                } else if ($subsettings == 'logo') {
+                    $content = GeneralContent::getLogoForm();
                 }
                     $useSettingTabs = true;
             
