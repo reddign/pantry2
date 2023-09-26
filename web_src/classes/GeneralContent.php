@@ -1,5 +1,7 @@
 <?PHP
 require_once "GoogleChartDisplay.php";
+require_once "SocialMedia.php";
+require_once "PageRouter.php";
 // require_once "../../../../data_src/api/socialmedia/create.php"
 
 
@@ -339,23 +341,23 @@ Contact Information:<BR>
       $content = '
           <div class="w3-container" style="padding: 128px 10px">
               <h1>Update Social Media Links</h1>
-              <form method="POST" action="update_social_media.php">
+              <form method="POST" action="SocialMedia.php">
                   <label for="facebook">Facebook:</label>
                   <input type="text" name="facebook" id="facebook"><br>
 
-                  <label for="twitter">Instagram:</label>
+                  <label for="instagram">Instagram:</label>
                   <input type="text" name="instagram" id="twitter"><br>
 
                   <label for="twitter">Twitter:</label>
                   <input type="text" name="twitter" id="twitter"><br>
 
-                  <label for="twitter">Snapchat:</label>
+                  <label for="snapchat">Snapchat:</label>
                   <input type="text" name="snapchat" id="twitter"><br>
 
-                  <label for="twitter">Pinterest:</label>
+                  <label for="pinterest">Pinterest:</label>
                   <input type="text" name="pinterest" id="twitter"><br>
 
-                  <label for="twitter">LinkedIn:</label>
+                  <label for="linkedin">LinkedIn:</label>
                   <input type="text" name="linkedin" id="twitter"><br>
 
                   <input type="submit" value="Save">
@@ -370,6 +372,9 @@ Contact Information:<BR>
       $content = '
       <div class="w3-container" style="padding: 128px 10px">
           <h1>Update Paragraphs in Website</h1>
+  
+
+
 
             <label for="paragraphHeader">Main Paragraph Header:</label>
             <input type="text" name="paragraphHeader" id="paragraphHeader"><br>

@@ -2,16 +2,31 @@
 <footer class="w3-center w3-dark-blue w3-padding-64">
   <a href="index.php?page=about#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
+
+    <a href="https://www.facebook.com/etowncollege/">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    </a>
+
+    <a href="https://www.instagram.com/etowncollege/">
     <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+
+    <a href="">
     <i class="fa-brands fa-snapchat w3-hover-opacity"></i>
+    </a>
+
+    <a href="https://www.pinterest.com/etowncollege/">
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    </a>
+
+    <a href="https://twitter.com/EtownCollege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
     <i class="fa fa-twitter w3-hover-opacity"></i>
-<html>
-  <a href="https://www.linkedin.com/in/nolan-pettit/" target="_blank" >
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-</a>
-</html>
+    </a>
+
+    <a href="https://www.linkedin.com/school/elizabethtown-college/" target="_blank" >
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>
+
     
 
   </div>
