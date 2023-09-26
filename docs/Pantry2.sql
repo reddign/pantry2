@@ -166,4 +166,4 @@ INSERT INTO `basketItem` VALUES (1,101,1),(2,101,1),(3,202,1),(4,201,1),(5,101,2
 INSERT INTO `transactions` VALUES (1, CURDATE(), 1);
 INSERT INTO `transactions` (`date`, `userID`) VALUES ('2023-09-20', 1), ('2023-09-21', 2), ('2023-09-22', 3);
 INSERT INTO `transactionsDetails` (`transactionID`, `quantity`, `productID`) VALUES (1, 3, 101), (1, 2, 201), (2, 4, 102), (3, 1, 301), (3, 2, 502);
-
+INSERT INTO `registration` VALUES (1,0,1, 2,3);
