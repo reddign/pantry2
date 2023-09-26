@@ -20,19 +20,19 @@ require_once "includes/header.php";
             animation: moveAndScale 10s infinite alternate;
         }
         .home {
-            text-align: center;
-            margin-top: 20px;
+            text-align: left;
+            margin-top: 15px;
         }
         .team-section h1 {
-            font-size: 3em;
-            text-shadow: 3px 3px 5px black;
+            font-size: 2em;
+            text-shadow: 2px 3px 5px black;
         }
         .section {
-            font-size: 2em;
+            font-size: 9em;
         }
         @keyframes moveAndScale {
             0% {
-                transform: scale(1) translate(0, 0);
+                transform: scale(10) translate(0, 0);
                 opacity: 0.5;
             }
             25% {
