@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'PUT') {
 
 $data = file_get_contents("php://input") != null ? json_decode(file_get_contents("php://input")) : die();
 
-// Assuming you have included the necessary database configuration and class files
+
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
 require_once "../../../../web_src/classes/GeneralContent.php";

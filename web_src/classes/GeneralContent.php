@@ -341,7 +341,7 @@ Contact Information:<BR>
       $content = '
           <div class="w3-container" style="padding: 128px 10px">
               <h1>Update Social Media Links</h1>
-              <form method="POST" action="SocialMedia.php">
+              <form method="POST" action="classes/SocialMedia.php">
                   <label for="facebook">Facebook:</label>
                   <input type="text" name="facebook" id="facebook"><br>
 
