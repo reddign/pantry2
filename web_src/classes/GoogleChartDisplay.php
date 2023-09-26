@@ -63,7 +63,16 @@ class GoogleChartDisplay{
                 $array_string .= "['Adult',".$adult."],";
                 $array_string .= "['Senior',".$senior."],";
             }
-        }else{
+        }
+        else if($type==="userInfo"){
+            foreach ($data as $info) {
+                $user = isset($info->user) ? $info->user : '';
+                $count = isset($info->count) ? $info->count : 0;
+    
+                $array_string .= "['" . $info->total. "',".$info->user."],";
+            }
+        }
+        else{
             foreach($data as $info){
                 $array_string .= "['".$info->productName."',".$info->total."],";
             }

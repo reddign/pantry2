@@ -31,19 +31,19 @@ if($graphType=="ByProduct"){
   // echo $sql;
   // print_r($params);
 }
-//TODO make this sql work
+
 else if($graphType=="ByDependentInfo"){
   $sql = "select userID, SUM(children), SUM(adult), SUM(senior)
   from registration GROUP BY userID";
   $params = null;
 }
+//TODO invert this graph
 else if($graphType=="ByUserInfo"){
-  $sql = " SELECT count(userID) total 
-  FROM transactions 
-  group by userID;";
+  $sql = "SELECT x.user, COUNT(x.user) total
+  FROM (SELECT count(userID) user FROM transactions group by userID)x
+  GROUP BY x.user;";
   $params = null;
 }
-
 else{
 
   if(isset($_GET["date1"])){
