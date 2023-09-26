@@ -19,12 +19,17 @@ class GoogleChartDisplay{
        
           return $content;
     }
-
-    public static function getUserData($data) {
-        $type="userInfo";
-        $content = GoogleChartDisplay::getGoogleJSForBarGraph($data, "User Info", "User Types", "Total Users", $type);
+    public static function getDependentData($data) {
+        $type="DependentInfo";
+        $content = GoogleChartDisplay::getGoogleJSForBarGraph($data, "Dependent Info", "User", "Total Users", $type);
         return $content;
     }
+
+   public static function getUserData($data) {
+       $type="userInfo";
+      $content = GoogleChartDisplay::getGoogleJSForBarGraph($data, "Users", "User", "Total Usages", $type);
+     return $content;
+   }
     
     private static function getGoogleJSForBarGraph($data,$title,$xscale,$yscale, $type){
         $content ='
@@ -47,7 +52,7 @@ class GoogleChartDisplay{
     }
     private static function getJSArrayData($data,$titlex,$titley, $type){
         $array_string = '["'.$titlex.'","'.$titley.'"],';
-        if($type==="userInfo"){
+        if($type==="DependentInfo"){
             foreach($data as $info) {
                 $userID = isset($info->userID) ? $info->userID : '';
                 $children = isset($info->{'SUM(children)'}) ? $info->{'SUM(children)'} : 0;
@@ -58,7 +63,16 @@ class GoogleChartDisplay{
                 $array_string .= "['Adult',".$adult."],";
                 $array_string .= "['Senior',".$senior."],";
             }
-        }else{
+        }
+        else if($type==="userInfo"){
+            foreach ($data as $info) {
+                $user = isset($info->user) ? $info->user : '';
+                $count = isset($info->count) ? $info->count : 0;
+    
+                $array_string .= "['" . $info->total. "',".$info->user."],";
+            }
+        }
+        else{
             foreach($data as $info){
                 $array_string .= "['".$info->productName."',".$info->total."],";
             }

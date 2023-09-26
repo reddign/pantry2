@@ -14,30 +14,36 @@ if($key!=$GLOBAL_API_KEY){
 $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
 
 if($graphType=="ByProduct"){
-  $sql = "select P.productName, COUNT(BI.basketID) total
+  $sql = "select P.productName, SUM(TD.quantity) total
   from product P,
-  basketItem BI
-  where P.productID = BI.productID 
+  transactionsDetails TD
+  where P.productID = TD.productID 
   GROUP BY P.productName;";
   $params = null;
 }else if($graphType=="ByCategory"){
   $catID = isset($catID)&&$catID!=""?$catID:2;
-  $sql = "select P.productName, COUNT(BI.basketID) total
+  $sql = "select P.productName, COUNT(TD.transactionID) total
   from product P,
-  basketItem BI
-  where P.productID = BI.productID and catID = :catid
+  transactionsDetails TD
+  where P.productID = TD.productID and p.catID = :catid
   GROUP BY P.productName";
   $params = [":catid"=>$catID];
   // echo $sql;
   // print_r($params);
 }
-//TODO make this sql work
-else if($graphType=="ByUserInfo"){
+
+else if($graphType=="ByDependentInfo"){
   $sql = "select userID, SUM(children), SUM(adult), SUM(senior)
   from registration GROUP BY userID";
   $params = null;
 }
-
+//TODO invert this graph
+else if($graphType=="ByUserInfo"){
+  $sql = "SELECT x.user, COUNT(x.user) total
+  FROM (SELECT count(userID) user FROM transactions group by userID)x
+  GROUP BY x.user;";
+  $params = null;
+}
 else{
 
   if(isset($_GET["date1"])){
