@@ -448,11 +448,11 @@ Contact Information:<BR>
       $content = '
       <div class="w3-container" style="padding: 128px 10px">
           <h1>Update Color Scheme</h1>
-            <label for="logo1">Logo 1:</label>
-            <input type="text" name="logo1" id="logo1"><br>
+          //  <label for="logo1">Logo 1:</label>
+          //  <input type="text" name="logo1" id="logo1"><br>
 
-            <label for="logo2">Logo 2:</label>
-            <input type="text" name="logo2" id="logo2"><br>
+          //  <label for="logo2">Logo 2:</label>
+          // <input type="text" name="logo2" id="logo2"><br>
 
             <label for="backgroundImage">Background Image:</label>
             <input type="text" name="backgroundImage" id="backgroundImage"><br>
