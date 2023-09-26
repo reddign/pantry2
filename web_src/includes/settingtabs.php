@@ -5,6 +5,7 @@
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=social">Social Media</a>
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=logo">Logo</a>
             <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=colors">Colors</a>
+            <a class="w3-bar-item w3-button w3-wide" href="index.php?page=settings&subsettings=paragraphs">Paragraphs</a>
 </div>
 <?PHP
 if($useCategoryTabs){

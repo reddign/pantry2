@@ -73,7 +73,10 @@ class PageRouter{
                     $content = GeneralContent::getSocialMediaUpdateForm();
                 } else if ($subsettings == "colors") {
                     $content = GeneralContent::getColorForm();
+                } else if ($subsettings == "paragraphs") {
+                    $content = GeneralContent::getParagraphUpdateForm();
                 }
+
                     $useSettingTabs = true;
             
             break;
