@@ -41,11 +41,13 @@ $goal1Icon= "fa-solid fa-utensils";
 $goal2Header = "Accessible";
 $goal2Body= "The pantry is intended to be accessible to all students in order to eliminate barriers to access 
 for students experiencing hunger and having difficulty buying food and will operate in ways that maximize hospitality and privacy.";
+$goal2Icon= "fa-solid fa-heart";
 
 //Goal 3
 $goal3Header = "Healthy Meals";
 $goal3Body= "The pantry, in partnership with offices and programs on campus, will provide resources that will help 
 students create healthy meals.";
+$goal3Icon= "fa-solid fa-seedling";
 
 //Dealing with 'We are Accessible' Section
 //Pantry Hours
@@ -59,9 +61,9 @@ $pantryCenter = "Center for Community and Civic Engagement";
 $pantryEmail = "civicengagement@etown.edu";
 
 
-/*
-// Biker vars ********************************************
 
+// Biker vars ********************************************
+/*
 // path to the logo
 $logo1 = "images/custom/bikersAgainstHunger.png";
 
@@ -86,16 +88,18 @@ Our pantry joins over 600 other initiatives nationwide, focusing on providing on
 //Goal 1
 $goal1Header = "Speed";
 $goal1Body= "The pantry helps bikers go faster than ever before!";
-//$goal1Icon= "images/custom/Motorcycle_icon.png"; 
+$goal1Icon= "fa-solid fa-motorcycle"; //used fontawesome.com 
 
 //Goal 2
 $goal2Header = "Love";
 $goal2Body= "This pantry is aimed to bring love and joy to the community through the generosity of others.";
+$goal2Icon= "fa-solid fa-shield-heart";
 
 //Goal 3
 $goal3Header = "Healthy Meals";
 $goal3Body= "The biker pantry, in partnership with stops along the road, 
 will provide resources that will help hungry bikers create healthy meals.";
+$goal3Icon= "fa-solid fa-leaf"; 
 
 //Dealing with 'We are Accessible' Section
 //Pantry Hours

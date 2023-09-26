@@ -133,7 +133,7 @@ class GeneralContent{
     }
     public static function getAbout(){
       global $logo2, $pantryName, $paragraphHeader, $paragraph, $goal1Header, 
-      $goal1Body, $goal2Header, $goal2Body, $goal3Header, $goal3Body, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
+      $goal1Body, $goal1Icon, $goal2Header, $goal2Body, $goal2Icon, $goal3Header, $goal3Body, $goal3Icon, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -166,17 +166,17 @@ class GeneralContent{
   <h3 class="w3-center">OUR GOALS</h3>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-third">
-      <i class="fa-solid fa-utensils w3-margin-bottom w3-jumbo w3-center"></i>
+      <i class="'.$goal1Icon.' w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">'.$goal1Header.'</p> 
       <p>'.$goal1Body.'</p>
     </div>
     <div class="w3-third">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <i class="'.$goal2Icon.' w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">'.$goal2Header.'</p>
       <p>'.$goal2Body.'</p>
     </div>
     <div class="w3-third">
-      <i class="fa-solid fa-seedling w3-margin-bottom w3-jumbo"></i>
+      <i class="'.$goal3Icon.' w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">'.$goal3Header.'</p>
       <p>'.$goal3Body.'</p>
     </div>
