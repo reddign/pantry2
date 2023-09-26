@@ -24,9 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the admin's user ID from the session (ensure it's set and valid)
     $adminId = isset($_SESSION['admin_id']) ? $_SESSION['admin_id'] : 1;
     $newmessage = updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin);
-    
-    echo($newmessage."I am here");
-    exit;
+    $response = json_decode($newmessage);
+    header("location: ../index.php?page=settings&message=".$response->message);
     }
 
 

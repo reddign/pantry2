@@ -17,7 +17,6 @@ $data = file_get_contents("php://input") != null ? json_decode(file_get_contents
 
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
-require_once "../../../../web_src/classes/GeneralContent.php";
 
 // Input validation and sanitation
 $admin_id = isset($data->admin_id) ? $data->admin_id : 0;
