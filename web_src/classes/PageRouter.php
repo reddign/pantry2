@@ -75,7 +75,10 @@ class PageRouter{
                     $content = GeneralContent::getColorForm();
                 } else if ($subsettings == 'logo') {
                     $content = GeneralContent::getLogoForm();
+                } else if ($subsettings == "paragraphs") {
+                    $content = GeneralContent::getParagraphUpdateForm();
                 }
+
                     $useSettingTabs = true;
             
             break;

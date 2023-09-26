@@ -132,7 +132,8 @@ class GeneralContent{
         ';
     }
     public static function getAbout(){
-      global $logo2, $pantryName;
+      global $logo2, $pantryName, $paragraphHeader, $paragraph, $goal1Header, 
+      $goal1Body, $goal2Header, $goal2Body, $goal3Header, $goal3Body, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -157,27 +158,27 @@ class GeneralContent{
   <img  src="'.$logo2.'" style="width:75%">
   </div>
   <div class="w3-col m6">
-  <p class="w3-center w3-large">Free Food for Students In Need</p>
-<p>Elizabethtown College is committed to ensuring that all students have regular access to healthy food options. The Blue Jay Pantry has been established by our Center for Community and Civic Engagement to provide our students with free, non-perishable food items sourced by charitable donations from within our community.</p>
+  <p class="w3-center w3-large">'.$paragraphHeader.'</p>
+  <p class="w3-center w3-large">'.$paragraph.'</p>
 
-<p>Our College joins over 600 schools nationwide who operate an on-campus food pantry and is a member of the College and University Food Bank Alliance (CUFBA). CUFBA provides colleges and universities with support, training and resources to connect more students with the food and resources they need for educational success.</p>
- </div>  
+ </div> 
+
   <h3 class="w3-center">OUR GOALS</h3>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-third">
       <i class="fa-solid fa-utensils w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>The pantry exists to help eliminate food insecurity at Elizabethtown College.</p>
+      <p class="w3-large">'.$goal1Header.'</p> 
+      <p>'.$goal1Body.'</p>
     </div>
     <div class="w3-third">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Accessible</p>
-      <p>The pantry is intended to be accessible to all students in order to eliminate barriers to access for students experiencing hunger and having difficulty buying food and will operate in ways that maximize hospitality and privacy.</p>
+      <p class="w3-large">'.$goal2Header.'</p>
+      <p>'.$goal2Body.'</p>
     </div>
     <div class="w3-third">
       <i class="fa-solid fa-seedling w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Healthy Meals</p>
-      <p>The pantry, in partnership with offices and programs on campus, will provide resources that will help students create healthy meals.</p>
+      <p class="w3-large">'.$goal3Header.'</p>
+      <p>'.$goal3Body.'</p>
     </div>
     
   </div>
@@ -208,13 +209,14 @@ class GeneralContent{
     <div class="w3-col m6">
       <h3>We are accessible</h3>
       <p>Pantry Hours:<BR>
-	  Pantry is open 24/7<BR>
+      '.$pantryHours.'<BR>
 	  <BR>
       Location:<BR>
-      Brossman Commons (BSC) 251<BR>
+      '.$pantryLocation.'<BR>
 	  <BR>
 Contact Information:<BR>
-Center for Community and Civic Engagement | civicengagement@etown.edu</p>
+'.$pantryCenter.' <BR>
+ Email: '.$pantryEmail.' </p>
       <p><a href="index.php?page=products" class="w3-button w3-red"><i class="fa fa-th"> </i> View Our Inventory</a></p>
     </div>
     <div class="w3-col m6">
@@ -363,8 +365,82 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
       return $content;
   }
   
+  public static function getParagraphUpdateForm() {
+    
+      $content = '
+      <div class="w3-container" style="padding: 128px 10px">
+          <h1>Update Paragraphs in Website</h1>
+
+            <label for="paragraphHeader">Main Paragraph Header:</label>
+            <input type="text" name="paragraphHeader" id="paragraphHeader"><br>
+
+            <label for="paragraph">Main Paragraph:</label>
+            <input type="text" name="paragraph" id="paragraph"><br>
+
+            <label for="goal1Header">Goal 1 Header:</label>
+            <input type="text" name="goal1Header" id="goal1Header"><br>
+
+            <label for="goal1Body">Goal 1 Body:</label>
+            <input type="text" name="goal1Body" id="goal1Body"><br>
+
+            <label for="goal2Header">Goal 2 Header:</label>
+            <input type="text" name="goal2Header" id="goal2Header"><br>
+
+            <label for="goal2Body">Goal 2 Body:</label>
+            <input type="text" name="goal2Body" id="goal2Body"><br>
+
+            <label for="goal3Header">Goal 3 Header:</label>
+            <input type="text" name="goal3Header" id="goal3Header"><br>
+
+            <label for="goal3Body">Goal 3 Body:</label>
+            <input type="text" name="goal3Body" id="goal3Body"><br>
+
+            <label for="pantryHours">Pantry Hours:</label>
+            <input type="text" name="pantryHours" id="pantryHours"><br>
+
+            <label for="pantryLocation">Pantry Location:</label>
+            <input type="text" name="pantryLocation" id="pantryLocation"><br>
+
+            <label for="pantryCenter">Pantry Center:</label>
+            <input type="text" name="pantryCenter" id="pantryCenter"><br>
+
+            <label for="pantryEmail">Pantry Email:</label>
+            <input type="text" name="pantryEmail" id="pantryEmail"><br>
+
+            <input type="submit" value="Save">
+      </div>';
+    
+    return $content;
+  }
+
   public static function getColorForm() {
-    $content = "colorForm";
+    //$content = "colorForm";
+
+    /* ***** To Do ******
+    // Make the entered values link to and change values in the config file.
+    */
+    
+      $content = '
+      <div class="w3-container" style="padding: 128px 10px">
+          <h1>Update Color Scheme</h1>
+            <label for="logo1">Logo 1:</label>
+            <input type="text" name="logo1" id="logo1"><br>
+
+            <label for="logo2">Logo 2:</label>
+            <input type="text" name="logo2" id="logo2"><br>
+
+            <label for="backgroundImage">Background Image:</label>
+            <input type="text" name="backgroundImage" id="backgroundImage"><br>
+
+            <label for="pantryName">Pantry Name:</label>
+            <input type="text" name="pantryName" id="pantryName"><br>
+
+            <label for="navBGColor">Navigation Background Color:</label>
+            <input type="text" name="navBGColor" id="navBGColor"><br>
+
+            <input type="submit" value="Save">
+      </div>';
+    
     return $content;
   }
 
@@ -379,6 +455,7 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
     </div>';
     return $content;
   }
+
 
 
 }
