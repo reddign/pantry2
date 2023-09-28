@@ -91,6 +91,9 @@
           <li class="scroll-to-link" data-target="content-get-cart_items_with_basketID">
             <a><code class="highlighted">GET</code> Get Items from a Specific Cart</a>
           </li>
+          <li class="scroll-to-link" data-target="content-new-cart">
+            <a><code class="highlighted">POST</code> Create New Cart</a>
+          </li>
           <li class="scroll-to-link" data-target="content-checkout-cart">
             <a><code class="highlighted">POST</code> Checkout Cart</a>
           </li>
@@ -507,6 +510,53 @@ Get Cart Item Result Format Example for Every Cart:
               }
             ]</code></pre>
 <h4>Just pass the basket id to get the specific cart from API</h4>
+        </div>
+
+        <div class="overflow-hidden content-section" id="content-new-cart">
+          <h2>Create New Cart</h2>
+          <p>
+            To create a cart for a new user you need to make a POST request to the following url:<br>
+            <code class="higlighted break-word">http://localhost/pantry2/data_src/api/cart/create.php</code>
+          </p>
+          <br>
+          <pre><code class="json highlighted hljs">
+Create New Cart JSON format Example :
+{
+  <span class="hljs-attr">"APIKEY"</span>: <span class="hljs-number">nsW3a567</span>
+  <span class="hljs-attr">"userID"</span>: <span class="hljs-number">1</span>
+}
+
+Success Response Will Be
+{
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"New Basket Created, basketID"</span>
+}
+If the user already has a cart
+{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Using Current Basket, basketID"</span>
+}
+</code></pre>
+          <h4>QUERY PARAMETERS</h4>
+          <table class="central-overflow-x">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>APIKEY</td>
+                <td>String</td>
+                <td>Secret API Key</td>
+              </tr>
+              <tr>
+                <td>userID</td>
+                <td>Integer</td>
+                <td>The user's ID the new cart is assigned to</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="overflow-hidden content-section" id="content-checkout-cart">
