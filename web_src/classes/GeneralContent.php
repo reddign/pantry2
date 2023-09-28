@@ -135,7 +135,8 @@ class GeneralContent{
     }
     public static function getAbout(){
       global $logo2, $pantryName, $paragraphHeader, $paragraph, $goal1Header, 
-      $goal1Body, $goal1Icon, $goal2Header, $goal2Body, $goal2Icon, $goal3Header, $goal3Body, $goal3Icon, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
+      $goal1Body, $goal1Icon, $goal2Header, $goal2Body, $goal2Icon, $goal3Header, $goal3Body, 
+      $goal3Icon, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -366,57 +367,70 @@ Contact Information:<BR>
   
       return $content;
   }
-  
+
   public static function getParagraphUpdateForm() {
-    
-      $content = '
-      <div class="w3-container" style="padding: 128px 10px">
-          <h1>Update Paragraphs in Website</h1>
-  
+    $content = '
+    <div class="w3-container" style="padding: 128px 10px">
+        <h1>Update Paragraphs in Website</h1>
+        
+        <p>
+            <span style="text-decoration: underline;">Main Paragraph User Input:</span><br>
+        </p>
+        <label for="paragraphHeader">Main Paragraph Header:</label>
+        <input type="text" name="paragraphHeader" id="paragraphHeader"><br>
 
+        <label for="paragraph">Main Paragraph:</label>
+        <input type="text" name="paragraph" id="paragraph"><br>
 
+        <p>
+            <span style="text-decoration: underline;">Goal 1 User Input:</span><br>
+        </p>
+        <label for="goal1Header">Goal 1 Header:</label>
+        <input type="text" name="goal1Header" id="goal1Header"><br>
 
-            <label for="paragraphHeader">Main Paragraph Header:</label>
-            <input type="text" name="paragraphHeader" id="paragraphHeader"><br>
+        <label for="goal1Body">Goal 1 Body Paragraph:</label>
+        <input type="text" name="goal1Body" id="goal1Body"><br>
 
-            <label for="paragraph">Main Paragraph:</label>
-            <input type="text" name="paragraph" id="paragraph"><br>
+        <p>
+            <span style="text-decoration: underline;">Goal 2 User Input:</span><br>
+        </p>
+        <label for="goal2Header">Goal 2 Header:</label>
+        <input type="text" name="goal2Header" id="goal2Header"><br>
 
-            <label for="goal1Header">Goal 1 Header:</label>
-            <input type="text" name="goal1Header" id="goal1Header"><br>
+        <label for="goal2Body">Goal 2 Body Paragraph:</label>
+        <input type="text" name="goal2Body" id="goal2Body"><br>
 
-            <label for="goal1Body">Goal 1 Body:</label>
-            <input type="text" name="goal1Body" id="goal1Body"><br>
+        <p>
+            <span style="text-decoration: underline;">Goal 4 User Input:</span><br>
+        </p>
+        <label for="goal3Header">Goal 3 Header:</label>
+        <input type="text" name="goal3Header" id="goal3Header"><br>
 
-            <label for="goal2Header">Goal 2 Header:</label>
-            <input type="text" name="goal2Header" id="goal2Header"><br>
+        <label for="goal3Body">Goal 3 Body Paragraph:</label>
+        <input type="text" name="goal3Body" id="goal3Body"><br>
 
-            <label for="goal2Body">Goal 2 Body:</label>
-            <input type="text" name="goal2Body" id="goal2Body"><br>
+        <p>
+            <span style="text-decoration: underline;">Hours, Location, and Contact Information Input:</span><br>
+        </p>
+        <label for="pantryHours">Pantry Hours:</label>
+        <input type="text" name="pantryHours" id="pantryHours"><br>
 
-            <label for="goal3Header">Goal 3 Header:</label>
-            <input type="text" name="goal3Header" id="goal3Header"><br>
+        <label for="pantryLocation">Pantry Location:</label>
+        <input type="text" name="pantryLocation" id="pantryLocation"><br>
 
-            <label for="goal3Body">Goal 3 Body:</label>
-            <input type="text" name="goal3Body" id="goal3Body"><br>
+        <label for="pantryCenter">Pantry Center:</label>
+        <input type="text" name="pantryCenter" id="pantryCenter"><br>
 
-            <label for="pantryHours">Pantry Hours:</label>
-            <input type="text" name="pantryHours" id="pantryHours"><br>
+        <label for="pantryEmail">Pantry Email:</label>
+        <input type="text" name="pantryEmail" id="pantryEmail"><br>
+        </br>
 
-            <label for="pantryLocation">Pantry Location:</label>
-            <input type="text" name="pantryLocation" id="pantryLocation"><br>
+        <input type="submit" value="Save">
 
-            <label for="pantryCenter">Pantry Center:</label>
-            <input type="text" name="pantryCenter" id="pantryCenter"><br>
+    </div>';
+  return $content;
+}
 
-            <label for="pantryEmail">Pantry Email:</label>
-            <input type="text" name="pantryEmail" id="pantryEmail"><br>
-
-            <input type="submit" value="Save">
-      </div>';
-    
-    return $content;
-  }
 
   public static function getColorForm() {
     //$content = "colorForm";

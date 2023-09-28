@@ -60,10 +60,9 @@ $pantryLocation = "Brossman Commons (BSC) 251";
 $pantryCenter = "Center for Community and Civic Engagement";
 $pantryEmail = "civicengagement@etown.edu";
 
-
-
-// Biker vars ********************************************
 /*
+// Biker vars ********************************************
+
 // path to the logo
 $logo1 = "images/custom/bikersAgainstHunger.png";
 
@@ -113,4 +112,5 @@ $pantryCenter = "Biker Community and Fellowship Center";
 $pantryEmail = "NeverHungryBikers@yahoo.com";
 
 */
+
 
