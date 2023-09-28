@@ -42,7 +42,8 @@ class GeneralContent{
         $display .= "<div class='w3-card'>";
         //Image
         $display .= "<img  src='{$product->img}' alt='productImg' style='width:120px;height:160px;'><br>";
-        if($button=="edit")//
+        ///Test comment
+        if($button=="edit")
         {
             $jsaction = " onclick='editItem({$product->productID});' ";
             $buttonMessage = "Edit Item";

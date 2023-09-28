@@ -1,7 +1,4 @@
 <!-- Footer -->
-<?php
-require_once "./database_config.php";
-?>
 <footer class="w3-center w3-dark-blue w3-padding-64">
   <a href="index.php?page=about#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i><?php echo $translations["to_top_button"]?></a>
   <div class="w3-xlarge w3-section">
@@ -29,25 +26,10 @@ function editItem(id){
 
 }
 
-function addItem(id) {
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'http://127.0.0.1/pantry2/data_src/api/cart/checkout.php', true);
-  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  
-  xhr.onload = function() {
-    if (this.status == 200) {
-      const response = JSON.parse(this.responseText);
-      if (response.status === "success") {
-        alert("Item added to cart successfully!");
-      } else {
-        alert(response.message);
-      }
-    }
-  }
+function addItem(id){
+  alert("add to cart item id " + id);
 
-  xhr.send('productID=' + id + '&APIKEY=' + $GLOBAL_API_KEY); 
 }
-
 
 function removeItem(id){
   alert("remove from cart item id " + id);
