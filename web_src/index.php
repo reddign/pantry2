@@ -8,7 +8,6 @@ require_once "classes/PageRouter.php";
 require_once "classes/GeneralContent.php";
 require_once "classes/EditItemForm.php";
 $title = $pantryName;
-
 $useFoodTabs = false;
 $useChartTabs = false;
 $useCategoryTabs = false;

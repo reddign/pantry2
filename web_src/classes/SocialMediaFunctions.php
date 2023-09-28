@@ -16,9 +16,8 @@ function putData($url, $data_json) {
         return false;
         }
  
-
         $message = $response;
-   
+
     return $message; 
 }
 // Function to update social media links in the database
@@ -26,9 +25,9 @@ function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snap
     global $url, $api_key;
     // Perform database update here
     $url = $url."/data_src/api/socialmedia/update.php";
- 
+
     $data = array("APIKEY" => $api_key,"admin_id"=>$adminId,"facebook" => $facebook,"instagram"=>$instagram,"twitter"=>$twitter,"snapchat"=>$snapchat,"pinterest"=>$pinterest,"linkedin"=>$linkedin);
-   
+
     $data_json = json_encode($data);
 
             //use curl to send values to backend data following API:

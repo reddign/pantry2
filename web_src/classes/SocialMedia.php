@@ -2,7 +2,6 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 $x = __DIR__."/../includes/config.php";
-echo $x;
 
 // require "includes/config.php";
 // process_social_media.php

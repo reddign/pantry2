@@ -4,16 +4,13 @@ header("Access-Control-Allow-Origin: *");
 header("Content-type: application/json");
 header("Access-Control-Allow-Methods: PUT");
 header("Access-Control-Allow-Headers: Access-Control-Allow-Headers, Access-Control-Allow-Methods, Content-type, Access-Control-Allow-Origin, Authorization, X-Requested-With");
-
 // Check if the HTTP method is PUT
 if ($_SERVER['REQUEST_METHOD'] !== 'PUT') {
     http_response_code(405); // Method Not Allowed
     echo json_encode(["message" => "Invalid HTTP method"]);
     exit;
 }
-
 $data = file_get_contents("php://input") != null ? json_decode(file_get_contents("php://input")) : die();
-
 
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
@@ -27,19 +24,16 @@ $snapchat = isset($data->snapchat) ? $data->snapchat : "";
 $pinterest = isset($data->pinterest) ? $data->pinterest : "";
 $linkedin = isset($data->linkedin) ? $data->linkedin : "";
 $key = isset($data->APIKEY) ? $data->APIKEY : "";
-
 if ($key !== $GLOBAL_API_KEY) {
     http_response_code(403); // Forbidden
     echo json_encode(["message" => "Invalid API KEY"]);
     exit;
 }
-
 if ($admin_id === 0) {
     http_response_code(400); // Bad Request
     echo json_encode(["message" => "Invalid Admin ID"]);
     exit;
 }
-
 try {
     $params = [
         ":admin_id" => $admin_id,
