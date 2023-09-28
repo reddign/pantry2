@@ -444,10 +444,19 @@ Contact Information:<BR>
     return $content;
   }
 
+  /* ***** To Do ******
+    // Make the submitted logos link to and change values in the config file.
+    */
   public static function getLogoForm() {
     $content = '
     <div class="w3-container" style="padding: 128px 10px">
-      <h2>Upload your logo</h2>
+      <h2>Upload your first logo</h2>
+      <form action="/action_page.php">
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+      </form>
+      <br> 
+      <h2>Upload your secondary logo</h2>
       <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
         <input type="submit">
