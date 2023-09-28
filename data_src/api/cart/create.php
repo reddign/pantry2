@@ -10,7 +10,7 @@ $schema = [
 ];
 
 $validator = new Validator($schema, $_POST);
-$validator->validate();
+$validator->validate(); 
 
 // Check API
 $key = isset($_POST["APIKEY"]) ? $_POST["APIKEY"] : "";
