@@ -1,4 +1,7 @@
 <?php
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 
 require_once "includes/config.php";
@@ -6,6 +9,8 @@ require_once "classes/LoginProcess.php";
 require_once "classes/PageRouter.php";
 require_once "classes/GeneralContent.php";
 require_once "classes/EditItemForm.php";
+require_once "classes/CheckLang.php";
+require_once "lang/loadLang.php";
 
 if(isset($_POST['adminLoginBtn'])){
     $_SESSION["adminLogin"] = true;
@@ -19,6 +24,7 @@ if(isset($_POST['adminLoginBtn'])){
     unset($_SESSION["error"]);
     header("Location: index.php?page=register");
 }
+
 
 $title = "Blue Jay Pantry";
 $useFoodTabs = false;

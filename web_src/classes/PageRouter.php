@@ -7,7 +7,9 @@
 class PageRouter{
     public static function getContent($page,$url){
         global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
+        
         $content = '';
+        
         //determine page content
         switch($page){
             case "data":
