@@ -1,6 +1,5 @@
 <!-- Footer -->
 <?php
-require "../../classes/SocialMedia.php";
 
 // TODO: figure out how to link the social media links to the logo images
 
