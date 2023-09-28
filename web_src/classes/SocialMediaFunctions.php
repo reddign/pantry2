@@ -33,9 +33,9 @@ function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snap
             //use curl to send values to backend data following API:
         //data_src/doc.html
     $message = putData($url, $data_json);
+
     return $message;
 }
-
 
 
 ?>

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once "GoogleChartDisplay.php";
 
 class EditSocialMediaForm{
@@ -30,4 +30,4 @@ class EditSocialMediaForm{
 
     // Other functions for validation and processing can be added here as needed.
 }
-?>
+?> -->
