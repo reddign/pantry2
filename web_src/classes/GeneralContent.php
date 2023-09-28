@@ -1,5 +1,6 @@
 <?PHP
 require_once "GoogleChartDisplay.php";
+
 class GeneralContent{
 
     public static function getAllProductsDisplay($products,$title="INVENTORY",$button="addtocart"){
@@ -97,36 +98,81 @@ class GeneralContent{
           $headersize = "h1";
           $height = "16";
         }
-        return '
-        <div class="w3-container w3-light-grey" style="padding:'.$height.'px 16px">
-            <div id="main">
-                <'.$headersize.'>'.$message.'</'.$headersize.'>
-            </div>
-        </div>';
+    
+        if(isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES"  ){
+          return '
+          <div class="w3-container w3-light-grey" style="padding:'.$height.'px 16px">
+              <div id="main">
+                  <'.$headersize.'>'.$message.'</'.$headersize.'>
+              </div>
+          </div>';
+        }else{
+          return '
+          <div class="w3-container w3-light-grey" style="padding:'.$height.'px 16px">
+              <div id="main">
+                  <'.$headersize.'>'.$message.'</'.$headersize.'>
+              </div>
+              <form action="index.php?page=login" method="POST">
+                  <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to Login">
+              </form>
+          </div>';
+        }
     }
     public static function getLoginForm(){
-        $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
+      $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
+      $adminLogin = (isset($_SESSION["adminLogin"]))?$_SESSION["adminLogin"]:"";
+      if($adminLogin){
+      return '
+      <div class="w3-container w3-light-grey" style="padding:128px 16px">
+          <div id="main">
+              <h1>Admin Login</h1>
+              <div id="error">'.$error.'</div>
+              <form action="index.php" method="POST" class="w3-form">
+                  <label id="usernameLabel">Username:</label><br>
+                  <input class="w3-input w3-border" id="username" name="user" placeholder="Type your student ID" required>
+                  <br>
+                  <br>
+                  <label id="passwordLabel">Password:</label><br>
+                  <input class="w3-input w3-border" id="password" name="pass" type="password" placeholder="Type your password" required>
+                  <br>
+                  <br>
+                  <input type="submit" class="w3-button w3-red w3-padding-large" id="loginBtn" name="loginBtn" value="LOGIN">
+              </form>
+              <br>
+              <form action="index.php" method="POST">
+                  <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to User Login">
+              </form>
+          </div>
+      </div>
+      ';
+      }else{
         return '
         <div class="w3-container w3-light-grey" style="padding:128px 16px">
             <div id="main">
-                <h1>Admin Login</h1>
+                <h1>Login</h1>
                 <div id="error">'.$error.'</div>
                 <form action="index.php" method="POST" class="w3-form">
-                    <label id="usernameLabel">Username:</label><br>
-                    <input class="w3-input w3-border" id="username" name="user" placeholder="Type your username" required>
-                    <br>
-                    <br>
-                    <label id="passwordLabel">Password:</label><br>
-                    <input class="w3-input w3-border" id="password" name="pass" type="password" placeholder="Type your password" required>
+                    <label id="usernameLabel">Student Id:</label><br>
+                    <input class="w3-input w3-border" id="username" name="user" placeholder="Type your student ID" required>       
                     <br>
                     <br>
                     <input type="submit" class="w3-button w3-red w3-padding-large" id="loginBtn" name="loginBtn" value="LOGIN">
-                    <!-- <button>LOGIN</button> -->
+                </form>
+                <br>
+                <form action="index.php" method="POST">
+                    <input type="submit" class="w3-button w3-blue w3-padding-large" id="adminLoginBtn" name="adminLoginBtn" value="Admin Login">
+                </form>
+                <br>
+                <br>
+                <form action="index.php" method="POST">
+                    <input type="submit" class="w3-padding-large" id="registerBtn" name="registerBtn" value="Register">
                 </form>
             </div>
         </div>
         ';
+      }
     }
+  
     public static function getAbout(){
       global $translations;
         return '<!-- Header with full-height image -->
@@ -308,8 +354,6 @@ class GeneralContent{
         </div>';
     }
     public static function getReportDisplay($data,$type){
-
-
         $content = '';
         switch($type){
             case 'ByCategory':
@@ -317,6 +361,12 @@ class GeneralContent{
                 break;
             case 'ByProduct':
                 $content .= GoogleChartDisplay::getTotalReport($data);
+                break;
+            case 'ByDependentInfo': 
+                  $content .= GoogleChartDisplay::getDependentData($data);
+                  break;
+            case 'ByUserInfo':
+                $content .= GoogleChartDisplay::getUserData($data);
                 break;
             default:
                 $content .= GoogleChartDisplay::getTotalReport($data);
@@ -328,7 +378,60 @@ class GeneralContent{
     }
 
 
-
-
+    public static function getRegisterForm() {
+      $error = (isset($_SESSION["error"])) ? $_SESSION["error"] : "";
+      
+      return '
+      <div class="w3-container w3-light-grey" style="padding:128px 16px">
+      <div id="main">
+          <h1>Register</h1>
+          <div id="error">' . $error . '</div>
+          <form action="./utils/register.php" method="post" class="w3-form">
+              <label id="usernameLabel">Student ID:</label><br>
+              <input class="w3-input w3-border" id="username" name="username" placeholder="Type your student ID" required>
+              <br>
+              
+              <label>Is this your first time using the pantry?</label><br>
+              <input type="radio" id="firstTimeYes" name="firstTime" value="true" required> 
+              <label for="firstTimeYes">Yes</label>
+              <input type="radio" id="firstTimeNo" name="firstTime" value="false" required>
+              <label for="firstTimeNo">No</label>
+              <br>
+              
+              <label>Is the food you collected being distributed to other people (roommates, family, children, etc)?</label><br>
+              <input type="radio" id="foodDistributedYes" name="foodDistributed" value="true" required>
+              <label for="foodDistributedYes">Yes</label>
+              <input type="radio" id="foodDistributedNo" name="foodDistributed" value="false" required>
+              <label for="foodDistributedNo">No</label>
+              <br>
+              
+              <label>If yes to the last question, how many children under 18? If no, input "0"</label><br>
+              <input class="w3-input w3-border" type="number" id="childrenUnder18" name="childrenUnder18" placeholder="Type number" min="0" value="" required>
+              <br>
+              
+              <label>If yes, how many adults 18-59? If no, input "0"</label><br>
+              <input class="w3-input w3-border" type="number" id="adults18to59" name="adults18to59" placeholder="Type number" min="0" value="" required>
+              <br>
+              
+              <label>If yes, how many seniors over 60? If no, input "0"</label><br>
+              <input class="w3-input w3-border" type="number" id="seniorsOver60" name="seniorsOver60" placeholder="Type number" min="0" value="" required>
+              <br>
+              
+              <label>Do you have any suggestions for the Blue Jay Pantry?</label><br>
+              <textarea class="w3-input w3-border" id="suggestions" name="suggestions" placeholder="Type your suggestions here" rows="4"></textarea>
+              <br>
+              
+              <input type="submit" class="w3-button w3-red w3-padding-large" value="Register">
+          </form>
+          <br>
+          <form action="index.php" method="POST">
+              <input type="submit" class="w3-button w3-blue w3-padding-large" id="backToUserLoginBtn" name="backToUserLoginBtn" value="Back to Login">
+          </form>
+      </div>
+  </div>
+  
+      ';
+  }
+  
 }
 ?>

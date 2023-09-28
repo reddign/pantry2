@@ -79,6 +79,9 @@ class PageRouter{
             case "login":
                 $content = GeneralContent::getLoginForm();
             break;
+            case "register":
+                $content = GeneralContent::getRegisterForm();
+            break;
             case "logout":
                 $content = LoginProcess::processLogout();
                 $content = GeneralContent::getGeneralMessage(" Logout Success! ");
