@@ -1,46 +1,35 @@
 <?php
-// process_social_media.php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+$x = __DIR__."/../includes/config.php";
 
+// require "includes/config.php";
+// process_social_media.php
+require_once $x;
+
+require "SocialMediaFunctions.php";
 session_start(); // Start the session if not already started
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize the input data
-    $facebook = $_POST["facebook"];
-    $instagram = $_POST["instagram"];
-    $twitter = $_POST["twitter"];
-    $snapchat = $_POST["snapchat"];
-    $pinterest = $_POST["pinterest"];
-    $linkedin = $_POST["linkedin"];
+    $facebook = isset($_POST["facebook"]) ? $_POST["facebook"] : "";
+    $instagram = isset($_POST["instagram"]) ? $_POST["instagram"] : "";
+    $twitter = isset($_POST["twitter"]) ? $_POST["twitter"] : "";
+    $snapchat = isset($_POST["snapchat"]) ? $_POST["snapchat"] : "";
+    $pinterest = isset($_POST["pinterest"]) ? $_POST["pinterest"] : "";
+    $linkedin = isset($_POST["linkedin"]) ? $_POST["linkedin"] : "";
 
-    // Get the admin's user ID (you may need to fetch it based on the admin's session)
-    $adminId = $_SESSION['admin_id']; // Assuming you store the admin's user ID in the session
+    // Get the admin's user ID from the session (ensure it's set and valid)
+    $adminId = isset($_SESSION['admin_id']) ? $_SESSION['admin_id'] : 1;
+    $newmessage = updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin);
+    $response = json_decode($newmessage);
+    header("location: ../index.php?page=settings&message=".$response->message);
+    }
 
-    // Update the admin_social_media table with the new social media links
-    updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin);
 
-    // Redirect back to the settings page or display a success message
-    header("Location: settings.php?success=1");
-    exit();
-}
 
-// Function to update social media links in the database
-function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin) {
-    // Perform database update here
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "foodpantry";
-    $GLOBAL_API_KEY = "848429r2g";
 
-    // Create a connection
-    $conn = new mysqli($servername, $username, $password, $database);
 
-    // Prepare the SQL statement
-    $sql = "INSERT INTO adminsocialmedia (facebook, instagram, 
-                                            twitter, snapchat, 
-                                            pinterest, linkedin)
-            VALUES ($facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin)";
-        
-}
 ?>

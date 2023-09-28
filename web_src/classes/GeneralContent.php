@@ -1,5 +1,6 @@
 <?PHP
 require_once "GoogleChartDisplay.php";
+require_once "PageRouter.php";
 // require_once "../../../../data_src/api/socialmedia/create.php"
 
 
@@ -133,7 +134,8 @@ class GeneralContent{
     }
     public static function getAbout(){
       global $logo2, $pantryName, $paragraphHeader, $paragraph, $goal1Header, 
-      $goal1Body, $goal2Header, $goal2Body, $goal3Header, $goal3Body, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
+      $goal1Body, $goal1Icon, $goal2Header, $goal2Body, $goal2Icon, $goal3Header, $goal3Body, 
+      $goal3Icon, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -166,17 +168,17 @@ class GeneralContent{
   <h3 class="w3-center">OUR GOALS</h3>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-third">
-      <i class="fa-solid fa-utensils w3-margin-bottom w3-jumbo w3-center"></i>
+      <i class="'.$goal1Icon.' w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">'.$goal1Header.'</p> 
       <p>'.$goal1Body.'</p>
     </div>
     <div class="w3-third">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <i class="'.$goal2Icon.' w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">'.$goal2Header.'</p>
       <p>'.$goal2Body.'</p>
     </div>
     <div class="w3-third">
-      <i class="fa-solid fa-seedling w3-margin-bottom w3-jumbo"></i>
+      <i class="'.$goal3Icon.' w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">'.$goal3Header.'</p>
       <p>'.$goal3Body.'</p>
     </div>
@@ -339,23 +341,23 @@ Contact Information:<BR>
       $content = '
           <div class="w3-container" style="padding: 128px 10px">
               <h1>Update Social Media Links</h1>
-              <form method="POST" action="update_social_media.php">
+              <form method="POST" action="classes/SocialMedia.php">
                   <label for="facebook">Facebook:</label>
                   <input type="text" name="facebook" id="facebook"><br>
 
-                  <label for="twitter">Instagram:</label>
+                  <label for="instagram">Instagram:</label>
                   <input type="text" name="instagram" id="twitter"><br>
 
                   <label for="twitter">Twitter:</label>
                   <input type="text" name="twitter" id="twitter"><br>
 
-                  <label for="twitter">Snapchat:</label>
+                  <label for="snapchat">Snapchat:</label>
                   <input type="text" name="snapchat" id="twitter"><br>
 
-                  <label for="twitter">Pinterest:</label>
+                  <label for="pinterest">Pinterest:</label>
                   <input type="text" name="pinterest" id="twitter"><br>
 
-                  <label for="twitter">LinkedIn:</label>
+                  <label for="linkedin">LinkedIn:</label>
                   <input type="text" name="linkedin" id="twitter"><br>
 
                   <input type="submit" value="Save">
@@ -364,54 +366,70 @@ Contact Information:<BR>
   
       return $content;
   }
-  
+
   public static function getParagraphUpdateForm() {
-    
-      $content = '
-      <div class="w3-container" style="padding: 128px 10px">
-          <h1>Update Paragraphs in Website</h1>
+    $content = '
+    <div class="w3-container" style="padding: 128px 10px">
+        <h1>Update Paragraphs in Website</h1>
+        
+        <p>
+            <span style="text-decoration: underline;">Main Paragraph User Input:</span><br>
+        </p>
+        <label for="paragraphHeader">Main Paragraph Header:</label>
+        <input type="text" name="paragraphHeader" id="paragraphHeader"><br>
 
-            <label for="paragraphHeader">Main Paragraph Header:</label>
-            <input type="text" name="paragraphHeader" id="paragraphHeader"><br>
+        <label for="paragraph">Main Paragraph:</label>
+        <input type="text" name="paragraph" id="paragraph"><br>
 
-            <label for="paragraph">Main Paragraph:</label>
-            <input type="text" name="paragraph" id="paragraph"><br>
+        <p>
+            <span style="text-decoration: underline;">Goal 1 User Input:</span><br>
+        </p>
+        <label for="goal1Header">Goal 1 Header:</label>
+        <input type="text" name="goal1Header" id="goal1Header"><br>
 
-            <label for="goal1Header">Goal 1 Header:</label>
-            <input type="text" name="goal1Header" id="goal1Header"><br>
+        <label for="goal1Body">Goal 1 Body Paragraph:</label>
+        <input type="text" name="goal1Body" id="goal1Body"><br>
 
-            <label for="goal1Body">Goal 1 Body:</label>
-            <input type="text" name="goal1Body" id="goal1Body"><br>
+        <p>
+            <span style="text-decoration: underline;">Goal 2 User Input:</span><br>
+        </p>
+        <label for="goal2Header">Goal 2 Header:</label>
+        <input type="text" name="goal2Header" id="goal2Header"><br>
 
-            <label for="goal2Header">Goal 2 Header:</label>
-            <input type="text" name="goal2Header" id="goal2Header"><br>
+        <label for="goal2Body">Goal 2 Body Paragraph:</label>
+        <input type="text" name="goal2Body" id="goal2Body"><br>
 
-            <label for="goal2Body">Goal 2 Body:</label>
-            <input type="text" name="goal2Body" id="goal2Body"><br>
+        <p>
+            <span style="text-decoration: underline;">Goal 4 User Input:</span><br>
+        </p>
+        <label for="goal3Header">Goal 3 Header:</label>
+        <input type="text" name="goal3Header" id="goal3Header"><br>
 
-            <label for="goal3Header">Goal 3 Header:</label>
-            <input type="text" name="goal3Header" id="goal3Header"><br>
+        <label for="goal3Body">Goal 3 Body Paragraph:</label>
+        <input type="text" name="goal3Body" id="goal3Body"><br>
 
-            <label for="goal3Body">Goal 3 Body:</label>
-            <input type="text" name="goal3Body" id="goal3Body"><br>
+        <p>
+            <span style="text-decoration: underline;">Hours, Location, and Contact Information Input:</span><br>
+        </p>
+        <label for="pantryHours">Pantry Hours:</label>
+        <input type="text" name="pantryHours" id="pantryHours"><br>
 
-            <label for="pantryHours">Pantry Hours:</label>
-            <input type="text" name="pantryHours" id="pantryHours"><br>
+        <label for="pantryLocation">Pantry Location:</label>
+        <input type="text" name="pantryLocation" id="pantryLocation"><br>
 
-            <label for="pantryLocation">Pantry Location:</label>
-            <input type="text" name="pantryLocation" id="pantryLocation"><br>
+        <label for="pantryCenter">Pantry Center:</label>
+        <input type="text" name="pantryCenter" id="pantryCenter"><br>
 
-            <label for="pantryCenter">Pantry Center:</label>
-            <input type="text" name="pantryCenter" id="pantryCenter"><br>
+        <label for="pantryEmail">Pantry Email:</label>
+        <input type="text" name="pantryEmail" id="pantryEmail"><br>
+        </br>
 
-            <label for="pantryEmail">Pantry Email:</label>
-            <input type="text" name="pantryEmail" id="pantryEmail"><br>
+        <input type="submit" value="Save">
 
-            <input type="submit" value="Save">
-      </div>';
-    
-    return $content;
-  }
+    </div>';
+  return $content;
+}
+
 
   public static function getColorForm() {
     //$content = "colorForm";
