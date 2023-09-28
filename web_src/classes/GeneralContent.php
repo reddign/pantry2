@@ -442,7 +442,7 @@ Contact Information:<BR>
     //$content = "colorForm";
 
     /* ***** To Do ******
-    // Make the entered values link to and change values in the config file.
+    // Make the entered values link to and change values in the config file, or eventually the database.
     */
     
       $content = '
@@ -459,7 +459,31 @@ Contact Information:<BR>
 
             <input type="submit" value="Save">
       </div>';
-    
+      $content = '
+      <div class="w3-container" style="padding: 128px 10px">
+          <h1>Update Style</h1>
+          <form method="POST" action="classes/Style.php">
+
+          <label for="pantryName">Pantry Name:</label>
+          <input type="text" name="pantryName" id="pantryName"><br>
+
+          <label for="header_logo">Header Logo:</label>
+          <input type="text" name="header_logo" id="header_logo"><br>
+
+          <label for="second_logo">Second Logo:</label>
+          <input type="text" name="second_logo" id="second_logo"><br>
+
+          <label for="background_image">Background Image:</label>
+          <input type="text" name="background_image" id="background_image"><br>
+
+          <label for="nav_bg_Color">Navigation Background Color:</label>
+          <input type="text" name="nav_bg_color" id="nav_bg_color"><br>
+
+          <input type="submit" value="Save">
+          </form>
+      </div>';
+
+
     return $content;
   }
 
