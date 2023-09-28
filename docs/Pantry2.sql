@@ -155,7 +155,10 @@ CREATE TABLE IF NOT EXISTS `foodpantry`.`transactionsDetails` (
     FOREIGN KEY (`transactionID`)
     REFERENCES `foodpantry`.`transactions` (`transactionID`)
     );
-
+    
+-- -----------------------------------------------------
+-- Insert Statments to Populate the Database
+-- -----------------------------------------------------
 INSERT INTO `user` VALUES (1,'aba2dc56c0c9a7ce7350ab8adf3cbef69ec9dc2fcdd07a9f856442d9758be1b7',1,'$2y$10$Ux7yFlVtPZsdxRL3eLDnqev89gsHQJzhXe7Rh1c3/Doe4qWUINZ6i');
 INSERT INTO `user` (`username`, `isAdmin`, `password`) VALUES ('user1', 0, 'password1'), ('user2', 0, 'password2'), ('user3', 0, 'password3');
 INSERT INTO `basket` VALUES (1,'2022-10-25', 1),(2,'2022-10-26', 1),(3,'2022-10-25', 1),(4,'2022-10-26', 1),(5,'2022-10-25', 1),(6,'2022-10-26',1 ),(7,'2022-10-26', 1),(8,'2022-10-27', 1),(9,'2022-10-27',1 ),(10,'2022-10-27', 1),(11,'2022-10-27', 1),(12,'2022-10-28',1),(13,'2022-10-29',1),(14,'2022-10-29',1),(15,'2022-10-23',1),(16,'2022-10-24',1);
