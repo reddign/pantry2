@@ -405,15 +405,15 @@ Center for Community and Civic Engagement | civicengagement@etown.edu</p>
               <label for="foodDistributedNo">No</label>
               <br>
               
-              <label>If yes to the last question, how many children under 18?</label><br>
+              <label>If yes to the last question, how many children under 18? If no, input "0"</label><br>
               <input class="w3-input w3-border" type="number" id="childrenUnder18" name="childrenUnder18" placeholder="Type number" min="0" value="" required>
               <br>
               
-              <label>If yes, how many adults 18-59?</label><br>
+              <label>If yes, how many adults 18-59? If no, input "0"</label><br>
               <input class="w3-input w3-border" type="number" id="adults18to59" name="adults18to59" placeholder="Type number" min="0" value="" required>
               <br>
               
-              <label>If yes, how many seniors over 60?</label><br>
+              <label>If yes, how many seniors over 60? If no, input "0"</label><br>
               <input class="w3-input w3-border" type="number" id="seniorsOver60" name="seniorsOver60" placeholder="Type number" min="0" value="" required>
               <br>
               
