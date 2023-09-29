@@ -1,8 +1,41 @@
 <?php
 
+//~~~~~~~~~~~~~~TODO: Make a datamodel 'content' with the following entities: ~~~~~~~~~
+//$paragraphHeader, $paragraph, $goal1Header, $goal1Body, $goal2Header, $goal2Body, 
+//$goal3Header, $goal3Body, $pantryHours, $pantryLocation, $pantryCenter, %pantryEmail, $donationBody
+
+//Example of what 'content' table may look like:
+/*
+DROP TABLE IF EXISTS content;
+
+CREATE TABLE content (
+    'paragraphHeader' VARCHAR(150) NOT NULL, 
+    'paragraph' VARCHAR(750) DEFAULT NULL,
+    'goal1Header' VARCHAR(150) NOT NULL, 
+    'goal1Body' VARCHAR(750) DEFAULT NULL,
+    'goal2Header' VARCHAR(150) NOT NULL, 
+    'goal2Body' VARCHAR(750) DEFAULT NULL,
+    'goal3Header' VARCHAR(150) NOT NULL, 
+    'goal3Body' VARCHAR(750) DEFAULT NULL,
+    'pantryHours' VARCHAR(150) NOT NULL, 
+    'pantryLocation' VARCHAR(150) NOT NULL, 
+    'pantryCenter' VARCHAR(150) NOT NULL, 
+    'pantryEmail' VARCHAR(150) NOT NULL, 
+    'donationBody' VARCHAR(150) NOT NULL, 
+);
+*/
+
+//~~~~~~~~~~~~~~TODO: Goal Icons~~~~~~~~~~~~~~~~
+//The Goal icons (fork + knife, heart, and leaf) came from the website fontawesome.com, may be advantageous to design something so users can input their own photos
+//Add the entities $goal1Icon, $goal2Icon, and $goal3Icon to a datamodel 
+
 $url = "http://127.0.0.1/pantry2";
 
 $api_key = "848429r2g";
+
+/* TO DO *****
+// Make variables link to database values.
+*/
 
 // Etown vars *********************************************
 
@@ -41,7 +74,7 @@ $goal1Icon= "fa-solid fa-utensils";
 $goal2Header = "Accessible";
 $goal2Body= "The pantry is intended to be accessible to all students in order to eliminate barriers to access 
 for students experiencing hunger and having difficulty buying food and will operate in ways that maximize hospitality and privacy.";
-$goal2Icon= "fa-solid fa-heart";
+$goal2Icon= "fa-solid fa-heart"; 
 
 //Goal 3
 $goal3Header = "Healthy Meals";
@@ -59,6 +92,10 @@ $pantryLocation = "Brossman Commons (BSC) 251";
 //Contact Information
 $pantryCenter = "Center for Community and Civic Engagement";
 $pantryEmail = "civicengagement@etown.edu";
+
+//Dealing with Donation Information
+//Donation Header is still hardcoded and NOT changed
+//$donationBody = "We accept many types of donations."
 
 /*
 // Biker vars ********************************************
@@ -110,6 +147,11 @@ $pantryLocation = "On the Road";
 //Contact Information
 $pantryCenter = "Biker Community and Fellowship Center";
 $pantryEmail = "NeverHungryBikers@yahoo.com";
+
+//Dealing with Donation Information
+//Donation Header is still hardcoded and NOT changed
+//$donationBody = "Hand over those donations."
+
 
 */
 

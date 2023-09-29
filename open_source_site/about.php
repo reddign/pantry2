@@ -4,15 +4,6 @@ error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 $title = "About BlueJay Pantry"; 
 
-//TODO: Paramertize paragraphs, no Hardcoding!! 
-
-//TODO: Define variables here for paragraph paramertization
-//$paragraph1, $paragraph2, etc. 
-
-//TODO: Define varaibles here for titles of paragraphs 
-// $title1, $title2, etc. 
-
-
 require_once "includes/header.php";
 
 ?>
@@ -26,7 +17,7 @@ require_once "includes/header.php";
     <!-- <span class="border"></span> -->
     <div class="paragraph1">
 
-    <!-- Free Food for Students in Need Paragraph, hardcoded -->
+    <!-- Free Food for Students in Need Paragraph -->
         <h1>Blue Jay Pantry</h1> 
         <p> 
             Elizabethtown College is committed to ensuring that all students have regular access to healthy food options. 
@@ -40,22 +31,20 @@ require_once "includes/header.php";
     </div>
     <span class="border"></span>
     <div class="paragraph2">
-        <h1>About The Program</h1> <!-- TODO: Find location of line on website -->
+        <h1>About The Program</h1> 
         <h2>Our Goals:</h2>
         <ul>
-            <li>The pantry exists to help eliminate food insecurity at Elizabethtown College.</li> <!-- "Responsible" Paragrpah, hardcoded --> 
+            <li>The pantry exists to help eliminate food insecurity at Elizabethtown College.</li> <!-- "Responsible" Paragrpah --> 
             <li>The pantry is intended to be accessible to all students in order to eliminate barriers 
                 to access for students experiencing hunger and having difficulty buying food and will 
-                operate in ways that maximize hospitality and privacy.</li> <!-- "Accesible" Paragraph, hardcoded -->
+                operate in ways that maximize hospitality and privacy.</li> <!-- "Accesible" Paragraph -->
             <li>The pantry, in partnership with offices and programs on campus, will provide resources that 
-                will help students create healthy meals.</li> <!-- "Healthy Meals" Paragraph, hardcoded -->
+                will help students create healthy meals.</li> <!-- "Healthy Meals" Paragraph-->
         </ul>
         <br>
         <span class="border"></span>
 
 
-
-        <!-- TODO: After this point in the code, I can't find the correlating text on the site. Find where this goes to.-->
 
         <h2>How it Works:</h2>
         <p>The Blue Jay Pantry is accessible to all undergraduate and graduate Elizabethtown College students. 

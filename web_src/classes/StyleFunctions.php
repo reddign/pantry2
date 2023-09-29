@@ -21,21 +21,21 @@ function putData($url, $data_json) {
     return $message; 
 }
 // Function to update social media links in the database
-function updateSocialMediaLinks($adminId, $facebook, $instagram, $twitter, $snapchat, $pinterest, $linkedin) {
+function updateSocialMediaLinks($userid, $pantry_name, $header_logo, $second_logo, $background_image, $nav_bg_color) {
     global $url, $api_key;
     // Perform database update here
-    $url = $url."/data_src/api/socialmedia/update.php";
+    $url = $url."/data_src/api/site_vars/update.php";
 
-    $data = array("APIKEY" => $api_key,"admin_id"=>$adminId,"facebook" => $facebook,"instagram"=>$instagram,"twitter"=>$twitter,"snapchat"=>$snapchat,"pinterest"=>$pinterest,"linkedin"=>$linkedin);
+    $data = array("APIKEY" => $api_key,"userid"=>$userid,"pantry_name"=>$pantry_name,"header_logo" => $header_logo,"second_logo"=>$second_logo,"background_image"=>$background_image,"nav_bg_color"=>$nav_bg_color);
 
     $data_json = json_encode($data);
 
             //use curl to send values to backend data following API:
         //data_src/doc.html
     $message = putData($url, $data_json);
-
     return $message;
 }
+
 
 
 ?>

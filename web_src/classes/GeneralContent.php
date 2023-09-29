@@ -135,7 +135,7 @@ class GeneralContent{
     public static function getAbout(){
       global $logo2, $pantryName, $paragraphHeader, $paragraph, $goal1Header, 
       $goal1Body, $goal1Icon, $goal2Header, $goal2Body, $goal2Icon, $goal3Header, $goal3Body, 
-      $goal3Icon, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail;
+      $goal3Icon, $pantryHours, $pantryLocation, $pantryCenter, $pantryEmail, $donationBody;
         return '<!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
           <div class="w3-display-left w3-text-white" style="padding:48px">
@@ -230,7 +230,7 @@ Contact Information:<BR>
 <!-- Donate Section -->
 <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="donate">
   <h3>DONATIONS</h3>
-  <p class="w3-large">We accept many types of donations.</p>
+  <p class="w3-large"> '.$donationBody.'</p>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
@@ -373,7 +373,7 @@ Contact Information:<BR>
         <h1>Update Paragraphs in Website</h1>
         
         <p>
-            <span style="text-decoration: underline;">Main Paragraph User Input:</span><br>
+            <span style="text-decoration: underline; font-weight: bold;">Main Paragraph User Input:</span><br>
         </p>
         <label for="paragraphHeader">Main Paragraph Header:</label>
         <input type="text" name="paragraphHeader" id="paragraphHeader"><br>
@@ -382,7 +382,7 @@ Contact Information:<BR>
         <input type="text" name="paragraph" id="paragraph"><br>
 
         <p>
-            <span style="text-decoration: underline;">Goal 1 User Input:</span><br>
+            <span style="text-decoration: underline; font-weight: bold;">Goal 1 User Input:</span><br>
         </p>
         <label for="goal1Header">Goal 1 Header:</label>
         <input type="text" name="goal1Header" id="goal1Header"><br>
@@ -391,7 +391,7 @@ Contact Information:<BR>
         <input type="text" name="goal1Body" id="goal1Body"><br>
 
         <p>
-            <span style="text-decoration: underline;">Goal 2 User Input:</span><br>
+            <span style="text-decoration: underline; font-weight: bold;">Goal 2 User Input:</span><br>
         </p>
         <label for="goal2Header">Goal 2 Header:</label>
         <input type="text" name="goal2Header" id="goal2Header"><br>
@@ -400,7 +400,7 @@ Contact Information:<BR>
         <input type="text" name="goal2Body" id="goal2Body"><br>
 
         <p>
-            <span style="text-decoration: underline;">Goal 4 User Input:</span><br>
+            <span style="text-decoration: underline; font-weight: bold;">Goal 4 User Input:</span><br>
         </p>
         <label for="goal3Header">Goal 3 Header:</label>
         <input type="text" name="goal3Header" id="goal3Header"><br>
@@ -409,7 +409,7 @@ Contact Information:<BR>
         <input type="text" name="goal3Body" id="goal3Body"><br>
 
         <p>
-            <span style="text-decoration: underline;">Hours, Location, and Contact Information Input:</span><br>
+            <span style="text-decoration: underline; font-weight: bold;">Hours, Location, and Contact Information Input:</span><br>
         </p>
         <label for="pantryHours">Pantry Hours:</label>
         <input type="text" name="pantryHours" id="pantryHours"><br>
@@ -424,6 +424,13 @@ Contact Information:<BR>
         <input type="text" name="pantryEmail" id="pantryEmail"><br>
         </br>
 
+        <p> 
+            <span style="text-decoration: underline; font-weight: bold;">Donation Input:</span><br>
+        </p>
+        <label for="donationBody">Donation Paragraph:</label>
+        <input type="text" name="donationBody" id="donationBody"><br>
+        </br>
+
         <input type="submit" value="Save">
 
     </div>';
@@ -435,18 +442,12 @@ Contact Information:<BR>
     //$content = "colorForm";
 
     /* ***** To Do ******
-    // Make the entered values link to and change values in the config file.
+    // Make the entered values link to and change values in the config file, or eventually the database.
     */
     
       $content = '
       <div class="w3-container" style="padding: 128px 10px">
           <h1>Update Color Scheme</h1>
-            <label for="logo1">Logo 1:</label>
-            <input type="text" name="logo1" id="logo1"><br>
-
-            <label for="logo2">Logo 2:</label>
-            <input type="text" name="logo2" id="logo2"><br>
-
             <label for="backgroundImage">Background Image:</label>
             <input type="text" name="backgroundImage" id="backgroundImage"><br>
 
@@ -458,7 +459,31 @@ Contact Information:<BR>
 
             <input type="submit" value="Save">
       </div>';
-    
+      $content = '
+      <div class="w3-container" style="padding: 128px 10px">
+          <h1>Update Style</h1>
+          <form method="POST" action="classes/Style.php">
+
+          <label for="pantryName">Pantry Name:</label>
+          <input type="text" name="pantryName" id="pantryName"><br>
+
+          <label for="header_logo">Header Logo:</label>
+          <input type="text" name="header_logo" id="header_logo"><br>
+
+          <label for="second_logo">Second Logo:</label>
+          <input type="text" name="second_logo" id="second_logo"><br>
+
+          <label for="background_image">Background Image:</label>
+          <input type="text" name="background_image" id="background_image"><br>
+
+          <label for="nav_bg_Color">Navigation Background Color:</label>
+          <input type="text" name="nav_bg_color" id="nav_bg_color"><br>
+
+          <input type="submit" value="Save">
+          </form>
+      </div>';
+
+
     return $content;
   }
 

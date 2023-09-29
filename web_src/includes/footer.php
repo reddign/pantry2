@@ -1,4 +1,9 @@
 <!-- Footer -->
+<?php
+
+// TODO: figure out how to link the social media links to the logo images
+
+?>
 <footer class="w3-center w3-dark-blue w3-padding-64">
   <a href="index.php?page=about#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
