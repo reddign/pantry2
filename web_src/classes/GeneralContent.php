@@ -489,7 +489,7 @@ Contact Information:<BR>
 
   /* ***** To Do ******
     // Make the submitted logos link to and change values in the config file.
-    making changes
+    change 2
     */
   public static function getLogoForm() {
     $content = '
