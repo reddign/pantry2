@@ -15,7 +15,7 @@ require_once "includes/header.php";
     </div>
     <div class="team-section">
         <h1>Nathan Brightup</h1>
-        <div class="section"> Nathan Brightup is a senior at Elizabethtown College. He is majoring in Computer Engineering and will graduate in 2025.
+        <div class="section"> Nathan Brightup is a senior at Elizabethtown College. He is majoring in Engineering and will graduate in 2025.
        <BR><BR>
         <a href="CS341Fall2023.php">Back to CS 341 - Fall 2023</a>   
     </div>
