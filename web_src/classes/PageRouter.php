@@ -7,7 +7,9 @@
 class PageRouter{
     public static function getContent($page,$url){
         global $useFoodTabs,$useChartTabs,$useCategoryTabs,$api_key;
+        
         $content = '';
+        
         //determine page content
         switch($page){
             case "data":
@@ -76,6 +78,9 @@ class PageRouter{
             break;
             case "login":
                 $content = GeneralContent::getLoginForm();
+            break;
+            case "register":
+                $content = GeneralContent::getRegisterForm();
             break;
             case "logout":
                 $content = LoginProcess::processLogout();

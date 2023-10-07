@@ -14,37 +14,54 @@ if($key!=$GLOBAL_API_KEY){
 $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
 
 if($graphType=="ByProduct"){
-  $sql = "select P.productName, COUNT(BI.basketID) total
+  $sql = "select P.productName, SUM(TD.quantity) total
   from product P,
-  BasketItem BI
-  where P.productID = BI.productID 
+  transactionsDetails TD
+  where P.productID = TD.productID 
   GROUP BY P.productName;";
   $params = null;
 }else if($graphType=="ByCategory"){
   $catID = isset($catID)&&$catID!=""?$catID:2;
-  $sql = "select P.productName, COUNT(BI.basketID) total
+  $sql = "select P.productName, COUNT(TD.transactionID) total
   from product P,
-  BasketItem BI
-  where P.productID = BI.productID and catID = :catid
+  transactionsDetails TD
+  where P.productID = TD.productID and p.catID = :catid
   GROUP BY P.productName";
   $params = [":catid"=>$catID];
   // echo $sql;
   // print_r($params);
-}else{
+}
+
+else if($graphType=="ByDependentInfo"){
+  $sql = "select userID, SUM(children), SUM(adult), SUM(senior)
+  from registration GROUP BY userID";
+  $params = null;
+}
+//TODO invert this graph
+else if($graphType=="ByUserInfo"){
+  $sql = "SELECT x.user, COUNT(x.user) total
+  FROM (SELECT count(userID) user FROM transactions group by userID)x
+  GROUP BY x.user;";
+  $params = null;
+}
+else{
 
   if(isset($_GET["date1"])){
     $params = [":date1"=>$_GET["date1"],":date2"=>$_GET["date2"]];
-    $where = "where basketDate BETWEEN :date1 and :date2";
+    $where = "where date BETWEEN :date1 and :date2";
   }else{
     $params = null;
     $where = '';
   }
   
 
-  $sql = "select basketDate as productName, COUNT(basketDate) total
-      from Basket
+  // Pulls and Formats transaction Date
+  $sql = "select DATE_FORMAT( date, 'YYYY-MM-DD' ) as transactionDate, COUNT(date) total
+      from transactions
       ".$where."
-      GROUP BY basketDate;";
+      GROUP BY date;";
+
+      
   
   
   }
