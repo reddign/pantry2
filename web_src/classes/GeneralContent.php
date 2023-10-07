@@ -4,7 +4,7 @@ class GeneralContent{
 
     public static function getAllProductsDisplay($products,$title="INVENTORY",$button="addtocart"){
 
-       
+       //Added a comment test
         $html = "<div class='w3-container' style='padding:128px 10px'>";
         $html .=  "<h3 class='w3-center'>".$title."</h3>";
        
@@ -152,7 +152,7 @@ class GeneralContent{
   <img  src="images/BlueJayPantry-Logo-v4.png" style="width:75%">
   </div>
   <div class="w3-col m6">
-  <p class="w3-center w3-large">Free Food for Students In Need</p>
+  <p class="w3-center w3-large">Free Food for Students In Need Reddig Test</p>
 <p>Elizabethtown College is committed to ensuring that all students have regular access to healthy food options. The Blue Jay Pantry has been established by our Center for Community and Civic Engagement to provide our students with free, non-perishable food items sourced by charitable donations from within our community.</p>
 
 <p>Our College joins over 600 schools nationwide who operate an on-campus food pantry and is a member of the College and University Food Bank Alliance (CUFBA). CUFBA provides colleges and universities with support, training and resources to connect more students with the food and resources they need for educational success.</p>
