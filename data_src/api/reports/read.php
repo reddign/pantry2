@@ -30,9 +30,7 @@ if($graphType=="ByProduct"){
   $params = [":catid"=>$catID];
   // echo $sql;
   // print_r($params);
-}
-
-else if($graphType=="ByDependentInfo"){
+}else if($graphType=="ByDependentInfo"){
   $sql = "select userID, SUM(children), SUM(adult), SUM(senior)
   from registration GROUP BY userID";
   $params = null;
@@ -56,7 +54,7 @@ else{
   
 
   // Pulls and Formats transaction Date
-  $sql = "select DATE_FORMAT( date, 'YYYY-MM-DD' ) as transactionDate, COUNT(date) total
+  $sql = "select DATE_FORMAT( date, '%Y-%m-%d' ) as transactionDate, COUNT(date) total
       from transactions
       ".$where."
       GROUP BY date;";

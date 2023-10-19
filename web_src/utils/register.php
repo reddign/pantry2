@@ -1,10 +1,11 @@
 <?php
 session_start(); 
 
-include '../includes/database_config.php';
+//include '../includes/database_config.php';
 include '../includes/config.php';
 include '../data_src/includes/database_config.php';
 require_once "../classes/LoginProcess.php";
+require_once "../classes/DatabaseAPIConnection.php";
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -14,13 +15,12 @@ global $url;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
     $username = $_POST['username'];
-    $apiUrl = "http://127.0.0.1/pantry2/data_src/api/user/create.php";
-    ; 
+    $apiUrl = $url."/data_src/api/user/create.php"; 
     $data = [
         "APIKEY" => $api_key,
         "username" => $username
     ];
-
+/*
     $options = [
         'http' => [
             'header' => "Content-type: application/x-www-form-urlencoded\r\n",
@@ -29,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
         ]
     ];
     $context = stream_context_create($options);
-    $result = file_get_contents($apiUrl, false, $context);
+    $result = file_get_contents($apiUrl, false, $context);*/
+    $result = DatabaseAPIConnection::post($apiUrl, $data);
 
     if ($result === FALSE) {
         $error = error_get_last();

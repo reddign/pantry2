@@ -20,19 +20,25 @@
 </footer>
  
 <script>
-function editItem(id){
+function editInventoryItem(id){
 
   location.href = "index.php?page=edit&editID=" + id;
 
 }
+function addInventoryItem(){
 
+location.href = "index.php?page=edit&editID=add";
+
+}
 function addItem(id){
-  alert("add to cart item id " + id);
+ // alert("add cart item id " + id);
+  location.href = "utils/addToCart.php?id="+id;
 
 }
 
 function removeItem(id){
-  alert("remove from cart item id " + id);
+  location.href = "utils/removeFromCart.php?id="+id;
+  //alert("remove from cart item id " + id);
 
 }
 

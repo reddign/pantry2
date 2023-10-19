@@ -11,7 +11,11 @@
 <?php
 if($useCategoryTabs){
 
-    $web_string = file_get_contents($url."/data_src/api/category/read.php?APIKEY={$api_key}");
+    $fullUrl = $url."/data_src/api/category/read.php";
+    $vars = ["APIKEY"=>$api_key];
+    $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
+            
+    //$web_string = file_get_contents($url."/data_src/api/category/read.php?APIKEY={$api_key}");
                 
     $categories = json_decode($web_string);
 

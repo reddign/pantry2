@@ -12,7 +12,7 @@ if($key!=$GLOBAL_API_KEY){
   exit;
 }
 if ($id == "" || $id == 0) {
-  $sql = "select * from basketitem";
+  $sql = "select * from basketitem B inner join product p on p.productID=B.productID ";
   $params = null;
   $data = FoodDatabase::getDataFromSQL($sql, $params);
   echo json_encode($data);

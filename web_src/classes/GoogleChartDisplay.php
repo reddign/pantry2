@@ -71,6 +71,10 @@ class GoogleChartDisplay{
     
                 $array_string .= "['" . $info->total. "',".$info->user."],";
             }
+        }else if($type=="date"){
+            foreach($data as $info){
+                $array_string .= "['".$info->transactionDate."',".$info->total."],";
+            }
         }
         else{
             foreach($data as $info){

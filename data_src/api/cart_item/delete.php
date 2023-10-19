@@ -1,9 +1,16 @@
 <?PHP
 require_once "../../includes/database_config.php";
 require_once "../../classes/FoodDatabase.php";
-$key = isset($_GET["APIKEY"])?$_GET["APIKEY"]:""; 
-$id = isset($_GET["productID"])?intval($_GET["productID"]):"";
-$basket_id = isset($_GET["basketID"])?intval($_GET["basketID"]):"";
+
+   
+        
+       
+   
+  
+$key = isset($_POST["APIKEY"])?$_POST["APIKEY"]:""; 
+$id = isset($_POST["productID"])?intval($_POST["productID"]):"";
+$basket_id = isset($_POST["basketID"])?intval($_POST["basketID"]):"";
+
 if($key!=$GLOBAL_API_KEY){
   echo json_encode(["message"=>"Invalid API KEY"]);
   exit;

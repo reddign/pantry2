@@ -14,7 +14,7 @@ if($key!=$GLOBAL_API_KEY){
   exit;
 }
 $params = [":name"=>$productName,":cid"=>$catID,":q"=>$qty,":i"=>$img];
-$sql = "insert into product (productName,catID,qty,img) VALUES (:name,:cid,:q,:i);";
+$sql = "insert into product (productName,catID,quantity,img) VALUES (:name,:cid,:q,:i);";
 FoodDatabase::executeSQL($sql, $params);
 $message = ["message"=>"Product Created Successfully"];
 echo json_encode($message);

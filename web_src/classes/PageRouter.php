@@ -13,13 +13,18 @@ class PageRouter{
         //determine page content
         switch($page){
             case "data":
-                $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key");
+                $fullUrl = $url."/data_src/api/products/read.php";
+                $vars = ["APIKEY"=>$api_key];
+                //$web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key");
+                $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
                 $content = $web_string;
                 $useFoodTabs = true;
             break;
             case "data_array":
-                $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key");
-                //$web_string = file_get_contents($url."/data_src/data.php?table=products");
+                $fullUrl = $url."/data_src/api/products/read.php";
+                $vars = ["APIKEY"=>$api_key];
+                //$web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key");
+                $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
                 $json_array= json_decode($web_string);
                 $content = "<pre>"; ///HTML pre tags just make this look pretty
                 $content .= print_r($json_array,TRUE);
@@ -30,16 +35,26 @@ class PageRouter{
                 $editID = isset($_GET["editID"])?$_GET["editID"]:"";
                 if($editID==""){
                     $catID = isset($_GET["catID"])?$_GET["catID"]:"";
-                    $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&catID={$catID}");
-                    
+                    $fullUrl = $url."/data_src/api/products/read.php";
+                    $vars = ["APIKEY"=>$api_key,"catID"=>$catID];
+                    //$web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key");
+                    $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
                     $products = json_decode($web_string);
-                
+                    
                     $content .= GeneralContent::getAllProductsDisplay($products,"EDIT INVENTORY","edit"); 
                     $useFoodTabs = true;
                 }else{
-                    $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&id={$editID}");
+                    $products_url = $url."/data_src/api/products/read.php";
+                    $pvars = ["APIKEY"=>$api_key,"id"=>$editID];
+                    $web_string = DatabaseAPIConnection::get($products_url,$pvars);
+                    //$web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&id={$editID}");
                     $products = json_decode($web_string);
-                    $web_string2 = file_get_contents($url."/data_src/api/category/read.php?APIKEY=$api_key");
+
+
+                    $category_url = $url."/data_src/api/category/read.php";
+                    $cvars = ["APIKEY"=>$api_key];
+                    $web_string2 = DatabaseAPIConnection::get($category_url,$cvars);
+ //                   $web_string2 = file_get_contents($url."/data_src/api/category/read.php?APIKEY=$api_key");
                     $categories = json_decode($web_string2);
                     $content .= EditItemForm::getForm($products[0],$categories);    
                 }
@@ -47,7 +62,13 @@ class PageRouter{
             case "products":
                 $catID = isset($_GET["catID"])?$_GET["catID"]:"";
                 $id = isset($_GET["id"])?$_GET["id"]:"";
-                $web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&catID={$catID}&id={$id}");
+
+                $fullUrl = $url."/data_src/api/products/read.php";
+                $vars = ["APIKEY"=>$api_key,"catID"=>$catID,"id"=>$id];
+                //$web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key");
+                $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
+            
+                //$web_string = file_get_contents($url."/data_src/api/products/read.php?APIKEY=$api_key&catID={$catID}&id={$id}");
                 //$web_string = file_get_contents($url."/data_src/data.php?table=products&catID={$catID}");
                 $products = json_decode($web_string);
                 $content .= GeneralContent::getAllProductsDisplay($products,"INVENTORY"); 
@@ -57,7 +78,11 @@ class PageRouter{
                 //Please use comments.  You are a professor.  They are watching you!
                 $catID = isset($_GET["catID"])?$_GET["catID"]:"";
                 $graphType = isset($_GET["graphType"])?$_GET["graphType"]:"";
-                $web_string = file_get_contents($url."/data_src/api/reports/read.php?APIKEY=$api_key&graphType={$graphType}&catID={$catID}");
+                $fullUrl = $url."/data_src/api/reports/read.php";
+                $vars = ["APIKEY"=>$api_key,"catID"=>$catID,"graphType"=>$graphType];
+                $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
+            
+                //$web_string = file_get_contents($url."/data_src/api/reports/read.php?APIKEY=$api_key&graphType={$graphType}&catID={$catID}");
                 $reportData = json_decode($web_string);
                 $content .= GeneralContent::getReportDisplay($reportData,$graphType); 
                 $useChartTabs = true;
@@ -87,8 +112,23 @@ class PageRouter{
                 $content = GeneralContent::getGeneralMessage(" Logout Success! ");
             break;
             case "cart":
-                $catID = "cart";
-                $web_string = file_get_contents($url."/data_src/api/cart/read.php?APIKEY=$api_key");
+                
+                if(!isset($_SESSION["CartID"]) || intval($_SESSION["CartID"])<=0 ){
+
+
+                    $apiUrl = $url."/data_src/api/cart/create.php";
+                    $data = ["APIKEY"=>$api_key,"userID"=>$_SESSION["userId"]];
+                    
+                    $message = DatabaseAPIConnection::post($apiUrl,$data);
+                    $data = json_decode($message);
+                    $_SESSION["CartID"]=$data->basketID;
+                    
+                }
+                $fullUrl = $url."/data_src/api/cart/read.php";
+                $vars = ["APIKEY"=>$api_key,"id"=>$_SESSION["CartID"]];
+                $web_string = DatabaseAPIConnection::get($fullUrl,$vars);
+            
+                //$web_string = file_get_contents($url."/data_src/api/cart/read.php?APIKEY=$api_key");
                 $products = json_decode($web_string);
                 $content .= GeneralContent::getAllProductsDisplay($products,"MY CART","remove"); 
                 $useFoodTabs = true;

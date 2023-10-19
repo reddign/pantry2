@@ -2,23 +2,40 @@
 require_once "GoogleChartDisplay.php";
 class EditItemForm{
     public static function getForm($product,$categories){
+        if($product!=null){
+            $formTitle = "Edit Item";
+            $productID = $product->productID;
+            $img = $product->img;
+            $productName = $product->productName;
+            $quantity = $product->quantity;
+            $catID = $product->catID;
+          }else{
+            $formTitle = "Add Item";
+            $productID = "";
+            $img = "";
+            $productName = "";
+            $quantity = "";
+            $catID = "";
+          }
       $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
       $display = '
       <div class="w3-container w3-light-grey" style="padding:128px 16px">
           <div id="main" style="padding:12px 160px">
-              <h1>Edit Item</h1>
+              <h1>'.$formTitle.'</h1>
               <div id="error">'.$error.'</div>';
       $display .= "<form method='post' action='index.php' class='w3-form'  enctype='multipart/form-data'>";
-      $display .= "Product ID: {$product->productID}<br>";
-      $display .= "<input type='hidden' name='id' id='id' value='{$product->productID}'>";
-      $display .= "Product Name: <input type='text' name='name' value='{$product->productName}'><br>";
-      $display .= "Quantity: <input type='text' name='qty' value='{$product->quantity}'><br>";
+      if($productID > 0 ) {
+        $display .= "Product ID: {$productID}<br>";
+      }
+      $display .= "<input type='hidden' name='id' id='id' value='{$productID}'>";
+      $display .= "Product Name: <input type='text' name='name' value='{$productName}'><br>";
+      $display .= "Quantity: <input type='text' name='qty' value='{$quantity}'><br>";
       $display .= "Cat ID: ";
       $display .= "<select name='catID' id='catID'>";
       $display .= "<option value=''>Choose Category</option>";
       foreach($categories as $category){
         $display .= "<option value='".$category->categoryID."'";
-        if($category->categoryID == $product->catID){
+        if($category->categoryID == $catID){
             $display .= " SELECTED ";
         }
         $display .= ">";
@@ -26,7 +43,9 @@ class EditItemForm{
         $display .= "</option>";
       }
       $display .= "</select><BR><BR>";
-      $display .= "Current Image:<img  src='{$product->img}' alt='productImg' style='width:120px;height:160px;'><br>";
+      if($img!=""){
+        $display .= "Current Image:<img  src='{$img}' alt='productImg' style='width:120px;height:160px;'><br>";
+      }
       $display .= "Upload New Image: <input type='file' name='imgfile'><br>";
       $display .= "<BR><BR><input type='submit' class='w3-button w3-red' id='saveBtn' name='saveBtn' value='Save Product Info'>";
       $display .= "</form>";
@@ -34,7 +53,38 @@ class EditItemForm{
       $display .= "</div>";
       return $display;    
   }
-  public static function validateAndProcessData($formdata,$imgdata,$url){
+  public static function validateAndAddData($formdata,$imgdata,$url){
+    global $api_key;
+    $message = "";
+    $image = "";
+    $name = $formdata["name"];
+    $quantity = intval($formdata["qty"]);
+    
+    $catID = intval($formdata["catID"]);
+   
+    if($catID==0){
+        $message = "No Category ID";
+    }
+    
+
+    if($message==""){
+
+        $imagepath =  EditItemForm::moveImageFile($imgdata,"imgfile");
+        $url = $url."/data_src/api/products/create.php";
+        $data = array("APIKEY" => $api_key,"productName" => $name,"quantity"=>$quantity,"img"=>$imagepath,"catID"=>$catID);
+        // print_r($data);
+        // exit;
+        $response = DatabaseAPIConnection::post($url,$data);
+        
+
+        $message = $response;
+    }else{
+        $responseData = ["message"=>$message];
+        $message = json_encode($http_response_header);
+    }
+    return $message;
+  }
+  public static function validateAndEditData($formdata,$imgdata,$url){
     global $api_key;
     $message = "";
     $image = "";
@@ -56,24 +106,10 @@ class EditItemForm{
         $imagepath =  EditItemForm::moveImageFile($imgdata,"imgfile");
         $url = $url."/data_src/api/products/update.php";
         $data = array("APIKEY" => $api_key,"productName" => $name,"quantity"=>$quantity,"img"=>$imagepath,"catID"=>$catID,"productID"=>$id);
-        $data_json = json_encode($data);
-
+        // print_r($data);
+        // exit;
+        $response = DatabaseAPIConnection::put($url,$data);
         
-        
-        //use curl to send values to backend data following API:
-        //data_src/doc.html
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
-        curl_setopt($ch, CURLOPT_POSTFIELDS,$data_json);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        $response = curl_exec($ch);
-        curl_close($ch);
-        if ( ! $response) {
-            return false;
-        }
         $message = $response;
     }else{
         $responseData = ["message"=>$message];

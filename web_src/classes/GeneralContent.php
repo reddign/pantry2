@@ -8,10 +8,12 @@ class GeneralContent{
        //Added a comment test
         $html = "<div class='w3-container' style='padding:128px 10px'>";
         $html .=  "<h3 class='w3-center'>".$title."</h3>";
-       
-        
+        if($title=="EDIT INVENTORY"){
+          $html .= GeneralContent::getAddInventoryButton();
+        }
         $count = 0;
         $divComplete = true;
+        
         if(is_array($products) && count($products)>0){
             
             foreach($products as $product){
@@ -45,7 +47,7 @@ class GeneralContent{
         ///Test comment
         if($button=="edit")
         {
-            $jsaction = " onclick='editItem({$product->productID});' ";
+            $jsaction = " onclick='editInventoryItem({$product->productID});' ";
             $buttonMessage = "Edit Item";
         }else if($button=="remove")
         {
@@ -63,7 +65,27 @@ class GeneralContent{
         $display .= "</div>";
         return $display;    
     }
+    public static function getAddInventoryButton(){
+      $display = "<div class='w3-margin-bottom w3-center'>";
+      $jsaction = " onclick='addInventoryItem();' ";
+      $buttonMessage = "Add Inventory Item";
+      $display .= "<button class='w3-button w3-red' $jsaction type='button'>{$buttonMessage}</button>";
+      $display .= "</div>";
+      return $display;   
+    }
+    /***
     public static function getEditItemForm($product){
+      if($product!=null){
+        $productID = $product->productID;
+        $img = $product->img;
+        $productName = $product->productName;
+        $quantity = $product->quantity;
+      }else{
+        $productID = "";
+        $img = "";
+        $productName = "";
+        $quantity = "";
+      }
       $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
       $display = '
       <div class="w3-container w3-light-grey" style="padding:128px 6px">
@@ -71,21 +93,22 @@ class GeneralContent{
               <h1>Edit Item</h1>
               <div id="error">'.$error.'</div>';
       $display .= "<form method='post' action='index.php' class='w3-form'>";
-      $display .= "Product ID: {$product->productID}<br>";
-      $display .= "Product Name: <input type='text' name='name' value='{$product->productName}'><br>";
-      $display .= "Quantity: <input type='text' name='qty' value='{$product->quantity}'><br>";
+      $display .= "Product ID: {$productID}<br>";
+      $display .= "Product Name: <input type='text' name='name' value='{$productName}'><br>";
+      $display .= "Quantity: <input type='text' name='qty' value='{$quantity}'><br>";
       $display .= "Current Image:";
       //Image
-      $display .= "<img  src='{$product->img}' alt='productImg' style='width:120px;height:160px;'><br>";
+      if($img!=""){
+        $display .= "<img  src='{$img}' alt='productImg' style='width:120px;height:160px;'><br>";
       
-      
+      }
       $display .= "Upload New Image: <input type='file' name='filename'><br>";
       $display .= "<input type='submit' class='w3-button w3-red' id='saveBtn' name='saveBtn' value='Save Product Info'>";
       $display .= "</form>";
       $display .= "</div>";
       $display .= "</div>";
       return $display;    
-  }
+  } */
     public static function getGeneralMessage($message="Page Not Found.",$size="large"){
         $error = (isset($_SESSION["error"]))?$_SESSION["error"]:"";
         if($size=="medium"){
@@ -368,6 +391,9 @@ class GeneralContent{
             case 'ByUserInfo':
                 $content .= GoogleChartDisplay::getUserData($data);
                 break;
+            case 'ByDateRange':
+                  $content .= GoogleChartDisplay::getByDateReport($data);
+                  break;
             default:
                 $content .= GoogleChartDisplay::getTotalReport($data);
 

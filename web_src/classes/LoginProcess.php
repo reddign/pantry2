@@ -15,6 +15,8 @@ class LoginProcess {
         if (is_array($users) && count($users) > 0) {
             $user = array_pop($users);
 
+            
+
             if ($user->isAdmin) {
                 if($pass == "" || $pass == null){
                     $_SESSION["LoginStatus"] = "NO";
@@ -26,7 +28,7 @@ class LoginProcess {
                     $_SESSION["LoginStatus"] = "YES";
                     $_SESSION["isAdmin"] = true;
                     $_SESSION["error"] = "";
-                    $_SESSION["userId"] = $user->userId;
+                    $_SESSION["userId"] = $user->userID;
                     return true;
                 } else {
                     $_SESSION["LoginStatus"] = "NO";
@@ -39,7 +41,7 @@ class LoginProcess {
                 $_SESSION["LoginStatus"] = "YES";
                 $_SESSION["isAdmin"] = false;
                 $_SESSION["error"] = "";
-                $_SESSION["userId"] = $user->userId;
+                $_SESSION["userId"] = $user->userID;
                 return true;
             }
         } else {
@@ -57,6 +59,8 @@ class LoginProcess {
         $_SESSION["userId"] = "";
         $_SESSION["error"] = "";
     }
+   
+    
 }
 
 
